@@ -46,6 +46,9 @@ def calcola_churn_sloc(file_vecchio, file_nuovo):
     righe_vecchio_pulite = estrai_linee_sorgente(file_vecchio)
     righe_nuovo_pulite = estrai_linee_sorgente(file_nuovo)
 
+    if not file_vecchio:
+        return len(estrai_linee_sorgente(file_nuovo))
+
     righe_aggiunte = 0
     righe_rimosse = 0
 
