@@ -1,19 +1,8 @@
 import subprocess
 import os
+import helper as hp
 from datetime import datetime
 
-def ottieni_timestamp_git(comando_git, cwd):
-    """Esegue un comando git e restituisce il timestamp intero."""
-    try:
-        risultato = subprocess.run(comando_git, cwd=cwd, check=True, 
-                                   capture_output=True, text=True)
-        # Prende la prima riga utile e la converte in intero
-        righe = risultato.stdout.strip().split('\n')
-        if righe and righe[0]:
-            return int(righe[0])
-    except (subprocess.CalledProcessError, ValueError):
-        pass
-    return None
 
 def calcola_age_e_weighted_age(percorso_repo, percorso_file_relativo, tag_release, loc_touched):
     """
@@ -22,12 +11,12 @@ def calcola_age_e_weighted_age(percorso_repo, percorso_file_relativo, tag_releas
     # 1. Trova la data della release attuale (in UNIX timestamp)
     # Comando: git log -1 --format=%at <tag_release>
     cmd_release_date = ["git", "log", "-1", "--format=%at", tag_release]
-    timestamp_release = ottieni_timestamp_git(cmd_release_date, percorso_repo)
+    timestamp_release = hp.ottieni_timestamp_git(cmd_release_date, percorso_repo)
 
     # 2. Trova la data di creazione del file (il commit più vecchio per quel file)
     # Comando: git log --reverse --format=%at -- <file>
     cmd_creation_date = ["git", "log", "--reverse", "--format=%at", "--", percorso_file_relativo]
-    timestamp_creazione = ottieni_timestamp_git(cmd_creation_date, percorso_repo)
+    timestamp_creazione = hp.ottieni_timestamp_git(cmd_creation_date, percorso_repo)
 
     # Gestione errori se il file non è tracciato o appena creato
     if not timestamp_release or not timestamp_creazione:

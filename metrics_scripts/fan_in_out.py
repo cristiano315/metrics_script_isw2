@@ -1,44 +1,72 @@
-import re
+"""
+Data: 28/04/2026
+Autore: enrico_barbatano
 
-def calcola_fan_out_progetto(file_aperto, metrics):
+Refactoring della gestione delle metriche di dipendenza (Fan-Out e Fan-In).
+
+In questa versione:
+- è stata separata la logica di estrazione delle dipendenze (delegata al modulo helper)
+- è stato eliminato l'accesso diretto alla struttura globale 'metrics' per migliorare la modularità
+- il Fan-Out viene calcolato per singola release come numero di dipendenze distinte
+- il Fan-In è stato ridefinito come metrica cumulativa globale (Fan-In total),
+  costruita aggregando le dipendenze tra classi lungo tutte le release
+- ! sono stati eliminati i duplicati tramite uso di strutture dati di tipo set
+- è stata introdotta una struttura dati interna per mantenere lo storico delle dipendenze,
+  permettendo di calcolare la centralità architetturale delle classi
+
+Questo refactoring migliora:
+- riusabilità del codice
+- coerenza tra metriche
+- manutenibilità dell'architettura
+- correttezza metodologica rispetto alla letteratura sulla defect prediction
+"""
+
+import helper as hp
+
+class FanInOut:
     """
-    Calcola il Fan-out ignorando le librerie standard (java, javax).
-    Restituisce solo un numero intero.
+    Classe per calcolare Fan-Out (per release)
+    e Fan-In Total (globale).
     """
-    fan_out = 0
-    pattern_import = re.compile(r"^\s*import\s+(?:static\s+)?([\w\.]+)\s*;")
 
-    for riga in file_aperto:
-        match = pattern_import.match(riga)
-        if match:
-            nome_libreria = match.group(1)
-            
-            # Se NON inizia con java. e NON inizia con javax., lo contiamo
-            if nome_libreria.startswith("org.apache.syncope."):
-                fan_out += 1
-                nome_classe = nome_libreria.split('.')[-1]
-                metrics[nome_classe]["fan_out"] += 1 #CONTA ANCHE I DUPLICATI, RIVEDERE
+    def __init__(self):
+        # Dizionario globale: classe -> set di classi che la usano
+        self.fan_in_map = {}
 
-    return fan_out
+    def compute_fan_out(self, file_content):
+        """
+        Calcola Fan-Out per una classe (per release).
+        Usa helper per estrarre dipendenze.
 
-# --- ESEMPIO DI UTILIZZO ---
-if __name__ == "__main__":
-    
-    with open("TestStorm.java", "w") as f:
-        f.write("""package org.apache.storm.topology;
+        Ritorna:
+        - numero di dipendenze
+        - set delle dipendenze (serve per Fan-In)
+        """
 
-        import java.util.Map;
-        import java.io.File;
-        import javax.servlet.http.HttpServlet;
-        import org.apache.storm.task.OutputCollector;
-        import org.apache.storm.task.TopologyContext;
+        dependencies = hp.extract_project_dependencies(file_content)
 
-        public class TestStorm { }
-        """)
+        fan_out_value = len(dependencies)
 
-    with open("TestStorm.java", "r") as file_da_analizzare:
-        # Ora la funzione restituisce direttamente il numero!
-        numero_fan_out = calcola_fan_out_progetto(file_da_analizzare)
-        
-        print(f"Il Fan-out del progetto è: {numero_fan_out}") 
-        # Risultato atteso: 2 (ignora Map, File e HttpServlet)
+        return fan_out_value, dependencies
+
+    def update_fan_in(self, class_id, dependencies):
+        """
+        Aggiorna Fan-In total.
+
+        class_id = classe corrente
+        dependencies = classi che questa classe usa
+        """
+
+        for dep in dependencies:
+
+            if dep not in self.fan_in_map:
+                self.fan_in_map[dep] = set()
+
+            self.fan_in_map[dep].add(class_id)
+
+    def get_fan_in_total(self, class_id):
+        """
+        Restituisce il Fan-In total della classe.
+        """
+
+        return len(self.fan_in_map.get(class_id, set()))

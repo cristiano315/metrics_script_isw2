@@ -46,6 +46,8 @@ def calcola_loc_java(file_aperto):
 
     return source_lines
 
-def calculate_loc_added(old_file, loc_new_file):
+
+#vecchai funzione che calcola loc added
+#def calculate_loc_added(old_file, loc_new_file):
     result = loc_new_file - calcola_loc_java(old_file)
     return result if result > 0 else 0
