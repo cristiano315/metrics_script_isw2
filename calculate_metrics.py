@@ -216,8 +216,8 @@ def create_dataset(directory_path, repo_path=None):
 
 if __name__ == "__main__":
 
-    target = os.path.abspath("./releases")
-    repo = os.path.abspath("./storm")
+    target = os.path.abspath("./syncope_java_releases")
+    repo = os.path.abspath("./syncope")
 
     rows = create_dataset(target, repo)
 

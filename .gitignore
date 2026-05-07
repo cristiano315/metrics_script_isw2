@@ -1,1 +1,6 @@
 syncope_java_releases/
+metrics_scripts/__pycache__/
+__pycache__/
+dataset.csv
+metrics_scripts/__pycache__/churn.cpython-313.pyc
+metrics_scripts/__pycache__/size.cpython-313.pyc
