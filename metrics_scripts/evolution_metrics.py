@@ -1,4 +1,5 @@
 """
+# controllare quali sono total e quali no
 Gestisce metriche evolutive:
 - Churn
 - LOC Added

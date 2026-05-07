@@ -16,25 +16,17 @@ from metrics_scripts import git_metrics as gitm
 metrics = {}
 
 
-# ✅ NORMALIZZAZIONE VERSIONI (LA PARTE IMPORTANTE)
+# ✅ VERSION SORT ROBUSTO
 def version_key(release_name):
-    """
-    Ordina correttamente le release tipo:
-    release_0.9.1-incubating -> [0,9,1]
-    """
-
-    # rimuove prefisso
-    v = release_name.replace("release_", "")
-
-    # rimuove suffissi tipo -incubating
-    v = re.split(r"[-_]", v)[0]
-
     try:
+        v = release_name.replace("release_", "")
+        v = re.split(r"[-_]", v)[0]
         return [int(x) for x in v.split(".")]
-    except:
+    except Exception:
         return [0]
 
 
+# ✅ CSV EXPORT
 def export_csv_rows(rows, output_path="dataset.csv"):
 
     print("\n📁 Creazione CSV...")
@@ -53,13 +45,20 @@ def export_csv_rows(rows, output_path="dataset.csv"):
     print(f"✅ CSV creato: {output_path}")
 
 
+# ✅ DATASET CREATION
 def create_dataset(directory_path, repo_path=None):
 
     file_history = {}
     fan_io = FanInOut()
 
-    # ✅ ORDINAMENTO CORRETTO
-    releases = sorted(os.listdir(directory_path), key=version_key)
+    all_entries = os.listdir(directory_path)
+
+    releases = [
+        d for d in all_entries
+        if os.path.isdir(os.path.join(directory_path, d)) and d.startswith("release_")
+    ]
+
+    releases = sorted(releases, key=version_key)
 
     print("\n✅ Release ordinate correttamente:")
     for r in releases:
@@ -76,8 +75,6 @@ def create_dataset(directory_path, repo_path=None):
     for release in releases:
 
         current_folder = os.path.join(directory_path, release)
-        if not os.path.isdir(current_folder):
-            continue
 
         print(f"\n📂 Processing release: {release}")
 
@@ -88,7 +85,9 @@ def create_dataset(directory_path, repo_path=None):
                     continue
 
                 full_path = os.path.join(root, file_name)
-                class_id = os.path.relpath(full_path, directory_path)
+                class_id = os.path.relpath(full_path, current_folder)
+
+                old_lines = file_history.get(class_id, [])
 
                 # ✅ evita duplicati
                 pair_key = (release, class_id)
@@ -96,6 +95,7 @@ def create_dataset(directory_path, repo_path=None):
                     continue
                 seen_pairs.add(pair_key)
 
+                # INIT
                 if class_id not in metrics:
                     metrics[class_id] = {
                         "Churn_Totale": 0,
@@ -118,12 +118,9 @@ def create_dataset(directory_path, repo_path=None):
                         "revisions_density": 0
                     }
 
+                # LETTURA FILE
                 with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
                     new_lines = f.readlines()
-
-                old_lines = file_history.get(class_id, [])
-
-                relative_path = os.path.relpath(full_path, current_folder)
 
                 # --- BASE ---
                 loc = sm.calcola_loc_java(new_lines)
@@ -145,11 +142,18 @@ def create_dataset(directory_path, repo_path=None):
 
                 # --- AGE ---
                 if repo_path:
-                    gitm.update_age(metrics, class_id, repo_path, relative_path, release, current_churn)
+                    gitm.update_age(
+                        metrics,
+                        class_id,
+                        repo_path,
+                        release,
+                        current_churn
+                    )
 
+                # ✅ aggiorna history DOPO
                 file_history[class_id] = new_lines
 
-                # ✅ SALVO DATI BASE PER CSV
+                # ✅ base dataset row
                 per_release_data.append({
                     "project": project_name,
                     "release": release,
@@ -168,14 +172,14 @@ def create_dataset(directory_path, repo_path=None):
     agg.compute_aggregates(metrics, file_history, fan_io)
 
     print("\n📊 Calcolo metriche Git...")
-    gitm.compute_git_metrics(metrics, file_history, repo_path)
+    gitm.compute_git_metrics(metrics, repo_path)
 
     for class_id in metrics:
         loc = sm.calcola_loc_java(file_history.get(class_id, []))
         der.compute_derived(metrics, class_id, loc)
 
     # =========================
-    # COSTRUZIONE CSV FINALE
+    # COSTRUZIONE CSV
     # =========================
 
     dataset_rows = []
@@ -187,23 +191,39 @@ def create_dataset(directory_path, repo_path=None):
         row = {
             **entry,
 
+            # --- REVISION ---
             "revisions": m["revisions"],
+
+            # --- MAX ---
             "max_churn": m["max_churn"],
             "max_loc_added": m["max_loc_added"],
+
+            # --- AVERAGE ---
             "avg_churn": m["avg_churn"],
             "avg_loc_added": m["avg_loc_added"],
-            "fan_in": m["fan_in"],
+
+            # --- TOTAL (🔥 naming corretto) ---
+            "fan_in_total": m["fan_in"],
+            "loc_touched_total": m["loc_touched"],
+
+            # --- TEMPORAL ---
             "age": m["age"],
             "weighted_age": m["weighted_age"],
+
+            # --- GIT ---
             "nauth": m["nauth"],
             "nfix": m["nfix"],
             "ndev": m["ndev"],
+
+            # --- DERIVED ---
             "bug_density": m["bug_density"],
-            "ns": m["ns"],
-            "loc_touched": m["loc_touched"],
-            "revisions_density": m["revisions_density"],
             "fix": m["fix"],
 
+            # --- STRUCTURE ---
+            "ns": m["ns"],
+            "revisions_density": m["revisions_density"],
+
+            # LABEL
             "buggy": "NO"
         }
 
@@ -214,15 +234,14 @@ def create_dataset(directory_path, repo_path=None):
     return dataset_rows
 
 
+# ✅ ENTRY POINT
 if __name__ == "__main__":
 
-    target = os.path.abspath("./syncope_java_releases")
-    repo = os.path.abspath("./syncope")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    target = os.path.abspath(os.path.join(BASE_DIR, "..", "releases"))
+    repo = os.path.abspath(os.path.join(BASE_DIR, "..", "storm"))
 
     rows = create_dataset(target, repo)
 
     export_csv_rows(rows)
-
-    print("\n🔍 Sample:")
-    for r in rows[:5]:
-        print(r)

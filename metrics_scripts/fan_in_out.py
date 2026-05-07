@@ -1,72 +1,59 @@
-"""
-Data: 28/04/2026
-Autore: enrico_barbatano
-
-Refactoring della gestione delle metriche di dipendenza (Fan-Out e Fan-In).
-
-In questa versione:
-- è stata separata la logica di estrazione delle dipendenze (delegata al modulo helper)
-- è stato eliminato l'accesso diretto alla struttura globale 'metrics' per migliorare la modularità
-- il Fan-Out viene calcolato per singola release come numero di dipendenze distinte
-- il Fan-In è stato ridefinito come metrica cumulativa globale (Fan-In total),
-  costruita aggregando le dipendenze tra classi lungo tutte le release
-- ! sono stati eliminati i duplicati tramite uso di strutture dati di tipo set
-- è stata introdotta una struttura dati interna per mantenere lo storico delle dipendenze,
-  permettendo di calcolare la centralità architetturale delle classi
-
-Questo refactoring migliora:
-- riusabilità del codice
-- coerenza tra metriche
-- manutenibilità dell'architettura
-- correttezza metodologica rispetto alla letteratura sulla defect prediction
-"""
-
+import os
 from metrics_scripts import helper as hp
 
 class FanInOut:
     """
-    Classe per calcolare Fan-Out (per release)
-    e Fan-In Total (globale).
+    Calcola:
+    - Fan-Out (per release)
+    - Fan-In total (globale su tutte le release)
     """
 
     def __init__(self):
-        # Dizionario globale: classe -> set di classi che la usano
+        # mappa: nome_classe -> set(classi che la usano)
         self.fan_in_map = {}
+
+    def _normalize_class_name(self, class_path):
+        """
+        Estrae solo il nome della classe:
+        storm-core/src/.../Config.java -> Config
+        """
+        return class_path.split(os.sep)[-1].replace(".java", "")
 
     def compute_fan_out(self, file_content):
         """
-        Calcola Fan-Out per una classe (per release).
-        Usa helper per estrarre dipendenze.
-
-        Ritorna:
-        - numero di dipendenze
-        - set delle dipendenze (serve per Fan-In)
+        Calcola Fan-Out e restituisce anche le dipendenze
         """
-
         dependencies = hp.extract_project_dependencies(file_content)
 
-        fan_out_value = len(dependencies)
+        # ✅ pulizia finale (evita None o vuoti)
+        dependencies = {d.strip() for d in dependencies if d}
 
-        return fan_out_value, dependencies
+        return len(dependencies), dependencies
 
     def update_fan_in(self, class_id, dependencies):
         """
-        Aggiorna Fan-In total.
-
-        class_id = classe corrente
-        dependencies = classi che questa classe usa
+        Aggiorna Fan-In: chi usa chi
         """
+        current_class = self._normalize_class_name(class_id)
 
         for dep in dependencies:
 
-            if dep not in self.fan_in_map:
-                self.fan_in_map[dep] = set()
+            # ✅ normalizzi anche la dipendenza
+            dep_clean = dep.strip()
 
-            self.fan_in_map[dep].add(class_id)
+            if not dep_clean:
+                continue
+
+            if dep_clean not in self.fan_in_map:
+                self.fan_in_map[dep_clean] = set()
+
+            # ✅ aggiungiamo chi usa questa classe
+            self.fan_in_map[dep_clean].add(current_class)
 
     def get_fan_in_total(self, class_id):
         """
-        Restituisce il Fan-In total della classe.
+        Restituisce fan-in totale
         """
+        class_name = self._normalize_class_name(class_id)
 
-        return len(self.fan_in_map.get(class_id, set()))
+        return len(self.fan_in_map.get(class_name, set()))

@@ -4,40 +4,43 @@ from metrics_scripts import helper as hp
 from datetime import datetime
 
 
-def calcola_age_e_weighted_age(percorso_repo, percorso_file_relativo, tag_release, loc_touched):
-    """
-    Calcola l'Age (in mesi) e la Weighted Age di un file.
-    """
-    # 1. Trova la data della release attuale (in UNIX timestamp)
-    # Comando: git log -1 --format=%at <tag_release>
-    cmd_release_date = ["git", "log", "-1", "--format=%at", tag_release]
-    timestamp_release = hp.ottieni_timestamp_git(cmd_release_date, percorso_repo)
+def calcola_age_e_weighted_age(percorso_repo, percorso_file_relativo, churn):
 
-    # 2. Trova la data di creazione del file (il commit più vecchio per quel file)
-    # Comando: git log --reverse --format=%at -- <file>
-    cmd_creation_date = ["git", "log", "--reverse", "--format=%at", "--", percorso_file_relativo]
-    timestamp_creazione = hp.ottieni_timestamp_git(cmd_creation_date, percorso_repo)
+    try:
+        # ✅ primo commit (creazione file)
+        cmd_creation = [
+            "git", "log", "--reverse", "--format=%at",
+            "--", percorso_file_relativo
+        ]
 
-    # Gestione errori se il file non è tracciato o appena creato
-    if not timestamp_release or not timestamp_creazione:
+        timestamp_creazione = hp.ottieni_timestamp_git(cmd_creation, percorso_repo)
+
+        # ✅ ultimo commit (stato attuale file)
+        cmd_last = [
+            "git", "log", "-1", "--format=%at",
+            "--", percorso_file_relativo
+        ]
+
+        timestamp_ultimo = hp.ottieni_timestamp_git(cmd_last, percorso_repo)
+
+        if not timestamp_creazione or not timestamp_ultimo:
+            return {"Age_Mesi": 0, "Weighted_Age": 0}
+
+        if timestamp_creazione >= timestamp_ultimo:
+            return {"Age_Mesi": 0, "Weighted_Age": 0}
+
+        diff_sec = timestamp_ultimo - timestamp_creazione
+
+        age_mesi = diff_sec / 2592000.0
+        weighted_age = age_mesi * churn
+
+        return {
+            "Age_Mesi": round(age_mesi, 2),
+            "Weighted_Age": round(weighted_age, 2)
+        }
+
+    except Exception:
         return {"Age_Mesi": 0, "Weighted_Age": 0}
-
-    # Se il file è stato creato in questa esatta release, l'età è 0
-    if timestamp_creazione >= timestamp_release:
-        return {"Age_Mesi": 0, "Weighted_Age": 0}
-
-    # 3. Calcolo dell'Age in Mesi
-    # Differenza in secondi, convertita in mesi (approssimando 1 mese = 30 giorni = 2592000 secondi)
-    differenza_secondi = timestamp_release - timestamp_creazione
-    age_mesi = differenza_secondi / 2592000.0 
-
-    # 4. Calcolo della Weighted Age
-    weighted_age = age_mesi * loc_touched
-
-    return {
-        "Age_Mesi": round(age_mesi, 2), # Arrotondiamo a 2 decimali
-        "Weighted_Age": round(weighted_age, 2)
-    }
 
 # --- ESEMPIO DI UTILIZZO ---
 if __name__ == "__main__":
