@@ -24,13 +24,14 @@ def compute_git_metrics(metrics, file_history, repo_path):
             nfix = hp.get_nfix(repo_path, relative_path)
 
             metrics[class_id]["nauth"] = nauth
-            metrics[class_id]["ndev"] = nauth   # approssimazione
+            metrics[class_id]["nauth_total"] += nauth
             metrics[class_id]["nfix"] = nfix
+            metrics[class_id]["nfix_total"] += nfix
 
         except Exception:
             metrics[class_id]["nauth"] = 0
-            metrics[class_id]["ndev"] = 0
             metrics[class_id]["nfix"] = 0
+            metrics[class_id]["nfix_total"] = 0
 
 
 def update_age(metrics, class_id, repo_path, relative_path, release, churn):

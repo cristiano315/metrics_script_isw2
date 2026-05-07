@@ -106,6 +106,7 @@ def create_dataset(directory_path, repo_path=None):
                         "weighted_age": 0,
                         "nauth": 0,
                         "nfix": 0,
+                        "nfix_total": 0,
                         "revisions": 0,
                         "max_loc_added": 0,
                         "avg_churn": 0,
@@ -115,7 +116,8 @@ def create_dataset(directory_path, repo_path=None):
                         "ndev": 0,
                         "fix": 0,
                         "loc_touched": 0,
-                        "revisions_density": 0
+                        "revisions_density": 0,
+                        "nauth_total": 0,
                     }
 
                 with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -189,18 +191,18 @@ def create_dataset(directory_path, repo_path=None):
 
             "revisions": m["revisions"],
             "max_churn": m["max_churn"],
-            "max_loc_added": m["max_loc_added"],
+            "churn_total": m["Churn_Totale"],
             "avg_churn": m["avg_churn"],
-            "avg_loc_added": m["avg_loc_added"],
+            "loc_added_total": m["loc_added_total"],
             "fan_in": m["fan_in"],
             "age": m["age"],
             "weighted_age": m["weighted_age"],
             "nauth": m["nauth"],
             "nfix": m["nfix"],
-            "ndev": m["ndev"],
+            "nauth_total": m["nauth_total"],
             "bug_density": m["bug_density"],
             "ns": m["ns"],
-            "loc_touched": m["loc_touched"],
+            "loc_touched": m["loc_touched"],#sostituire con nfix total
             "revisions_density": m["revisions_density"],
             "fix": m["fix"],
 
