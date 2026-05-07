@@ -6,7 +6,7 @@
     """
 
 import difflib
-import helper as hp
+from metrics_scripts import helper as hp
 
 
 def calcola_churn_sloc(file_vecchio, file_nuovo):

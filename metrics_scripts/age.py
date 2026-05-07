@@ -1,6 +1,6 @@
 import subprocess
 import os
-import helper as hp
+from metrics_scripts import helper as hp
 from datetime import datetime
 
 

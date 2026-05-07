@@ -21,7 +21,7 @@ Questo refactoring migliora:
 - correttezza metodologica rispetto alla letteratura sulla defect prediction
 """
 
-import helper as hp
+from metrics_scripts import helper as hp
 
 class FanInOut:
     """

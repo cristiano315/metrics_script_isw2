@@ -26,7 +26,7 @@ Questo approccio:
 """
 
 import difflib
-import helper as hp
+from metrics_scripts import helper as hp
 def calculate_loc_added(old_file, new_file):
     
 
