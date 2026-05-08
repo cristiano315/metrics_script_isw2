@@ -30,6 +30,7 @@ def compute_git_metrics(metrics, file_history, repo_path):
 
         except Exception:
             metrics[class_id]["nauth"] = 0
+            metrics[class_id]["nfix_total"] = 0
             metrics[class_id]["nfix"] = 0
             metrics[class_id]["nfix_total"] = 0
 

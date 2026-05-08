@@ -14,6 +14,7 @@ from metrics_scripts import git_metrics as gitm
 
 
 metrics = {}
+tries = 1 
 
 
 # ✅ NORMALIZZAZIONE VERSIONI (LA PARTE IMPORTANTE)
@@ -35,7 +36,8 @@ def version_key(release_name):
         return [0]
 
 
-def export_csv_rows(rows, output_path="dataset.csv"):
+# ✅ CSV EXPORT
+def export_csv_rows(rows, output_path="../dataset.csv"):
 
     print("\n📁 Creazione CSV...")
 
@@ -73,6 +75,7 @@ def create_dataset(directory_path, repo_path=None):
     # =========================
     # SCAN RELEASE
     # =========================
+    attempt = 0
     for release in releases:
 
         current_folder = os.path.join(directory_path, release)
@@ -161,6 +164,9 @@ def create_dataset(directory_path, repo_path=None):
                     "loc_added": loc_added,
                     "fan_out": fan_out
                 })
+        attempt += 1
+        if attempt == 1:
+            break
 
     # =========================
     # POST PROCESS
@@ -184,23 +190,34 @@ def create_dataset(directory_path, repo_path=None):
 
     for entry in per_release_data:
         class_id = entry["class"]
-        m = metrics[class_id]
+        m = metrics[class_id]   
 
         row = {
             **entry,
 
             "revisions": m["revisions"],
             "max_churn": m["max_churn"],
-            "churn_total": m["Churn_Totale"],
+            # --- AVERAGE ---
             "avg_churn": m["avg_churn"],
+
+            # --- TOTAL (🔥 naming corretto) ---
+            "fan_in_total": m["fan_in"],
+            "churn_total": m["Churn_Totale"],
             "loc_added_total": m["loc_added_total"],
-            "fan_in": m["fan_in"],
+
+            # --- TEMPORAL ---
             "age": m["age"],
             "weighted_age": m["weighted_age"],
             "nauth": m["nauth"],
-            "nfix": m["nfix"],
             "nauth_total": m["nauth_total"],
+            "nfix": m["nfix"],
+
+            # --- DERIVED ---
             "bug_density": m["bug_density"],
+            "fix": m["fix"],
+            "nfix_total": m["nfix_total"],
+
+            # --- STRUCTURE ---
             "ns": m["ns"],
             "loc_touched": m["loc_touched"],#sostituire con nfix total
             "revisions_density": m["revisions_density"],
@@ -218,8 +235,10 @@ def create_dataset(directory_path, repo_path=None):
 
 if __name__ == "__main__":
 
-    target = os.path.abspath("./syncope_java_releases")
-    repo = os.path.abspath("./syncope")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    target = os.path.abspath(os.path.join(BASE_DIR, "syncope_java_releases"))
+    repo = os.path.abspath(os.path.join(BASE_DIR, "syncope"))
 
     rows = create_dataset(target, repo)
 
