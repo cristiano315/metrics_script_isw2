@@ -173,7 +173,7 @@ def process_all_releases():
                 print(f"[{release_name}] Dati estratti e salvati in memoria.\n")
             else:
                 print(f"[{release_name}] Saltato a causa di un errore del server.\n")
-        break
+
 
     # ==========================================
     # FASE FINALE: MERGE CON IL CSV ESISTENTE
