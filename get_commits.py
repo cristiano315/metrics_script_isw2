@@ -62,7 +62,7 @@ def clone_github_releases(repo_url, releases, base_dest_folder):
                 shutil.rmtree(git_dir, ignore_errors=True)
             
             # Eseguiamo la funzione di filtraggio per i file .java
-            keep_only_java_files(dest_folder)
+            #keep_only_java_files(dest_folder)
             
             print(f"✅ Release '{release}' pronta! Contiene solo file .java in: {dest_folder}\n")
                 

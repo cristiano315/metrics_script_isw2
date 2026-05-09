@@ -4,3 +4,5 @@ __pycache__/
 dataset.csv
 metrics_scripts/__pycache__/churn.cpython-313.pyc
 metrics_scripts/__pycache__/size.cpython-313.pyc
+.vscode/settings.json
+storico_smells_classi.csv
