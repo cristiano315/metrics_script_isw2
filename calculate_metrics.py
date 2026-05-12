@@ -1,3 +1,21 @@
+"""
+Data: 28/04/2026
+Autore: enrico_barbatano
+
+Main per la costruzione del dataset di metriche software a livello di classe.
+
+Ogni riga del CSV rappresenta una coppia:
+(project, release, class)
+
+La pipeline:
+1. ordina le release in base al timestamp reale del tag Git
+2. legge i file Java di ogni release
+3. calcola metriche locali della release
+4. aggiorna metriche cumulative fino a quella release
+5. calcola metriche Git coerenti con la release corrente
+6. genera il dataset finale senza leakage temporale
+"""
+
 import os
 import csv
 import re
@@ -9,15 +27,15 @@ from metrics_scripts.fan_in_out import FanInOut
 
 from metrics_scripts import evolution_metrics as evo
 from metrics_scripts import aggregate_metrics as agg
-from metrics_scripts import derived_metrics as der
 from metrics_scripts import git_metrics as gitm
+from metrics_scripts import helper as hp
 
 
-metrics = {}
-
-
-# ✅ VERSION SORT ROBUSTO
 def version_key(release_name):
+    """
+    Chiave numerica di fallback per ordinare release del tipo:
+    release_0.10.1 -> [0, 10, 1]
+    """
     try:
         v = release_name.replace("release_", "")
         v = re.split(r"[-_]", v)[0]
@@ -26,9 +44,29 @@ def version_key(release_name):
         return [0]
 
 
-# ✅ CSV EXPORT
-def export_csv_rows(rows, output_path="dataset.csv"):
+def release_time_key(release_name, repo_path):
+    """
+    Ordina le release usando il timestamp reale del tag Git corrispondente.
+    Se il tag non è risolvibile, usa come fallback version_key().
+    """
+    if not repo_path:
+        return version_key(release_name)
 
+    git_ref = hp.resolve_git_ref(repo_path, release_name)
+    if not git_ref:
+        return version_key(release_name)
+
+    ts = hp.get_ref_timestamp(repo_path, git_ref)
+    if ts is None:
+        return version_key(release_name)
+
+    return ts
+
+
+def export_csv_rows(rows, output_path="dataset.csv"):
+    """
+    Esporta il dataset in CSV.
+    """
     print("\n📁 Creazione CSV...")
 
     if not rows:
@@ -45,20 +83,36 @@ def export_csv_rows(rows, output_path="dataset.csv"):
     print(f"✅ CSV creato: {output_path}")
 
 
-# ✅ DATASET CREATION
 def create_dataset(directory_path, repo_path=None):
+    """
+    Costruisce il dataset finale.
 
+    Parametri:
+    - directory_path: cartella con le release estratte
+    - repo_path: repository Git reale (serve per metriche storiche)
+
+    Restituisce:
+    - lista di righe del dataset finale
+    """
+
+    # Stato cumulativo per classe
+    metrics = {}
+
+    # Mantiene l'ultima versione nota della classe per calcolare i delta
     file_history = {}
+
+    # Gestore dipendenze
     fan_io = FanInOut()
 
+    # Prendo solo cartelle release_*
     all_entries = os.listdir(directory_path)
-
     releases = [
         d for d in all_entries
         if os.path.isdir(os.path.join(directory_path, d)) and d.startswith("release_")
     ]
 
-    releases = sorted(releases, key=version_key)
+    # ✅ Ordinamento corretto: data reale del tag Git, non solo numero versione
+    releases = sorted(releases, key=lambda r: release_time_key(r, repo_path))
 
     print("\n✅ Release ordinate correttamente:")
     for r in releases:
@@ -66,16 +120,17 @@ def create_dataset(directory_path, repo_path=None):
 
     project_name = os.path.basename(repo_path) if repo_path else "unknown"
 
+    # Evita duplicati su (release, class)
     seen_pairs = set()
-    per_release_data = []
 
-    # =========================
-    # SCAN RELEASE
-    # =========================
+    # Output finale
+    dataset_rows = []
+
+    # ======================================================
+    # 1. PROCESSAMENTO RELEASE
+    # ======================================================
     for release in releases:
-
         current_folder = os.path.join(directory_path, release)
-
         print(f"\n📂 Processing release: {release}")
 
         for root, _, files in os.walk(current_folder):
@@ -85,164 +140,141 @@ def create_dataset(directory_path, repo_path=None):
                     continue
 
                 full_path = os.path.join(root, file_name)
+
+                # ID classe indipendente dalla release
                 class_id = os.path.relpath(full_path, current_folder)
 
-                old_lines = file_history.get(class_id, [])
-
-                # ✅ evita duplicati
                 pair_key = (release, class_id)
                 if pair_key in seen_pairs:
                     continue
                 seen_pairs.add(pair_key)
 
-                # INIT
+                # Inizializzazione metriche cumulative
                 if class_id not in metrics:
                     metrics[class_id] = {
-                        "Churn_Totale": 0,
+                        "churn_total": 0,
                         "max_churn": 0,
                         "loc_added_total": 0,
-                        "fan_in": 0,
-                        "age": 0,
-                        "weighted_age": 0,
-                        "nauth": 0,
-                        "nfix": 0,
                         "revisions": 0,
                         "max_loc_added": 0,
-                        "avg_churn": 0,
-                        "avg_loc_added": 0,
-                        "bug_density": 0,
-                        "ns": set(),
-                        "ndev": 0,
-                        "fix": 0,
-                        "loc_touched": 0,
-                        "revisions_density": 0
+                        "ns": set()
                     }
 
-                # LETTURA FILE
-                with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
+                # Lettura file corrente
+                with open(full_path, "r", encoding="utf-8", errors="ignore") as f:
                     new_lines = f.readlines()
 
-                # --- BASE ---
+                # Prima osservazione della classe?
+                is_first_observation = class_id not in file_history
+                old_lines = file_history.get(class_id, [])
+
+                # -------------------------
+                # METRICHE LOCALI ALLA RELEASE
+                # -------------------------
                 loc = sm.calcola_loc_java(new_lines)
-                current_churn = churn.calcola_churn_sloc(old_lines, new_lines)
-                loc_added = L_A.calculate_loc_added(old_lines, new_lines)
 
-                # --- EVOLUZIONE ---
-                evo.update_churn(metrics, class_id, current_churn)
-                evo.update_loc_added(metrics, class_id, loc_added)
-                evo.update_revisions(metrics, class_id, old_lines, new_lines)
+                # Prima osservazione = baseline, non modifica
+                if is_first_observation:
+                    current_churn = 0
+                    loc_added = 0
+                else:
+                    current_churn = churn.calcola_churn_sloc(old_lines, new_lines)
+                    loc_added = L_A.calculate_loc_added(old_lines, new_lines)
 
-                # --- FAN ---
+                # -------------------------
+                # AGGIORNAMENTO METRICHE EVOLUTIVE CUMULATIVE
+                # -------------------------
+                evo.update_churn(metrics, class_id, current_churn, is_first_observation)
+                evo.update_loc_added(metrics, class_id, loc_added, is_first_observation)
+                evo.update_revisions(metrics, class_id, old_lines, new_lines, is_first_observation)
+
+                # -------------------------
+                # FAN OUT / FAN IN TOTAL
+                # -------------------------
                 fan_out, deps = fan_io.compute_fan_out(new_lines)
                 fan_io.update_fan_in(class_id, deps)
 
-                # --- NS ---
+                # -------------------------
+                # NS (Number of Subsystems)
+                # -------------------------
                 subsystem = class_id.split(os.sep)[0]
                 metrics[class_id]["ns"].add(subsystem)
 
-                # --- AGE ---
-                if repo_path:
-                    gitm.update_age(
-                        metrics,
-                        class_id,
-                        repo_path,
-                        release,
-                        current_churn
-                    )
+                # -------------------------
+                # SNAPSHOT AGGREGATE FINO A QUESTA RELEASE
+                # -------------------------
+                agg_snapshot = agg.snapshot_aggregate_metrics(
+                    metrics,
+                    class_id,
+                    fan_io,
+                    new_lines
+                )
 
-                # ✅ aggiorna history DOPO
-                file_history[class_id] = new_lines
+                # -------------------------
+                # SNAPSHOT GIT FINO A QUESTA RELEASE
+                # -------------------------
+                git_snapshot = gitm.compute_git_metrics_for_release(
+                    repo_path,
+                    class_id,
+                    release,
+                    loc,
+                    agg_snapshot["loc_touched_total"]
+                )
 
-                # ✅ base dataset row
-                per_release_data.append({
+                # -------------------------
+                # COSTRUZIONE RIGA FINALE
+                # -------------------------
+                row = {
                     "project": project_name,
                     "release": release,
                     "class": class_id,
+
+                    # metriche locali alla release
                     "loc": loc,
                     "churn": current_churn,
                     "loc_added": loc_added,
-                    "fan_out": fan_out
-                })
+                    "fan_out": fan_out,
 
-    # =========================
-    # POST PROCESS
-    # =========================
+                    # metriche cumulative fino a questa release
+                    "revisions": agg_snapshot["revisions"],
+                    "max_churn": agg_snapshot["max_churn"],
+                    "max_loc_added": agg_snapshot["max_loc_added"],
+                    "avg_churn": agg_snapshot["avg_churn"],
+                    "avg_loc_added": agg_snapshot["avg_loc_added"],
+                    "fan_in_total": agg_snapshot["fan_in_total"],
+                    "loc_touched_total": agg_snapshot["loc_touched_total"],
+                    "revisions_density": agg_snapshot["revisions_density"],
+                    "ns": agg_snapshot["ns"],
 
-    print("\n📊 Calcolo metriche aggregate...")
-    agg.compute_aggregates(metrics, file_history, fan_io)
+                    # metriche Git / temporali fino a questa release
+                    "age": git_snapshot["age"],
+                    "weighted_age": git_snapshot["weighted_age"],
+                    "nauth": git_snapshot["nauth"],
+                    "nfix": git_snapshot["nfix"],
+                    "ndev": git_snapshot["ndev"],
 
-    print("\n📊 Calcolo metriche Git...")
-    gitm.compute_git_metrics(metrics, repo_path)
+                    # metriche derivate
+                    "bug_density": git_snapshot["bug_density"],
+                    "fix": git_snapshot["fix"],
 
-    for class_id in metrics:
-        loc = sm.calcola_loc_java(file_history.get(class_id, []))
-        der.compute_derived(metrics, class_id, loc)
+                    # label finale
+                    "buggy": "NO"
+                }
 
-    # =========================
-    # COSTRUZIONE CSV
-    # =========================
+                dataset_rows.append(row)
 
-    dataset_rows = []
-
-    for entry in per_release_data:
-        class_id = entry["class"]
-        m = metrics[class_id]
-
-        row = {
-            **entry,
-
-            # --- REVISION ---
-            "revisions": m["revisions"],
-
-            # --- MAX ---
-            "max_churn": m["max_churn"],
-            "max_loc_added": m["max_loc_added"],
-
-            # --- AVERAGE ---
-            "avg_churn": m["avg_churn"],
-            "avg_loc_added": m["avg_loc_added"],
-
-            # --- TOTAL (🔥 naming corretto) ---
-            "fan_in_total": m["fan_in"],
-            "loc_touched_total": m["loc_touched"],
-
-            # --- TEMPORAL ---
-            "age": m["age"],
-            "weighted_age": m["weighted_age"],
-
-            # --- GIT ---
-            "nauth": m["nauth"],
-            "nfix": m["nfix"],
-            "ndev": m["ndev"],
-
-            # --- DERIVED ---
-            "bug_density": m["bug_density"],
-            "fix": m["fix"],
-
-            # --- STRUCTURE ---
-            "ns": m["ns"],
-            "revisions_density": m["revisions_density"],
-
-            # LABEL
-            "buggy": "NO"
-        }
-
-        dataset_rows.append(row)
+                # ✅ aggiorno la history solo dopo aver calcolato i delta
+                file_history[class_id] = new_lines
 
     print("\n✅ Dataset completo generato")
-
     return dataset_rows
 
 
-# ✅ ENTRY POINT
 if __name__ == "__main__":
-
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
     target = os.path.abspath(os.path.join(BASE_DIR, "..", "releases"))
     repo = os.path.abspath(os.path.join(BASE_DIR, "..", "storm"))
 
     rows = create_dataset(target, repo)
-
     export_csv_rows(rows)
-    

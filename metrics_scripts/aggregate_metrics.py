@@ -1,35 +1,33 @@
 """
-Calcolo metriche aggregate globali
+Calcolo snapshot delle metriche aggregate fino alla release corrente.
 """
 
 from metrics_scripts import size as sm
 
-def compute_aggregates(metrics, file_history, fan_io):
 
-    for class_id in metrics:
-        revs = metrics[class_id]["revisions"]
-        loc = sm.calcola_loc_java(file_history.get(class_id, []))
+def snapshot_aggregate_metrics(metrics, class_id, fan_io, current_lines):
+    """
+    Restituisce le metriche aggregate della classe
+    nello stato corrente della pipeline.
+    """
 
-        # Average churn
-        metrics[class_id]["avg_churn"] = (
-            metrics[class_id]["Churn_Totale"] / revs if revs > 0 else 0
-        )
+    revs = metrics[class_id]["revisions"]
+    loc = sm.calcola_loc_java(current_lines)
 
-        # Average LOC Added
-        metrics[class_id]["avg_loc_added"] = (
-            metrics[class_id]["loc_added_total"] / revs if revs > 0 else 0
-        )
+    churn_total = metrics[class_id]["churn_total"]
+    loc_added_total = metrics[class_id]["loc_added_total"]
 
-        # Fan-In total
-        metrics[class_id]["fan_in"] = fan_io.get_fan_in_total(class_id)
+    avg_churn = churn_total / revs if revs > 0 else 0
+    avg_loc_added = loc_added_total / revs if revs > 0 else 0
 
-        # LOC Touched
-        metrics[class_id]["loc_touched"] = metrics[class_id]["Churn_Totale"]
-
-        # Revisions Density
-        metrics[class_id]["revisions_density"] = (
-            revs / loc if loc > 0 else 0
-        )
-
-        # NS → cardinalità
-        metrics[class_id]["ns"] = len(metrics[class_id]["ns"])
+    return {
+        "revisions": revs,
+        "max_churn": metrics[class_id]["max_churn"],
+        "max_loc_added": metrics[class_id]["max_loc_added"],
+        "avg_churn": avg_churn,
+        "avg_loc_added": avg_loc_added,
+        "fan_in_total": fan_io.get_fan_in_total(class_id),
+        "loc_touched_total": churn_total,
+        "revisions_density": (revs / loc if loc > 0 else 0),
+        "ns": len(metrics[class_id]["ns"])
+    }
