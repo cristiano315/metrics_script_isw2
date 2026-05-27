@@ -13,15 +13,15 @@ import requests
 # CONFIG
 # =====================================================================
 
-PROJECT_KEY = "STORM"
+PROJECT_KEY = "SYNCOPE"
 
-TICKETS_FILE = r"C:\Users\User\ISW2_Project\tickets.txt"
+TICKETS_FILE = r"C:\Uni\ISW2\Progetto\metrics_script\metrics_script_isw2\SYNCOPE_Tickets.txt"
 
 # Repository Git pulito completo di Apache Storm.
 # Deve essere una repo git valida.
-GIT_REPO_PATH = r"C:\Users\User\ISW2_Project\storm_labeling"
+GIT_REPO_PATH = r"C:\Uni\ISW2\Progetto\metrics_script\metrics_script_isw2\syncope"
 
-OUTPUT_DIR = r"C:\Users\User\ISW2_Project\labeling"
+OUTPUT_DIR = r"C:\Uni\ISW2\Progetto\metrics_script\metrics_script_isw2\syncope_labeling"
 
 TICKETS_METADATA_CSV = os.path.join(OUTPUT_DIR, "tickets_metadata.csv")
 TICKET_COMMITS_CSV = os.path.join(OUTPUT_DIR, "ticket_commits.csv")

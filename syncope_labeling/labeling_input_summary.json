@@ -1,0 +1,34 @@
+{
+  "tickets_input": 877,
+  "outputs": {
+    "tickets_metadata_csv": "C:\\Uni\\ISW2\\Progetto\\metrics_script\\metrics_script_isw2\\syncope_labeling\\tickets_metadata.csv",
+    "ticket_commits_csv": "C:\\Uni\\ISW2\\Progetto\\metrics_script\\metrics_script_isw2\\syncope_labeling\\ticket_commits.csv",
+    "ticket_java_files_csv": "C:\\Uni\\ISW2\\Progetto\\metrics_script\\metrics_script_isw2\\syncope_labeling\\ticket_commit_java_files.csv",
+    "jira_github_linkage_csv": "C:\\Uni\\ISW2\\Progetto\\metrics_script\\metrics_script_isw2\\syncope_labeling\\jira_github_linkage.csv",
+    "linkage_summary_json": "C:\\Uni\\ISW2\\Progetto\\metrics_script\\metrics_script_isw2\\syncope_labeling\\linkage_summary.json"
+  },
+  "linkage_summary": {
+    "tickets_total": 877,
+    "jira_found": 877,
+    "jira_found_rate_pct": 100.0,
+    "valid_bug_fixed": 877,
+    "valid_bug_fixed_rate_pct": 100.0,
+    "tickets_with_affected_versions": 836,
+    "affected_versions_rate_pct": 95.32,
+    "tickets_with_fix_versions": 868,
+    "fix_versions_rate_pct": 98.97,
+    "tickets_linked_to_git": 853,
+    "jira_git_linkage_rate_all_tickets_pct": 97.26,
+    "jira_git_linkage_rate_valid_bug_fixed_pct": 97.26,
+    "tickets_linked_to_java": 760,
+    "jira_java_linkage_rate_all_tickets_pct": 86.66,
+    "jira_java_linkage_rate_valid_bug_fixed_pct": 86.66,
+    "tickets_usable_for_szz": 760,
+    "usable_for_szz_rate_all_tickets_pct": 86.66,
+    "usable_for_szz_rate_valid_bug_fixed_pct": 86.66,
+    "total_commits_found": 8845,
+    "total_non_merge_commits_found": 8603,
+    "total_fix_like_commits_found": 2062,
+    "total_java_file_references": 87176
+  }
+}

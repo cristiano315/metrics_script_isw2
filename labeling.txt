@@ -1,0 +1,6 @@
+LABELING
+1) Prendere i ticket in cui ho affected version e fixed
+2) Fare szz su tutti i ticket in cui posso farlo, che non ho preso sopra
+3) Calcolare proportion
+4) Per tutti i ticket rimanenti usare le date se disponibili, altrimenti proportion per calcolare le versioni
+non prendo le versioni incubating perche' troppo dense di cambiamenti e sbilancerebbero il dataset

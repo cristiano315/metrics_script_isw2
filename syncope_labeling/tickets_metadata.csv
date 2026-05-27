@@ -1,0 +1,878 @@
+ticket,issue_type,status,resolution,created,resolutiondate,affected_versions,fix_versions,summary
+SYNCOPE-1963,Bug,Closed,Fixed,2026-04-20T15:38:28.017+0000,2026-04-21T08:37:29.949+0000,4.1.0,4.1.1;5.0.0,"Error while searching for user or group manager not null or null on user, group and any objects"
+SYNCOPE-1962,Bug,Closed,Fixed,2026-04-15T13:24:55.460+0000,2026-04-15T15:06:28.111+0000,4.1.0;4.1.1,4.1.1,Error during database upgrade procedure on Oracle 23
+SYNCOPE-1960,Bug,Closed,Fixed,2026-04-07T15:57:09.940+0000,2026-04-08T10:01:15.074+0000,4.0.5;4.1.0,4.0.6;4.1.1;5.0.0,"Cannot remove aux class from user, group or any object"
+SYNCOPE-1959,Bug,Closed,Fixed,2026-04-03T13:12:23.081+0000,2026-04-03T18:24:33.391+0000,4.1.0,4.1.1;5.0.0,Error while editing group relationships in admin console
+SYNCOPE-1957,Bug,Closed,Fixed,2026-03-26T15:17:02.720+0000,2026-03-27T18:49:50.218+0000,4.0.4;4.1.0-M0,4.0.5;4.1.0;5.0.0,"Wrong validation triggered while updating users, groups or any objects after auxiliary class change"
+SYNCOPE-1956,Bug,Closed,Fixed,2026-03-20T10:24:12.862+0000,2026-03-20T17:36:49.842+0000,4.0.4;4.0.5,4.0.5;4.1.0;5.0.0,Dropdown multivalue PlainAttr not updated via Console
+SYNCOPE-1945,Bug,Closed,Fixed,2026-01-22T09:41:47.963+0000,2026-03-27T15:06:32.749+0000,4.0.3;4.0.4,4.0.5;4.1.0;5.0.0,Tasks result not visible until the refresh is triggered
+SYNCOPE-1944,Bug,Closed,Fixed,2026-01-15T11:58:13.868+0000,2026-01-15T16:23:46.499+0000,3.0.15;4.0.3,4.0.4;4.1.0-M0,Membership derived attributes are not computed from membership plain attributes
+SYNCOPE-1943,Bug,Closed,Fixed,2026-01-15T10:58:35.698+0000,2026-01-16T08:26:03.669+0000,3.0.15;4.0.3,3.0.16;4.0.4;4.1.0-M0,French Canadian GUI failed with Groups contextual menu
+SYNCOPE-1942,Bug,Closed,Fixed,2025-12-30T09:13:20.595+0000,2026-01-19T10:50:13.404+0000,4.0.0-M1;4.0.0;4.0.1;4.0.2;4.0.3,4.0.4;4.1.0-M0,Menu localization doesn't work properly on admin console
+SYNCOPE-1937,Bug,Closed,Fixed,2025-12-05T13:58:41.351+0000,2025-12-06T06:36:42.055+0000,3.0.15;4.0.3,3.0.16;4.0.4;4.1.0-M0,User password history length is not correctly trimmed
+SYNCOPE-1936,Bug,Closed,Fixed,2025-12-01T15:28:06.177+0000,2025-12-03T06:33:48.340+0000,3.0.15;4.0.3,3.0.16;4.0.4;4.1.0-M0,WA: only SIGNATURE and CURRENT keys generated for OIDC
+SYNCOPE-1933,Bug,Closed,Fixed,2025-11-26T12:12:40.048+0000,2025-11-26T13:46:25.353+0000,3.0.15;4.0.3,3.0.16;4.0.4;4.1.0-M0,Console: only first dynamic group is shown
+SYNCOPE-1928,Bug,Closed,Fixed,2025-11-05T10:15:16.107+0000,2025-11-07T12:06:44.457+0000,3.0.14;4.0.2,4.0.3;4.1.0-M0,Session timeout not working for Console
+SYNCOPE-1925,Bug,Closed,Fixed,2025-10-29T11:51:02.703+0000,2025-10-30T08:01:54.581+0000,3.0.14;4.0.2,3.0.15;4.0.3;4.1.0-M0,Contextual menu stays open after modal window is closed
+SYNCOPE-1924,Bug,Closed,Fixed,2025-10-27T14:54:55.936+0000,2025-10-28T07:29:24.720+0000,3.0.14;4.0.2,3.0.15;4.0.3;4.1.0-M0,"Bug in retainAll, removeAll, and removeIf methods of PropagationByResource"
+SYNCOPE-1919,Bug,Closed,Fixed,2025-09-30T14:48:25.488+0000,2025-10-01T11:27:23.405+0000,4.0.1,4.0.2;4.1.0-M0,Notification Job occasionally stuck
+SYNCOPE-1915,Bug,Closed,Fixed,2025-09-23T12:22:18.471+0000,2025-09-23T12:24:06.759+0000,4.0.1,4.0.2;4.1.0-M0,Failure when running the Persistence Storage Upgrader against Oracle DBMS
+SYNCOPE-1913,Bug,Closed,Fixed,2025-09-17T08:51:46.343+0000,2025-09-17T10:39:55.841+0000,4.0.1;4.0.2,4.0.2;4.1.0-M0,Missing dependency to resolve inline Groovy in Syncope WA
+SYNCOPE-1912,Bug,Closed,Fixed,2025-09-12T08:40:15.028+0000,2025-09-15T10:33:09.633+0000,3.0.13;4.0.1,3.0.14;4.0.2;4.1.0-M0,Linked account password is not propagated on update
+SYNCOPE-1911,Bug,Closed,Fixed,2025-09-11T09:58:17.923+0000,2025-09-19T10:27:36.981+0000,3.0.13;4.0.1,4.0.2;4.1.0-M0,Case sensisitve search failing with Elasticsearch or OpenSearch
+SYNCOPE-1910,Bug,Closed,Fixed,2025-09-10T07:49:23.758+0000,2025-09-10T09:17:18.348+0000,4.0.1,4.0.2;4.1.0-M0,Tasks and Reports executed nevertheless inactive
+SYNCOPE-1905,Bug,Closed,Fixed,2025-08-12T15:27:55.584+0000,2025-08-13T09:33:22.547+0000,4.0.1,4.0.2;4.1.0-M0,Error while pulling a specific group (single pull) from resource
+SYNCOPE-1904,Bug,Closed,Fixed,2025-08-06T07:27:26.412+0000,2025-08-06T09:53:27.786+0000,3.0.12;4.0.0,3.0.13;4.0.1;4.1.0-M0,Console: cannot edit authentication.attributes under Keymaster > Parameters
+SYNCOPE-1902,Bug,Closed,Fixed,2025-08-05T09:38:49.906+0000,2025-08-05T11:09:10.121+0000,3.0.12;4.0.0,3.0.13;4.0.1;4.1.0-M0,Can't set Unauthorized Redirect URL in access policy via Console
+SYNCOPE-1899,Bug,Closed,Fixed,2025-07-29T06:49:57.623+0000,2025-07-29T07:07:09.325+0000,4.0.0,4.0.1;4.1.0-M0,Console: code editor does not persist changes
+SYNCOPE-1896,Bug,Closed,Fixed,2025-07-23T09:07:17.817+0000,2025-07-23T10:03:21.000+0000,3.0.12;4.0.0,3.0.13;4.0.1;4.1.0-M0,Audit: not serializable exception for ConnectorObject and Any instances
+SYNCOPE-1895,Bug,Closed,Fixed,2025-07-21T10:19:02.121+0000,2025-08-01T12:35:16.434+0000,3.0.12;4.0.0,3.0.13;4.0.1;4.1.0-M0,Console CSV export does not consider search filter
+SYNCOPE-1891,Bug,Closed,Fixed,2025-07-03T10:16:56.568+0000,2025-07-03T13:20:46.719+0000,3.0.12;4.0.0,3.0.13;4.0.1;4.1.0-M0,Missing mapped attribute setting for SAML2IdPAuthModuleConf
+SYNCOPE-1890,Bug,Closed,Fixed,2025-06-30T07:13:22.321+0000,2025-07-01T09:55:07.434+0000,4.0.0,4.0.1;4.1.0-M0,Configure max retry attempts for login with Syncope authentication module on WA
+SYNCOPE-1888,Bug,Closed,Fixed,2025-05-28T09:37:21.204+0000,2025-05-28T10:43:18.817+0000,3.0.12;4.0.0,3.0.13;4.0.1;4.1.0-M0,Console: change required property for specific inputs in policy configuration
+SYNCOPE-1884,Bug,Closed,Fixed,2025-05-19T10:35:00.137+0000,2025-05-19T12:34:47.516+0000,3.0.11;4.0.0-M1,3.0.12;4.0.0;4.1.0-M0,Errors with Encrypted plain values
+SYNCOPE-1883,Bug,Closed,Fixed,2025-05-14T14:22:47.394+0000,2025-05-15T10:36:09.146+0000,3.0.11;4.0.0-M1,3.0.12;4.0.0;4.1.0-M0,Google MFA authentication does not validate scratch codes
+SYNCOPE-1882,Bug,Closed,Fixed,2025-05-14T10:38:31.875+0000,2025-05-14T10:47:24.988+0000,4.0.0-M1,4.0.0;4.1.0-M0,Multivalue dropdown attributes show additional empty selectable value
+SYNCOPE-1881,Bug,Closed,Fixed,2025-05-13T10:07:47.037+0000,2025-05-13T10:32:17.639+0000,4.0.0-M1,4.0.0;4.1.0-M0,WA: SP Metadata not fetched from Core
+SYNCOPE-1878,Bug,Closed,Fixed,2025-05-12T08:48:25.039+0000,2025-05-12T09:07:54.334+0000,3.0.11;4.0.0-M1,3.0.12;4.0.0;4.1.0-M0,Priority propagation failing with NOT_ATTEMPTED
+SYNCOPE-1875,Bug,Closed,Fixed,2025-04-30T11:06:04.755+0000,2025-04-30T11:47:46.253+0000,3.0.11;4.0.0-M1,3.0.12;4.0.0;4.1.0-M0,SAML delegated authentication: metadata keeps getting re-generated
+SYNCOPE-1873,Bug,Closed,Fixed,2025-04-23T15:07:55.924+0000,2025-04-24T13:53:03.773+0000,3.0.11;4.0.0-M1;4.0.0;4.1.0-M0,3.0.12;4.0.0;4.1.0-M0,LocalDateTime fields not properly handled in BeanPanel
+SYNCOPE-1871,Bug,Closed,Fixed,2025-04-01T10:47:41.058+0000,2025-04-01T15:44:15.645+0000,3.0.11;4.0.0-M1,3.0.12;4.0.0,Realm selection shows only one of allowed sub-trees
+SYNCOPE-1867,Bug,Closed,Fixed,2025-03-06T09:40:43.766+0000,2025-03-06T15:07:45.305+0000,3.0.10;4.0.0-M0,3.0.11;4.0.0-M1,Prevent NPE when fetching realm entitlements to enforce authorization
+SYNCOPE-1864,Bug,Closed,Fixed,2025-02-06T09:11:21.506+0000,2025-02-17T06:13:51.698+0000,3.0.10;4.0.0-M0,3.0.11;4.0.0-M1,Unwanted password propagation after update on pull
+SYNCOPE-1862,Bug,Closed,Fixed,2025-02-04T16:55:58.733+0000,2025-02-05T18:16:54.861+0000,4.0.0-M0,4.0.0-M1,Attribute release policy does not show up in the actuator endpoint registeredServices
+SYNCOPE-1860,Bug,Closed,Fixed,2025-02-01T08:36:54.615+0000,2025-02-01T13:36:10.740+0000,3.0.10;4.0.0-M0,3.0.11;4.0.0-M1,Standalone WAR artifacts duplicates JAR dependencies
+SYNCOPE-1858,Bug,Closed,Fixed,2025-01-28T08:27:43.883+0000,2025-01-29T15:00:39.062+0000,3.0.10,3.0.11;4.0.0-M1,Macro operation with dropdown form property without default value generates stacktrace
+SYNCOPE-1857,Bug,Closed,Fixed,2025-01-23T11:38:11.868+0000,2025-01-29T11:30:40.662+0000,4.0.0-M0,4.0.0-M1,Unwanted Oracle persistence context enforce when Oracle driver is in classpath
+SYNCOPE-1856,Bug,Closed,Fixed,2025-01-21T16:59:37.179+0000,2025-01-23T13:52:35.147+0000,3.0.10;4.0.0-M0,3.0.11;4.0.0-M1,Administrator can update and delete realms outside of the granted subtree
+SYNCOPE-1851,Bug,Closed,Fixed,2025-01-02T16:42:22.246+0000,2025-01-03T09:48:46.144+0000,3.0.10;4.0.0-M0,3.0.11;4.0.0-M1,NullPointerExeption for Date fields in Macro execution forms
+SYNCOPE-1850,Bug,Closed,Fixed,2024-12-31T15:12:25.629+0000,2025-01-03T08:08:43.666+0000,4.0.0-M0,4.0.0-M1,Concurrent execution of a given task shall not be allowed
+SYNCOPE-1849,Bug,Closed,Fixed,2024-12-31T08:38:45.054+0000,2024-12-31T14:13:48.622+0000,3.0.10;4.0.0-M0,3.0.11;4.0.0-M1,NullPointerException when logging into Console
+SYNCOPE-1848,Bug,Closed,Fixed,2024-12-17T08:41:27.066+0000,2024-12-17T10:27:50.193+0000,3.0.9,3.0.10;4.0.0-M0,Can't read user memberships with SCIM search endpoint
+SYNCOPE-1846,Bug,Closed,Fixed,2024-12-02T13:51:48.391+0000,2024-12-10T07:16:11.060+0000,3.0.10,3.0.10;4.0.0-M0,Cannot create more than one relationship at a time from the console
+SYNCOPE-1840,Bug,Closed,Fixed,2024-11-06T16:10:13.612+0000,2024-11-07T15:59:46.037+0000,3.0.9,3.0.10;4.0.0-M0,Cannot define the same form property for different Macro tasks
+SYNCOPE-1839,Bug,Closed,Fixed,2024-11-05T09:39:44.433+0000,2024-11-05T09:43:11.476+0000,3.0.9,3.0.10;4.0.0-M0,In Console Commands cannot be removed from Macro Tasks
+SYNCOPE-1838,Bug,Closed,Fixed,2024-11-05T08:55:06.108+0000,2024-11-05T09:43:01.916+0000,3.0.9,3.0.10;4.0.0-M0,Group owners cannot log into Console
+SYNCOPE-1837,Bug,Closed,Fixed,2024-11-04T11:30:52.129+0000,2024-11-06T13:21:36.865+0000,3.0.9,3.0.10;4.0.0-M0,"Resources, Relationships and AuxClasses are deleted after SCIM PUT method invocation"
+SYNCOPE-1833,Bug,Closed,Fixed,2024-10-21T09:31:00.465+0000,2024-10-21T09:38:26.175+0000,3.0.9,3.0.10,Non-compliant SCIM payload returned when user extension is defined
+SYNCOPE-1831,Bug,Closed,Fixed,2024-10-18T06:58:47.428+0000,2024-10-18T14:15:22.884+0000,3.0.8,3.0.9;4.0.0-M0,SCIM general configuration can not be updated
+SYNCOPE-1828,Bug,Closed,Fixed,2024-10-04T07:21:25.756+0000,2024-10-04T10:31:43.096+0000,3.0.8,3.0.9;4.0.0-M0,Can't open the profiles tab in WA page if one of the fields is null
+SYNCOPE-1825,Bug,Closed,Fixed,2024-08-02T09:35:40.835+0000,2024-08-02T10:41:12.012+0000,3.0.8,3.0.9,Database schema not set on OpenJPA even if configured by properties
+SYNCOPE-1820,Bug,Closed,Fixed,2024-05-09T13:32:21.956+0000,2024-05-09T15:19:56.546+0000,3.0.6;3.0.7;4.0.0-M0,3.0.7;4.0.0-M0,Console label not working with multivalue schema
+SYNCOPE-1817,Bug,Closed,Fixed,2024-04-18T07:36:54.105+0000,2024-04-18T09:29:41.094+0000,3.0.6,3.0.7;4.0.0-M0,Standalone: components not available
+SYNCOPE-1813,Bug,Closed,Fixed,2024-04-08T11:11:48.073+0000,2024-04-12T09:58:29.480+0000,3.0.6,3.0.7;4.0.0-M0,Wrong provisioning result shown after batch operation
+SYNCOPE-1812,Bug,Closed,Fixed,2024-04-04T14:00:31.742+0000,2024-04-05T06:31:45.491+0000,3.0.6,3.0.7;4.0.0-M0,Can't perform case-sensitive search using MariaDB
+SYNCOPE-1808,Bug,Closed,Fixed,2024-02-29T16:11:28.700+0000,2024-03-01T07:59:59.909+0000,3.0.6,3.0.7;4.0.0-M0,Wrong location for group in ResourceTypes SCIM service
+SYNCOPE-1806,Bug,Closed,Fixed,2024-02-21T11:46:16.370+0000,2024-03-06T12:46:42.379+0000,2.1.13;3.0.6,3.0.7;4.0.0-M0,Overlapping dynamic realms don't get updated
+SYNCOPE-1803,Bug,Closed,Fixed,2024-02-16T14:03:32.548+0000,2024-02-19T10:49:29.263+0000,3.0.6,3.0.7;4.0.0-M0,Can't remove multivalue membership plain schema value from console
+SYNCOPE-1800,Bug,Closed,Fixed,2024-01-04T08:45:54.389+0000,2024-01-04T09:57:19.468+0000,3.0.6,3.0.7;4.0.0-M0,FIQL comparison espressions with single quote cause JSONB search to fail
+SYNCOPE-1798,Bug,Closed,Fixed,2023-12-27T11:17:02.134+0000,2023-12-27T11:38:51.488+0000,3.0.6,3.0.7;4.0.0-M0,Incorrect descendant Realms found by Elasticsearch / OpenSearch
+SYNCOPE-1794,Bug,Closed,Fixed,2023-12-14T08:44:16.325+0000,2023-12-14T13:55:00.894+0000,3.0.5,3.0.6;4.0.0-M0,SAML: Authentication issue instant is too old or in the future
+SYNCOPE-1793,Bug,Closed,Fixed,2023-12-07T15:46:17.387+0000,2023-12-09T14:24:46.077+0000,3.0.5,3.0.6;4.0.0-M0,A logged in user cannot associate/deassociate a resource to himself
+SYNCOPE-1792,Bug,Closed,Fixed,2023-12-05T09:46:15.572+0000,2023-12-08T15:32:51.402+0000,3.0.5,3.0.6;4.0.0-M0,Error in console while editing conf parameter with values containing numbers
+SYNCOPE-1791,Bug,Closed,Fixed,2023-11-27T15:28:51.321+0000,2023-12-12T16:22:44.876+0000,3.0.5,3.0.6;4.0.0-M0,Unable to save audit config for CUSTOM event in the console
+SYNCOPE-1790,Bug,Closed,Fixed,2023-11-17T13:59:12.954+0000,2023-11-18T07:22:04.599+0000,3.0.5,3.0.6;4.0.0-M0,Swagger filtered GET returns multiple Users/AnyObjects instead of one
+SYNCOPE-1785,Bug,Closed,Fixed,2023-10-28T05:04:24.895+0000,2023-10-28T05:36:12.368+0000,3.0.5,3.0.6;4.0.0-M0,Display rows changes not effective until reload
+SYNCOPE-1778,Bug,Closed,Fixed,2023-10-03T07:15:50.316+0000,2023-10-03T10:17:33.995+0000,3.0.5,3.0.6;4.0.0-M0,Reset password requires double click in order to provide username
+SYNCOPE-1777,Bug,Closed,Fixed,2023-09-28T11:22:48.225+0000,2023-09-28T14:58:44.844+0000,3.0.4,3.0.5;4.0.0-M0,DelegatedAdministrationException is occasionally thrown during Pull Task execution
+SYNCOPE-1774,Bug,Closed,Fixed,2023-08-16T15:55:26.864+0000,2023-08-18T07:53:53.049+0000,3.0.4;4.0.0-M0,3.0.5;4.0.0-M0,Admin console does not recognize parameter type
+SYNCOPE-1770,Bug,Closed,Fixed,2023-07-10T14:21:22.860+0000,2023-07-11T14:01:23.433+0000,3.0.4,3.0.5;4.0.0-M0,Errors upon Core restart after adding domain
+SYNCOPE-1767,Bug,Closed,Fixed,2023-06-21T13:55:59.494+0000,2023-06-22T10:49:35.926+0000,2.1.14;3.0.3,2.1.15;3.0.4;4.0.0-M0,When searching Groups with GROUP_MEMBER condition only Users are considered
+SYNCOPE-1766,Bug,Resolved,Fixed,2023-06-16T09:17:52.554+0000,2023-06-16T10:30:22.794+0000,2.1.14,2.1.15,Can't assign Virtual Schema to AnyTypeClass by console
+SYNCOPE-1764,Bug,Closed,Fixed,2023-06-08T14:32:42.848+0000,2023-09-06T03:42:12.815+0000,3.0.3,3.0.5;4.0.0-M0,Connector capabilities and/or configuration are not updated in cluster environments
+SYNCOPE-1763,Bug,Closed,Fixed,2023-06-08T10:48:29.938+0000,2023-06-16T07:02:24.988+0000,3.0.4,3.0.4;4.0.0-M0,Constant increase of open files after upgrade to CXF 3.6.0
+SYNCOPE-1761,Bug,Closed,Fixed,2023-05-30T14:01:17.100+0000,2023-05-31T14:39:57.050+0000,3.0.3,3.0.4;4.0.0-M0,"As admin, searching Users, Groups or Any Objects performs full Realm tree traversal"
+SYNCOPE-1757,Bug,Closed,Fixed,2023-05-05T20:23:10.019+0000,2023-05-09T06:21:55.561+0000,2.1.14;3.0.3,3.0.4;4.0.0-M0,Misalignment between SyncTokenSerializer and SyncTokenDeserializer in case of token given as a clear string
+SYNCOPE-1756,Bug,Closed,Fixed,2023-05-05T09:55:54.277+0000,2023-05-05T10:26:30.492+0000,2.1.13,2.1.14,Add an id_token_hint parameter to the logout provider url for OIDC
+SYNCOPE-1755,Bug,Closed,Fixed,2023-05-05T09:43:11.640+0000,2023-05-05T10:42:15.716+0000,3.0.3,2.1.14;3.0.4;4.0.0-M0,NullPointer exception during PULL delete operation in case of NO_MATCH
+SYNCOPE-1750,Bug,Closed,Fixed,2023-04-06T13:56:18.330+0000,2023-04-12T04:47:34.423+0000,2.1.13;3.0.2,2.1.14;3.0.3;4.0.0-M0,Password policy not enforced if password is not stored in Syncope
+SYNCOPE-1749,Bug,Closed,Fixed,2023-04-03T05:39:26.326+0000,2023-04-04T08:53:57.934+0000,2.1.13;3.0.2,2.1.14;3.0.3;4.0.0-M0,Incorrect Dynamic Group Membership Condition save from Console
+SYNCOPE-1744,Bug,Closed,Fixed,2023-03-16T15:05:08.259+0000,2026-04-21T08:37:19.291+0000,3.0.1,4.0.6;4.1.1;5.0.0,Empty value in template when notification is sent on DELETE event
+SYNCOPE-1742,Bug,Closed,Fixed,2023-03-16T11:58:04.997+0000,2023-03-17T15:33:51.021+0000,3.0.2,3.0.3;4.0.0-M0,Exception in console when defining a date for delegation
+SYNCOPE-1739,Bug,Closed,Fixed,2023-03-08T11:29:27.206+0000,2023-03-08T16:02:36.702+0000,3.0.2,3.0.3;4.0.0-M0,Wrong volume mapping for source code in fit docker profile
+SYNCOPE-1737,Bug,Closed,Fixed,2023-03-02T12:12:06.156+0000,2023-03-04T07:05:35.266+0000,3.0.2,3.0.3;4.0.0-M0,Cannot specifiy attribute mapping for AttributeRelease policies
+SYNCOPE-1736,Bug,Closed,Fixed,2023-02-28T11:29:45.036+0000,2023-03-04T07:05:40.972+0000,2.1.13;3.0.2,3.0.3;4.0.0-M0,Templates do not set the latest additions to Users and Groups
+SYNCOPE-1735,Bug,Closed,Fixed,2023-02-24T09:40:53.199+0000,2023-02-24T10:42:36.532+0000,3.0.2,3.0.3;4.0.0-M0,Can't retrieve all policies during Realm create and update
+SYNCOPE-1734,Bug,Closed,Fixed,2023-02-23T16:13:40.777+0000,2023-02-24T09:12:19.352+0000,2.1.13;3.0.2,2.1.14;3.0.3;4.0.0-M0,Elasticsearch not updated for uidOnCreate
+SYNCOPE-1731,Bug,Closed,Fixed,2023-02-21T10:53:45.467+0000,2023-02-21T12:18:18.910+0000,2.1.13;3.0.2,2.1.14;3.0.3;4.0.0-M0,Performance issue with multiple any type classes
+SYNCOPE-1730,Bug,Closed,Fixed,2023-02-13T07:58:25.638+0000,2023-02-13T10:44:10.455+0000,3.0.1,3.0.2;4.0.0-M0,Standalone on Windows: Console Topology page does not show any Connector or Resource
+SYNCOPE-1727,Bug,Closed,Fixed,2023-02-04T08:53:27.200+0000,2023-02-04T10:50:20.985+0000,2.1.13;3.0.1,3.0.2;4.0.0-M0,Elasticsearch cannot find anything under given Realm in case of parent update
+SYNCOPE-1726,Bug,Closed,Fixed,2023-01-25T07:12:00.423+0000,2023-02-01T14:46:53.772+0000,3.0.1,3.0.2;4.0.0-M0,WA does not always get configuration from Core on startup
+SYNCOPE-1725,Bug,Closed,Fixed,2023-01-23T12:54:15.608+0000,2023-01-23T14:13:18.708+0000,3.0.1,3.0.2;4.0.0-M0,Error when searching with high number of OR or AND conditions with Elasticsearch
+SYNCOPE-1715,Bug,Closed,Fixed,2022-12-16T09:35:40.910+0000,2022-12-16T09:42:07.009+0000,3.0.0,3.0.1,Cannot update Audit settings via Console
+SYNCOPE-1712,Bug,Closed,Fixed,2022-11-17T11:26:09.796+0000,2022-11-17T11:27:58.141+0000,3.0.0,3.0.1,Invalid HTTP method: PATCH with JDK 17
+SYNCOPE-1711,Bug,Closed,Fixed,2022-11-16T15:09:01.522+0000,2022-11-17T10:35:38.609+0000,3.0.0,3.0.1,WA Docker image not working properly
+SYNCOPE-1707,Bug,Closed,Fixed,2022-10-31T06:46:14.040+0000,2022-10-31T10:45:05.904+0000,3.0.0-M2;3.0.0-M1,3.0.0,Failure when attempting to add Plain Schema via Console
+SYNCOPE-1706,Bug,Closed,Fixed,2022-10-28T14:54:52.768+0000,2022-10-29T05:14:44.033+0000,2.1.12;3.0.0-M1,2.1.13;3.0.0,Notification task not created with event category PROPAGATION
+SYNCOPE-1704,Bug,Closed,Fixed,2022-10-26T13:49:02.790+0000,2022-10-26T15:20:03.970+0000,2.1.12;3.0.0-M1,2.1.13;3.0.0-M2,Policy update not affecting External Resources
+SYNCOPE-1701,Bug,Closed,Fixed,2022-10-18T14:39:49.358+0000,2022-10-18T15:05:10.213+0000,3.0.0-M0;3.0.0-M1,3.0.0-M2,unable to build syncope-sra from Maven Archetype
+SYNCOPE-1693,Bug,Closed,Fixed,2022-08-26T19:29:33.413+0000,2022-09-01T10:56:32.122+0000,2.1.12;3.0.0-M0,2.1.13;3.0.0-M1,Must change password submit on console leads to errors
+SYNCOPE-1691,Bug,Closed,Fixed,2022-08-03T06:13:23.787+0000,2022-08-03T12:17:41.604+0000,2.1.11,2.1.12;3.0.0-M0,Schema labels not used for attribute column headers
+SYNCOPE-1690,Bug,Closed,Fixed,2022-07-14T10:28:47.356+0000,2022-07-14T10:36:29.299+0000,3.0.0-M0,3.0.0-M0,NPE when add search condition in topology explore resource
+SYNCOPE-1686,Bug,Closed,Fixed,2022-06-28T15:05:16.013+0000,2024-12-02T13:09:12.000+0000,2.1.11;3.0.9,3.0.10;4.0.0-M0,relationship refering to object itself
+SYNCOPE-1684,Bug,Closed,Fixed,2022-06-23T15:38:39.152+0000,2022-06-27T16:03:16.393+0000,3.0.0-M0,3.0.0-M0,NotFoundException thrown when enabled/disabled audit from console
+SYNCOPE-1683,Bug,Closed,Fixed,2022-06-21T09:39:26.302+0000,2022-06-21T12:30:21.321+0000,2.1.11;3.0.0-M0,2.1.12;3.0.0-M0,Show connector overridden properties in resource wizard in tabular topology during create
+SYNCOPE-1677,Bug,Closed,Fixed,2022-05-18T15:23:23.067+0000,2022-05-19T07:33:50.532+0000,3.0.0-M0,3.0.0-M0,Code editor in Console wraps short lines
+SYNCOPE-1676,Bug,Closed,Fixed,2022-05-12T07:45:37.478+0000,2022-05-12T07:57:02.920+0000,3.0.0-M0,3.0.0-M0,Wrong header color in reset password enduser
+SYNCOPE-1672,Bug,Closed,Fixed,2022-04-06T10:28:21.230+0000,2022-04-06T11:37:30.142+0000,3.0.0-M0,3.0.0-M0,"Can't retrieve Java classes when add java implementation for Password Rule, Account Rule and Reportlet on Console"
+SYNCOPE-1671,Bug,Closed,Fixed,2022-04-06T07:19:47.613+0000,2022-04-06T08:50:47.399+0000,2.1.11,2.1.12;3.0.0-M0,Wrong JobDelegate column name in scheduled task table
+SYNCOPE-1664,Bug,Closed,Fixed,2022-02-24T09:32:40.157+0000,2022-02-25T08:51:58.467+0000,2.1.10;3.0.0-M0,2.1.11;3.0.0-M0,JSONB: Inconsistent search query when is used a pull correlation rule
+SYNCOPE-1663,Bug,Closed,Fixed,2022-02-05T11:16:34.850+0000,2022-02-05T16:02:37.317+0000,2.1.10,2.1.11;3.0.0-M0,Value errors in FIQL expressions lead to empty result rather than error messages
+SYNCOPE-1660,Bug,Closed,Fixed,2022-01-27T13:51:12.514+0000,2022-01-27T15:09:02.576+0000,2.1.10,2.1.11;3.0.0-M0,Anonymous requests does not store domain and delegatedBy information in the auth context
+SYNCOPE-1659,Bug,Closed,Fixed,2022-01-20T16:03:18.567+0000,2022-03-10T07:32:52.045+0000,2.1.10,2.1.11;3.0.0-M0,Read-only flag not working in console on virtual attributes
+SYNCOPE-1657,Bug,Closed,Fixed,2022-01-17T11:04:22.874+0000,2022-02-04T10:07:02.098+0000,2.1.10,2.1.11;3.0.0-M0,Unable to define a new name for a cloned resource
+SYNCOPE-1656,Bug,Closed,Fixed,2022-01-12T16:25:20.368+0000,2022-03-17T13:06:38.838+0000,2.1.10,2.1.11;3.0.0-M0,Remediations are not created on update while pulling
+SYNCOPE-1654,Bug,Closed,Fixed,2021-11-29T09:27:39.580+0000,2021-11-29T09:51:23.688+0000,2.1.10,2.1.11;3.0.0-M0,Inconsistent Realm search FIQL expressions between JPA and Elasticsearch engines
+SYNCOPE-1651,Bug,Closed,Fixed,2021-11-24T09:46:16.203+0000,2021-11-24T10:04:37.691+0000,2.1.10,2.1.11;3.0.0-M0,Invalid users can be specified in X-Syncope-Delegated-By
+SYNCOPE-1650,Bug,Closed,Fixed,2021-11-12T15:39:19.426+0000,2021-11-12T17:03:05.503+0000,2.1.10,2.1.11;3.0.0-M0,Default Account Rule: pattern is ignored
+SYNCOPE-1649,Bug,Closed,Fixed,2021-11-10T13:42:36.839+0000,2021-11-10T13:56:40.479+0000,2.1.10,2.1.11;3.0.0-M0,Reports: XML character escaping applied to CSV output
+SYNCOPE-1648,Bug,Closed,Fixed,2021-11-05T07:45:55.282+0000,2021-11-05T09:07:37.140+0000,2.1.10,2.1.11;3.0.0-M0,Search with PostgreSQL JSONB fails for FIQL like 'username!=value'
+SYNCOPE-1644,Bug,Closed,Fixed,2021-09-28T10:19:40.718+0000,2021-09-28T10:59:58.529+0000,2.1.9,2.1.10;3.0.0-M0,Task run failure with multi-node deployments
+SYNCOPE-1643,Bug,Closed,Fixed,2021-09-17T09:47:01.226+0000,2021-09-17T12:22:48.583+0000,2.1.9,2.1.10;3.0.0-M0,Update of Realm doesn't trigger provisioning for users
+SYNCOPE-1640,Bug,Closed,Fixed,2021-08-12T10:39:00.045+0000,2021-08-14T18:45:12.376+0000,2.0.16;2.1.9,2.1.10;3.0.0-M0,Uncaught exception when creating Enum schema
+SYNCOPE-1635,Bug,Closed,Fixed,2021-05-20T11:36:23.013+0000,2021-05-21T04:21:45.698+0000,2.1.6;2.1.9,2.1.10;3.0.0-M0,"Create Rules with configurations for each domain, make creation thread safe"
+SYNCOPE-1634,Bug,Closed,Fixed,2021-05-18T13:15:32.853+0000,2021-05-18T15:57:49.918+0000,2.1.6;2.1.9,2.1.10;3.0.0-M0,Group Owner update/delete action doesn't trigger propagation action
+SYNCOPE-1629,Bug,Closed,Fixed,2021-04-15T12:34:30.720+0000,2021-04-15T13:05:25.742+0000,2.1.9,2.1.10;3.0.0-M0,JPA JSON: Date conversion pattern including slashes leads to incorrect search results
+SYNCOPE-1628,Bug,Closed,Fixed,2021-04-14T08:28:06.672+0000,2021-04-14T09:49:27.434+0000,2.0.16;2.1.9,2.1.10;3.0.0-M0,Console goes NPE when Connector fails to initialize
+SYNCOPE-1627,Bug,Closed,Fixed,2021-04-12T12:15:31.801+0000,2021-04-13T04:45:56.000+0000,,,syncope-installer-2.0.16.jar actually links to syncope-installer-2.0.16-uber.jar
+SYNCOPE-1626,Bug,Closed,Fixed,2021-04-02T15:54:29.100+0000,2021-04-05T07:40:34.801+0000,,3.0.0-M0,rename package org.apache.syncope.common.keymaster.client.zookeper to zookeeper
+SYNCOPE-1623,Bug,Closed,Fixed,2021-03-19T03:24:46.918+0000,2021-03-19T07:49:41.478+0000,,,Hosted Javadoc not available
+SYNCOPE-1622,Bug,Closed,Fixed,2021-03-17T15:46:59.396+0000,2021-03-17T16:52:56.001+0000,2.0.16;2.1.8,2.0.17;2.1.9;3.0.0-M0,ConnId Connectors not pooled with Resource override
+SYNCOPE-1620,Bug,Closed,Fixed,2021-03-04T07:56:56.194+0000,2021-03-04T09:02:51.956+0000,2.0.16;2.1.8,2.0.17;2.1.9;3.0.0-M0,JWT validation requires exp and nbf claims
+SYNCOPE-1619,Bug,Closed,Fixed,2021-02-26T11:32:24.344+0000,2021-02-26T15:40:05.553+0000,2.1.8,2.1.9;3.0.0-M0,SearchPanel should display the input field based on the type of the selected property
+SYNCOPE-1616,Bug,Closed,Fixed,2021-02-05T11:34:47.215+0000,2021-02-05T11:44:03.437+0000,2.1.7;2.1.8,2.1.9;3.0.0-M0,CSV and single push / pull concurrency issues
+SYNCOPE-1613,Bug,Closed,Fixed,2021-01-26T13:26:18.420+0000,2021-01-26T14:43:39.508+0000,2.1.3,2.1.9;3.0.0-M0,"startAt date is set to start field for SCHEDULED, PULL and PUSH TaskTOs"
+SYNCOPE-1612,Bug,Closed,Fixed,2021-01-25T15:02:39.485+0000,2021-02-16T08:31:11.249+0000,3.0.0-M0,3.0.0-M0,"""Operation is taking too long"" warning while adding/editing a connector/resource"
+SYNCOPE-1607,Bug,Closed,Fixed,2021-01-08T15:04:15.597+0000,2021-01-08T15:21:52.859+0000,2.0.16;2.1.8,2.0.17;2.1.9;3.0.0-M0,Console Page preferences not working
+SYNCOPE-1606,Bug,Closed,Fixed,2020-12-22T14:25:16.999+0000,2020-12-22T16:48:18.448+0000,2.1.8,2.1.9;3.0.0-M0,Syncope returns an exception when doing two sequential operations for the same user from the toggle panel
+SYNCOPE-1605,Bug,Closed,Fixed,2020-12-01T11:27:47.163+0000,2020-12-02T08:25:49.517+0000,2.1.7;3.0.0-M0,2.1.8;3.0.0-M0,Propagation task not generated if update involves only ConnObjectLink
+SYNCOPE-1604,Bug,Closed,Fixed,2020-11-24T16:35:21.363+0000,2020-11-25T15:37:34.629+0000,2.1.7,2.1.8;3.0.0-M0,AjaxDateTimePicker doesn't handle some 1900 dates the right way
+SYNCOPE-1603,Bug,Closed,Fixed,2020-11-19T13:42:31.433+0000,2020-11-19T14:14:00.062+0000,2.1.7,2.1.8;3.0.0-M0,PushCorrelationRule not used for DELETE on External Resources
+SYNCOPE-1602,Bug,Closed,Fixed,2020-11-18T15:53:34.824+0000,2020-11-18T16:33:19.796+0000,2.1.7,2.1.8;3.0.0-M0,ConnObjectKey attribute values not included with DefaultPushCorrelationRule
+SYNCOPE-1601,Bug,Closed,Fixed,2020-11-17T14:38:32.513+0000,2020-11-17T15:15:59.058+0000,2.1.7,2.1.8;3.0.0-M0,Propagation not always triggered after form submit in User Requests
+SYNCOPE-1598,Bug,Closed,Fixed,2020-11-05T09:52:35.441+0000,2020-11-05T11:18:10.661+0000,2.0.16;2.1.7,2.1.8;3.0.0-M0,Create or update user with two+ memberships for the same group are not prevented
+SYNCOPE-1596,Bug,Closed,Fixed,2020-10-26T12:31:38.186+0000,2020-10-26T12:53:20.851+0000,2.1.7,2.1.8,Console: read-only attributes not rendered as disabled
+SYNCOPE-1590,Bug,Closed,Fixed,2020-09-14T13:50:16.740+0000,2020-09-14T14:03:02.543+0000,2.1.7,2.1.8,Error when adding i18n labels to schemas
+SYNCOPE-1586,Bug,Closed,Fixed,2020-09-08T07:27:07.187+0000,2020-09-08T10:50:29.720+0000,2.1.6,2.1.7;3.0.0-M0,Startup failures with sample docker-compose and MySQL
+SYNCOPE-1583,Bug,Closed,Fixed,2020-07-21T20:31:44.827+0000,2020-07-22T08:09:14.163+0000,2.0.15;2.1.6,2.0.16;2.1.7;3.0.0-M0,"For members part of a Dynamic Group, but cannot access group attributes in member mapping"
+SYNCOPE-1581,Bug,Closed,Fixed,2020-07-17T08:58:09.541+0000,2020-07-17T09:19:58.762+0000,2.1.6,2.1.7,When enabling Swagger UI or Flowable extensions Installer generates invalid POM files
+SYNCOPE-1573,Bug,Closed,Fixed,2020-06-30T10:41:20.651+0000,2020-06-30T11:11:42.273+0000,2.0.15;2.1.6,2.0.16;2.1.7;3.0.0-M0,Logout forced from Console when editing user with many memberships
+SYNCOPE-1569,Bug,Closed,Fixed,2020-06-11T05:31:47.685+0000,2020-06-11T06:17:16.379+0000,2.1.6,2.1.7;3.0.0-M0,Console: cannot save Reportlet search conditions
+SYNCOPE-1567,Bug,Closed,Fixed,2020-05-19T20:12:25.470+0000,2020-05-20T08:59:34.535+0000,2.0.15;2.1.6,2.0.16;2.1.7;3.0.0-M0,Mapping does not allow relationships
+SYNCOPE-1565,Bug,Closed,Fixed,2020-05-18T11:57:05.481+0000,2020-06-04T13:49:00.240+0000,2.0.15;2.1.6,2.0.16;2.1.7;3.0.0-M0,Integration tests run with XML payloads are failing
+SYNCOPE-1564,Bug,Closed,Fixed,2020-05-18T11:55:35.032+0000,2020-05-19T13:25:30.514+0000,2.0.15;2.1.6,2.0.16;2.1.7;3.0.0-M0,Integration tests run with YAML payloads are failing
+SYNCOPE-1563,Bug,Closed,Fixed,2020-05-15T08:30:16.069+0000,2020-05-15T12:25:55.654+0000,2.1.6,2.1.7;3.0.0-M0,User approval update should send the password only when requested
+SYNCOPE-1561,Bug,Closed,Fixed,2020-05-13T07:42:40.711+0000,2020-05-13T07:45:50.944+0000,2.1.6,2.1.7;3.0.0-M0,Batch: missing support for custom TLSClientParameters
+SYNCOPE-1560,Bug,Closed,Fixed,2020-05-12T09:06:18.875+0000,2020-05-12T09:36:46.373+0000,2.0.15;2.1.6,2.0.16;2.1.7;3.0.0-M0,File upload component: missing translations
+SYNCOPE-1554,Bug,Closed,Fixed,2020-04-17T07:08:29.863+0000,2020-04-23T09:24:07.293+0000,2.1.5,2.1.6;3.0.0-M0,Generated default admin role layout doesn't work
+SYNCOPE-1549,Bug,Closed,Fixed,2020-03-19T10:35:43.368+0000,2020-08-24T13:05:29.074+0000,2.0.14;2.1.5,2.0.16;2.1.7,Groups select opens a popup when removing a group
+SYNCOPE-1546,Bug,Closed,Fixed,2020-03-06T12:26:00.204+0000,2020-03-06T16:55:47.722+0000,2.0.14;2.1.5,2.1.6;3.0.0-M0,PriorityPropagationTaskExecutor: rejected tasks not stored
+SYNCOPE-1544,Bug,Closed,Fixed,2020-02-20T15:37:14.424+0000,2020-02-26T13:06:41.667+0000,2.1.5,2.1.6;3.0.0-M0,'Override?' flag not properly set for password and username fields of LinkedAccounts
+SYNCOPE-1542,Bug,Closed,Fixed,2020-02-13T10:55:33.756+0000,2020-03-17T17:11:42.915+0000,2.1.5,2.1.6;3.0.0-M0,Search panel issues in Admin Console
+SYNCOPE-1539,Bug,Closed,Fixed,2020-02-03T16:22:51.363+0000,2020-02-04T09:26:11.734+0000,2.0.14;2.1.5,2.0.15;2.1.6;3.0.0-M0,AjaxPalettePanel does not support setRequired
+SYNCOPE-1538,Bug,Closed,Fixed,2020-01-31T15:03:04.961+0000,2020-02-20T13:17:10.517+0000,2.1.5,2.1.6;3.0.0-M0,Admin Console: users / groups management slow to access with high number of realms
+SYNCOPE-1537,Bug,Closed,Fixed,2020-01-30T11:41:41.586+0000,2020-02-26T16:39:08.993+0000,2.1.5,2.1.6;3.0.0-M0,Password of LinkedAccounts not saved properly from Admin Console
+SYNCOPE-1536,Bug,Closed,Fixed,2020-01-28T09:21:01.569+0000,2020-01-28T09:33:41.531+0000,2.1.5,2.1.6;3.0.0-M0,Enduser UI does not clean up file alteration monitors on shutdown
+SYNCOPE-1533,Bug,Closed,Fixed,2020-01-14T15:21:04.453+0000,2020-01-15T07:12:28.070+0000,2.1.5,2.1.6;3.0.0-M0,Broken backward compatibilty because of changes in Equals and HashCode methods in TOs
+SYNCOPE-1526,Bug,Closed,Fixed,2019-12-12T03:04:31.416+0000,2019-12-12T07:33:24.784+0000,2.0.14;2.1.5,2.0.15;2.1.6;3.0.0-M0,Broken link to issues from reference documentation
+SYNCOPE-1525,Bug,Closed,Fixed,2019-12-12T02:59:47.916+0000,2019-12-12T07:38:45.907+0000,2.0.14;2.1.5,2.0.15;2.1.6;3.0.0-M0,"Documentation indicates sharing private key, hiding public key"
+SYNCOPE-1524,Bug,Closed,Fixed,2019-12-11T16:19:35.289+0000,2019-12-12T08:30:24.126+0000,2.0.14;2.1.5,2.0.15;2.1.6,Social registration does not redirect to self registration page
+SYNCOPE-1520,Bug,Closed,Fixed,2019-12-02T15:01:54.961+0000,2019-12-02T15:24:30.069+0000,2.1.5,2.1.6;3.0.0-M0,Exception when updating Group unique attribute with JPA JSON
+SYNCOPE-1512,Bug,Closed,Fixed,2019-11-18T16:25:27.880+0000,2019-11-23T14:58:11.141+0000,2.1.5,2.1.6;3.0.0-M0,Error while saving a unique plain attribute value with single quote when using JPA JSON
+SYNCOPE-1505,Bug,Closed,Fixed,2019-10-29T14:37:35.651+0000,2019-11-08T10:56:38.082+0000,2.0.14;2.1.5;3.0.0-M0,2.0.15;2.1.6;3.0.0-M0,"Changes to ""AjaxPalettePanel"" components in Console are not saved when the previous step button is pressed before submitting the wizard form"
+SYNCOPE-1504,Bug,Closed,Fixed,2019-10-15T11:37:05.319+0000,2019-10-15T12:37:51.118+0000,2.1.5,2.1.6;3.0.0-M0,Error setting uidOnCreate attribute during a pull task with multiple provisions
+SYNCOPE-1503,Bug,Closed,Fixed,2019-10-10T10:07:09.846+0000,2019-10-17T12:55:37.372+0000,2.1.5,2.1.6;3.0.0-M0,Cannot remove provisioning information from Resource in Admin Console
+SYNCOPE-1493,Bug,Closed,Fixed,2019-09-10T09:43:43.236+0000,2019-09-10T12:34:23.051+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,Mapping unique schema as remote key never matches internal objects
+SYNCOPE-1492,Bug,Closed,Fixed,2019-09-09T18:08:14.829+0000,2019-09-10T14:35:39.502+0000,,2.0.14;2.1.5;3.0.0-M0,Build Instructions are missing an EVN (DOCKER_HOST) needed for  mvn -Ppostgres-it
+SYNCOPE-1488,Bug,Closed,Fixed,2019-09-09T14:10:21.266+0000,2019-09-10T12:56:59.810+0000,3.0.0-M0,2.0.14;2.1.5;3.0.0-M0,Change to MVM Env for JDK > 8.00
+SYNCOPE-1487,Bug,Closed,Fixed,2019-09-09T13:31:15.224+0000,2019-09-10T12:57:04.077+0000,2.0.13;2.1.4;3.0.0-M0,2.0.14;2.1.5;3.0.0-M0,"Build Instructions do not say that the ""patch"" program is needed"
+SYNCOPE-1485,Bug,Closed,Fixed,2019-09-04T10:58:21.808+0000,2019-09-04T12:35:39.325+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,Reindex of elasticsearch ends with memory error in case of huge amount of data
+SYNCOPE-1484,Bug,Closed,Fixed,2019-09-03T08:10:49.823+0000,2019-09-03T11:45:05.688+0000,3.0.0-M0,2.0.14;2.1.5;3.0.0-M0,syncope-ide-netbeans submodule fails to find netbeans dependency
+SYNCOPE-1483,Bug,Closed,Fixed,2019-09-03T07:41:49.955+0000,2019-09-03T08:24:11.722+0000,3.0.0-M0,3.0.0-M0,maven-enforcer-plugin: API incompatibility fails the build
+SYNCOPE-1481,Bug,Closed,Fixed,2019-08-07T11:18:19.322+0000,2019-08-13T12:53:27.828+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,Invalid values when saving a membership attribute of type date
+SYNCOPE-1480,Bug,Closed,Fixed,2019-07-25T10:58:39.075+0000,2019-09-11T15:15:10.352+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,Elasticsearch:dynrealm assignment not updated on condition change
+SYNCOPE-1478,Bug,Closed,Fixed,2019-06-25T15:31:45.697+0000,2019-09-11T10:14:30.568+0000,2.1.4,2.1.5;3.0.0-M0,"Unable to remove value of ""Schema to hold values for identifiers generated upon Create by the external Identity Store"" from provisioning"
+SYNCOPE-1477,Bug,Closed,Fixed,2019-06-05T13:24:22.816+0000,2019-06-05T13:57:49.398+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,jQuery UI's spinner not rendered
+SYNCOPE-1476,Bug,Closed,Fixed,2019-06-03T10:18:52.834+0000,2019-06-04T09:08:52.865+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,Error while creating Enum schema from Admin Console
+SYNCOPE-1475,Bug,Closed,Fixed,2019-05-29T15:52:04.394+0000,2019-05-30T15:41:30.887+0000,2.0.13,2.0.14,Activiti modeler is not rendered on Google Chrome
+SYNCOPE-1474,Bug,Closed,Fixed,2019-05-24T15:52:00.741+0000,2019-09-11T09:37:17.138+0000,2.1.4,2.1.5;3.0.0-M0,Resource is duplicated after batch operation
+SYNCOPE-1472,Bug,Closed,Fixed,2019-05-17T14:23:18.369+0000,2019-05-21T15:13:38.129+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,"Resource association is duplicated on database after update, assign or link operations"
+SYNCOPE-1470,Bug,Closed,Fixed,2019-05-07T07:23:35.399+0000,2019-05-07T07:29:38.975+0000,2.1.4,2.1.5;3.0.0-M0,Flowable extension not working with MariaDB
+SYNCOPE-1469,Bug,Closed,Fixed,2019-05-07T06:41:08.331+0000,2019-05-07T06:42:55.195+0000,2.1.4,2.1.5;3.0.0-M0,MySQL with JSON support: errors during startup
+SYNCOPE-1467,Bug,Closed,Fixed,2019-05-03T14:59:25.442+0000,2019-05-07T13:05:00.254+0000,2.0.13;2.1.4,2.0.14;2.1.5;3.0.0-M0,RDN not allowed when an attribute of the group present also in the DN is changed
+SYNCOPE-1462,Bug,Closed,Fixed,2019-04-29T12:34:49.599+0000,2019-06-06T10:21:20.689+0000,2.1.4,2.1.5,Requests list is not refreshed if empty
+SYNCOPE-1461,Bug,Closed,Fixed,2019-04-16T09:28:51.875+0000,2019-10-23T12:52:59.686+0000,2.1.4,2.1.6;3.0.0-M0,MySQL: Segmentation fault with query using JSON_TABLE
+SYNCOPE-1457,Bug,Closed,Fixed,2019-04-05T13:20:50.983+0000,2019-04-08T10:15:11.755+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,"NonAlphaNumeric policy pattern matches the ""Not word"" character class"
+SYNCOPE-1454,Bug,Closed,Fixed,2019-04-02T10:14:53.694+0000,2019-04-02T10:26:30.935+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Avoid duplicated Propagation Tasks
+SYNCOPE-1453,Bug,Closed,Fixed,2019-03-27T11:23:59.005+0000,2019-03-27T16:39:24.402+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,"MappingItem with ""mustChangePassword"" field cannot be provisioned and updated during import"
+SYNCOPE-1452,Bug,Closed,Fixed,2019-03-25T12:03:57.032+0000,2019-03-26T13:31:38.899+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Notification about is not deleted after update
+SYNCOPE-1450,Bug,Closed,Fixed,2019-03-12T12:44:06.746+0000,2019-03-12T13:18:50.090+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Audit: sensitive information not masked by default during update
+SYNCOPE-1448,Bug,Closed,Fixed,2019-03-11T20:11:49.568+0000,2019-03-25T13:45:34.289+0000,2.1.3,2.1.4;3.0.0-M0,Bean loading/register section not threadsafe
+SYNCOPE-1447,Bug,Closed,Fixed,2019-03-11T10:20:19.352+0000,2019-03-11T14:56:40.479+0000,2.1.3,2.1.4;3.0.0-M0,NPE while deleting a privilege from admin console
+SYNCOPE-1446,Bug,Closed,Fixed,2019-03-08T16:17:38.605+0000,2019-03-12T11:59:00.926+0000,2.1.3,2.1.4;3.0.0-M0,Persistence exception on PostgreSQL when AUDIT is enabled on propagation tasks
+SYNCOPE-1443,Bug,Closed,Fixed,2019-02-28T15:10:46.905+0000,2019-03-04T12:01:02.426+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Changing Display Rows number in Reconciliation Resource Panel doesn't work
+SYNCOPE-1442,Bug,Closed,Fixed,2019-02-26T09:37:50.414+0000,2019-03-04T07:59:54.422+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Inactive Job with cron expression set is executed anyway
+SYNCOPE-1440,Bug,Closed,Fixed,2019-02-21T09:59:56.518+0000,2019-03-04T10:55:51.411+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Pagination of Users/Groups doesn't work as expected with Elasticsearch
+SYNCOPE-1439,Bug,Closed,Fixed,2019-02-20T12:05:15.264+0000,2019-03-07T11:12:22.639+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,User membership attributes not updated
+SYNCOPE-1438,Bug,Closed,Fixed,2019-02-20T10:34:24.186+0000,2019-02-20T10:52:12.751+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,"""changePwdDate"" field is not initialized when create a new user with the specified password"
+SYNCOPE-1437,Bug,Closed,Fixed,2019-02-19T16:44:43.355+0000,2019-02-20T10:42:46.993+0000,2.1.3,2.1.4;3.0.0-M0,Error while searching for users / groups / any objects with Elasticsearch when no data are present
+SYNCOPE-1432,Bug,Closed,Fixed,2019-02-05T08:11:57.765+0000,2019-03-04T10:49:41.160+0000,2.1.3,2.1.4;3.0.0-M0,"After creating new connector / resource, Topology does not show it"
+SYNCOPE-1431,Bug,Closed,Fixed,2019-02-05T08:08:05.578+0000,2019-02-05T16:28:40.121+0000,2.1.3,2.1.4;3.0.0-M0,Connector and Resource history compare does not work
+SYNCOPE-1430,Bug,Closed,Fixed,2019-01-28T14:26:39.992+0000,2019-01-29T17:01:09.661+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,ItemTransformer for Date schemas throws NPE
+SYNCOPE-1429,Bug,Closed,Fixed,2019-01-25T16:40:18.018+0000,2019-01-30T15:31:17.094+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,Wildcard case-insesitive queries do not work with Elasticsearch
+SYNCOPE-1428,Bug,Closed,Fixed,2019-01-25T14:39:09.869+0000,2019-01-25T15:26:07.514+0000,2.0.12;2.1.3,2.0.13;2.1.4;3.0.0-M0,APIs to read by key return 404 instead of 401 for not authenticated calls
+SYNCOPE-1425,Bug,Closed,Fixed,2019-01-17T14:07:17.998+0000,2019-01-17T14:22:39.946+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Mapping item transformers do not work for non-string values
+SYNCOPE-1420,Bug,Closed,Fixed,2018-12-21T10:09:28.049+0000,2018-12-21T11:03:33.487+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Expired Access Tokens might impede successful authentication
+SYNCOPE-1419,Bug,Closed,Fixed,2018-12-20T13:42:03.823+0000,2018-12-20T23:22:15.020+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,User and AnyObject search fails in case of not leaf conditions given on multivalue fields
+SYNCOPE-1417,Bug,Closed,Fixed,2018-12-13T16:08:51.063+0000,2018-12-14T11:37:31.941+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Search with order by two plain attributes gives no results
+SYNCOPE-1411,Bug,Closed,Fixed,2018-12-10T11:45:54.322+0000,2018-12-10T15:44:02.544+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,User/Any object updates generate attributes with null owner in case of patches involving membership attributes
+SYNCOPE-1408,Bug,Closed,Fixed,2018-12-05T09:14:04.128+0000,2018-12-05T12:26:26.910+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Partial user edit via Role layout implies removing all unmanaged attributes
+SYNCOPE-1407,Bug,Closed,Fixed,2018-12-04T15:35:38.967+0000,2018-12-04T15:58:19.135+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Date pattern ignored by widget
+SYNCOPE-1406,Bug,Closed,Fixed,2018-12-03T11:56:44.734+0000,2018-12-03T12:01:55.317+0000,2.1.2,2.1.3;3.0.0-M0,Error during startup because of missing property 'historyLevel'
+SYNCOPE-1405,Bug,Closed,Fixed,2018-12-03T11:52:25.808+0000,2018-12-03T12:02:10.479+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Error during db initialization: views.xml always set for PostgreSQL
+SYNCOPE-1404,Bug,Closed,Fixed,2018-11-28T08:53:06.900+0000,2018-11-28T09:21:22.060+0000,,2.1.3;3.0.0-M0,Dialog not closing in Netbeans ide plugin when creating a new element
+SYNCOPE-1399,Bug,Closed,Fixed,2018-11-20T11:30:29.696+0000,2018-11-20T17:10:30.116+0000,,2.1.3;3.0.0-M0,Error while executing the custom task to initialize indices with Elasticsearch v6.x
+SYNCOPE-1398,Bug,Closed,Fixed,2018-11-19T15:17:58.864+0000,2018-11-20T08:24:28.698+0000,2.0.11,2.0.12,Console stucks on update with unique key constraint violation
+SYNCOPE-1393,Bug,Closed,Fixed,2018-11-05T11:05:27.036+0000,2018-11-05T13:56:14.651+0000,2.0.10;2.1.1,2.0.12;2.1.3;3.0.0-M0,jexl function fullPath2Dn return invalid value for ROOT realm
+SYNCOPE-1391,Bug,Closed,Fixed,2018-11-02T12:09:33.778+0000,2018-11-12T16:06:35.540+0000,2.0.11;2.1.2,2.0.12;2.1.3;3.0.0-M0,Check template for confirmPasswordReset and mustChangePassword
+SYNCOPE-1390,Bug,Closed,Fixed,2018-11-01T09:21:48.958+0000,2018-11-02T10:05:02.128+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Pull Realms: pull task with Unmatching Rules: PROVISION shouldn't create propagation task
+SYNCOPE-1389,Bug,Closed,Fixed,2018-10-24T10:47:19.596+0000,2018-10-24T15:06:10.369+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,"In case of virtual attribute mapping, propagation is always set as UPDATE also in case of CREATE"
+SYNCOPE-1388,Bug,Closed,Fixed,2018-10-23T08:35:18.483+0000,2018-10-30T17:03:29.645+0000,2.0.8;2.1.1,2.0.11;2.1.2;3.0.0-M0,mustChangePassword flag does not prevent user from invoking actions
+SYNCOPE-1387,Bug,Closed,Fixed,2018-10-23T08:16:41.408+0000,2018-10-23T12:27:52.911+0000,2.0.8,2.0.11;2.1.2;3.0.0-M0,ClassCast exception when pull realms
+SYNCOPE-1383,Bug,Closed,Fixed,2018-10-11T07:17:02.515+0000,2018-10-11T08:40:46.517+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,"Exception during ""getObject"" from external resource"
+SYNCOPE-1380,Bug,Closed,Fixed,2018-10-10T06:18:44.394+0000,2018-10-10T07:02:49.230+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,"During Push or Pull, if policy with conflict resolution IGNORE is set, the process is interrupted as soon as such setting applies"
+SYNCOPE-1377,Bug,Closed,Fixed,2018-10-01T12:19:25.361+0000,2018-10-01T15:05:38.466+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Wrong X-Syncope-Domain header does not throw an error
+SYNCOPE-1376,Bug,Closed,Fixed,2018-09-27T16:47:59.347+0000,2018-10-05T15:02:47.334+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,swagger-ui server URL incorrect behind ssl reverse proxy
+SYNCOPE-1375,Bug,Closed,Fixed,2018-09-26T07:53:45.156+0000,2018-09-26T10:14:35.410+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,The existence of a membership attribute mapping implies membership creation during pull
+SYNCOPE-1374,Bug,Closed,Fixed,2018-09-20T07:55:21.092+0000,2018-09-20T08:27:24.921+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Concurrent propagation tasks for non-Master domains not saved
+SYNCOPE-1373,Bug,Closed,Fixed,2018-09-17T13:42:36.645+0000,2018-09-20T11:05:25.268+0000,2.1.0;2.1.1,2.0.11;2.1.2;3.0.0-M0,Custom task schedule is reset after update
+SYNCOPE-1372,Bug,Closed,Fixed,2018-09-17T10:02:53.009+0000,2018-09-17T10:12:21.473+0000,2.0.10;2.1.1,2.0.11;2.1.2,Password history checks not effective
+SYNCOPE-1371,Bug,Closed,Fixed,2018-09-13T11:17:12.522+0000,2018-09-13T11:19:58.959+0000,2.1.1,2.1.2,"After upgrade from 2.0, error when updating Realm: ClassCastException: Expected LOGIC_ACTIONS, got PULL_ACTIONS"
+SYNCOPE-1370,Bug,Closed,Fixed,2018-09-12T15:40:05.050+0000,2018-09-12T15:43:31.996+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Password reset succeeds also on wrong captcha
+SYNCOPE-1366,Bug,Closed,Fixed,2018-09-05T13:28:05.773+0000,2018-09-05T13:53:08.693+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Audit events ownership always set to admin user
+SYNCOPE-1365,Bug,Closed,Fixed,2018-09-05T12:45:22.728+0000,2018-09-05T13:23:56.738+0000,2.1.1,2.1.2;3.0.0-M0,Erorr during retrieve candidate groups for approval process
+SYNCOPE-1364,Bug,Closed,Fixed,2018-09-05T10:54:40.156+0000,2018-09-05T11:29:32.769+0000,2.1.1,2.1.2;3.0.0-M0,Upgrade tool from 2.0 script error
+SYNCOPE-1363,Bug,Closed,Fixed,2018-09-05T07:32:51.289+0000,2018-09-05T07:33:42.419+0000,2.1.1,2.1.2;3.0.0-M0,"Deleting multiple users at once reports ""Operation delete not supported"""
+SYNCOPE-1362,Bug,Closed,Fixed,2018-09-05T06:36:15.589+0000,2018-09-05T06:37:16.483+0000,2.1.1,2.1.2;3.0.0-M0,Sorting users by creation date raises RuntimeException
+SYNCOPE-1361,Bug,Closed,Fixed,2018-09-04T09:39:19.181+0000,2018-09-05T14:18:10.322+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Custom audit appender does not work after a restart
+SYNCOPE-1360,Bug,Closed,Fixed,2018-09-03T15:22:07.202+0000,2018-09-03T15:36:56.748+0000,2.0.10;2.1.1,2.0.11;2.1.2;3.0.0-M0,Delegated administration to Dynamic Realms not possible
+SYNCOPE-1358,Bug,Closed,Fixed,2018-08-16T13:00:02.836+0000,2018-08-16T13:12:03.793+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Search by boolean value does not work from Admin Console
+SYNCOPE-1357,Bug,Closed,Fixed,2018-08-16T10:31:16.936+0000,2018-08-16T12:16:19.302+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,MemoryVirAttrCache not working
+SYNCOPE-1356,Bug,Closed,Fixed,2018-08-16T10:04:03.855+0000,2018-08-16T12:16:31.624+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,LDAPMembershipPullActions does not remove memberships
+SYNCOPE-1354,Bug,Closed,Fixed,2018-08-13T13:08:59.751+0000,2018-08-13T13:36:26.923+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Push Tasks do not send status onto External Resources
+SYNCOPE-1353,Bug,Closed,Fixed,2018-08-11T06:22:37.200+0000,2018-08-11T11:37:28.679+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,DBPasswordPropagationActions link in the reference guide is wrong
+SYNCOPE-1352,Bug,Closed,Fixed,2018-08-10T13:39:54.847+0000,2018-08-10T13:59:31.293+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Group wizard doesn't update the plain attributes
+SYNCOPE-1350,Bug,Closed,Fixed,2018-08-09T10:11:29.405+0000,2018-08-09T10:13:10.720+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Date values not formatted according to the conversion pattern
+SYNCOPE-1347,Bug,Closed,Fixed,2018-07-31T15:15:40.734+0000,2018-07-31T15:17:30.656+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Invocation Problem calling org.apache.syncope.installer.processes.ArchetypeProcess
+SYNCOPE-1346,Bug,Closed,Fixed,2018-07-26T15:19:08.356+0000,2018-07-27T07:41:02.042+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Adding a new task while re-executing a propagation task
+SYNCOPE-1344,Bug,Closed,Fixed,2018-07-24T15:47:02.041+0000,2018-07-24T16:00:27.517+0000,2.0.10;2.1.1,2.0.10;2.1.1;3.0.0-M0,CORE_SCHEME not being updated in enduser.properties
+SYNCOPE-1343,Bug,Closed,Fixed,2018-07-24T11:05:56.396+0000,2018-07-26T07:08:41.178+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Attributes are not reset after pull of null values
+SYNCOPE-1342,Bug,Closed,Fixed,2018-07-22T18:59:41.342+0000,2018-07-23T08:21:26.805+0000,2.1.0,2.1.1;3.0.0-M0,console UI login form ignores Domain selection
+SYNCOPE-1340,Bug,Closed,Fixed,2018-07-20T15:19:27.816+0000,2018-07-21T16:21:02.775+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Cannot update membership attribute
+SYNCOPE-1339,Bug,Closed,Fixed,2018-07-16T14:45:31.747+0000,2018-08-08T15:37:30.705+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Enduser spinner does not apply to the whole page
+SYNCOPE-1338,Bug,Closed,Fixed,2018-07-16T09:46:46.104+0000,2018-07-16T09:49:32.954+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Double type conversion applied during pull leads to errors
+SYNCOPE-1337,Bug,Closed,Fixed,2018-07-13T08:29:52.358+0000,2018-07-13T14:58:56.063+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Password history policy is not enforced on salted passwords
+SYNCOPE-1335,Bug,Closed,Fixed,2018-07-11T10:14:29.459+0000,2018-07-11T10:16:13.730+0000,2.1.0,2.1.1;3.0.0-M0,Missing SQL statements when upgrading from 2.0 Jazz
+SYNCOPE-1334,Bug,Closed,Fixed,2018-07-10T09:31:29.198+0000,2018-07-10T15:39:20.265+0000,2.1.0,2.1.1;3.0.0-M0,Maven install problem with Apache Syncope 2.1.0
+SYNCOPE-1333,Bug,Closed,Fixed,2018-07-09T15:10:03.375+0000,2018-07-10T08:52:45.585+0000,2.0.9;2.1.0,2.0.10;2.1.1;3.0.0-M0,Missing virtual attribute value in case of type extension
+SYNCOPE-1331,Bug,Closed,Fixed,2018-07-06T13:14:27.937+0000,2018-07-06T13:32:39.516+0000,2.1.0,2.1.1,ExternalResourcePropagationAction is too long name for a table in Oracle DB
+SYNCOPE-1330,Bug,Closed,Fixed,2018-07-02T09:14:48.500+0000,2018-07-02T09:48:27.749+0000,,,MD5 should no longer be provided on download pages
+SYNCOPE-1326,Bug,Closed,Fixed,2018-06-22T13:54:03.421+0000,2018-06-22T15:23:20.519+0000,2.0.8;2.1.0,2.0.9;2.1.0,Wizard generates unnecessary attrPatch when the field is empty
+SYNCOPE-1321,Bug,Closed,Fixed,2018-06-11T12:31:19.825+0000,2018-06-20T12:59:42.612+0000,2.0.8,2.0.9;2.1.0,Search doesn't work for date attributes with conversion pattern with time zone
+SYNCOPE-1320,Bug,Closed,Fixed,2018-06-01T14:23:56.817+0000,2018-06-01T15:25:02.292+0000,2.0.8,2.0.9;2.1.0,Push task report generation fails in case of IgnoreProvisionException
+SYNCOPE-1319,Bug,Closed,Fixed,2018-05-29T12:43:26.952+0000,2018-05-29T12:49:31.301+0000,2.0.8,2.0.9;2.1.0,Pull Task template not assigning roles
+SYNCOPE-1318,Bug,Closed,Fixed,2018-05-29T09:45:15.031+0000,2018-05-29T10:20:20.132+0000,2.0.8,2.0.9;2.1.0,Future task rejected from ScheduledThreadPoolExecutor
+SYNCOPE-1317,Bug,Closed,Fixed,2018-05-27T08:46:38.412+0000,2018-05-28T06:53:44.885+0000,2.0.8,2.0.9;2.1.0,RuntimeException when remove all schemas
+SYNCOPE-1315,Bug,Closed,Fixed,2018-05-22T07:41:25.705+0000,2018-05-28T13:17:40.484+0000,2.0.8,2.0.9;2.1.0,Propagation task sorting by Object Type not working as expected
+SYNCOPE-1314,Bug,Closed,Fixed,2018-05-22T07:37:11.616+0000,2018-05-24T10:28:23.184+0000,2.0.8,2.0.9;2.1.0,Bulk action from reconciliation section ever shows NOT ATTEMPTED after provision
+SYNCOPE-1312,Bug,Closed,Fixed,2018-05-15T15:30:30.780+0000,2018-05-28T11:09:44.566+0000,2.0.8,2.0.9;2.1.0,Console CSS is depending from Google fonts
+SYNCOPE-1309,Bug,Closed,Fixed,2018-05-11T06:27:26.768+0000,2018-05-29T09:41:59.539+0000,2.0.8,2.0.9;2.1.0,Enduser UI does not remove Access Token on Finish
+SYNCOPE-1308,Bug,Closed,Fixed,2018-05-03T15:00:09.485+0000,2018-05-07T15:24:55.038+0000,2.0.8,2.0.9;2.1.0,Exception getting users with orderBy on SyncopeClient API with Postgres 10.3
+SYNCOPE-1307,Bug,Closed,Fixed,2018-04-26T07:00:36.338+0000,2018-04-26T12:13:42.969+0000,2.0.8,2.0.9;2.1.0,Wrong export order for Realms
+SYNCOPE-1306,Bug,Closed,Fixed,2018-04-24T14:08:43.909+0000,2018-04-26T11:31:44.183+0000,2.0.8,2.0.9;2.1.0,Date value without a conversion pattern not shown by Admin Console
+SYNCOPE-1304,Bug,Closed,Fixed,2018-04-23T13:21:50.917+0000,2018-04-23T14:29:47.339+0000,2.0.8,2.0.9;2.1.0,Order Groups by userOwner throws DataIntegrityViolation exception
+SYNCOPE-1303,Bug,Closed,Fixed,2018-04-23T09:35:02.782+0000,2018-04-23T10:13:14.491+0000,,2.0.9;2.1.0,Content migration from 1.2 problems
+SYNCOPE-1301,Bug,Closed,Fixed,2018-04-12T06:17:13.748+0000,2018-04-13T07:50:41.920+0000,2.0.8,2.0.9;2.1.0,Token creation is not threadsafe
+SYNCOPE-1298,Bug,Closed,Fixed,2018-04-10T12:07:48.325+0000,2018-04-10T14:17:17.377+0000,2.0.8,2.0.9;2.1.0,Quartz jobs with no matching Task or Report not visible from Admin Console
+SYNCOPE-1297,Bug,Closed,Fixed,2018-04-09T09:24:30.212+0000,2018-06-08T14:25:22.203+0000,2.0.8,2.0.9;2.1.0,Select all + bulk button redirecting to top of the page on click
+SYNCOPE-1296,Bug,Closed,Fixed,2018-04-06T18:36:47.784+0000,2018-04-09T06:31:56.385+0000,,2.1.0,Eclipse Plugin OSGI Dependency Issue
+SYNCOPE-1294,Bug,Closed,Fixed,2018-04-04T15:26:09.012+0000,2018-04-04T15:50:07.446+0000,2.0.8;2.1.0,2.0.9;2.1.0,Plainschema panel doesn't display the assigned validator class
+SYNCOPE-1293,Bug,Closed,Fixed,2018-04-04T12:05:52.254+0000,2018-04-05T08:17:51.732+0000,1.2.11;2.0.8,1.2.12;2.0.9;2.1.0,Default password reset notifications not working
+SYNCOPE-1291,Bug,Closed,Fixed,2018-04-03T09:15:50.107+0000,2018-04-03T09:50:37.283+0000,2.0.8,2.0.9;2.1.0,Cannot login again into Admin Console after Session Expired
+SYNCOPE-1290,Bug,Closed,Fixed,2018-04-02T15:54:52.626+0000,2018-04-03T08:45:00.939+0000,2.0.8,2.0.9;2.1.0,Deletion of only schema entry breaks schema UI
+SYNCOPE-1288,Bug,Closed,Fixed,2018-03-29T13:41:27.982+0000,2018-04-05T14:40:01.905+0000,,2.0.9;2.1.0,Propagation tasks list not keeping order while browsing pages
+SYNCOPE-1285,Bug,Closed,Fixed,2018-03-22T08:24:33.747+0000,2018-03-22T10:45:33.285+0000,2.0.8,2.0.9;2.1.0,Quartz db init on HA environments occurs on all nodes
+SYNCOPE-1282,Bug,Closed,Fixed,2018-03-15T13:15:56.196+0000,2018-03-15T14:07:29.283+0000,2.0.8,2.0.9;2.1.0,Search schema error
+SYNCOPE-1276,Bug,Closed,Fixed,2018-02-13T14:28:25.987+0000,2018-02-20T11:55:16.630+0000,2.0.7,2.0.8;2.1.0,Link or assign Group from External Resource resets dynamic membership conditions
+SYNCOPE-1275,Bug,Closed,Fixed,2018-02-12T16:56:56.632+0000,2018-02-21T12:00:34.773+0000,2.0.7,2.0.8;2.1.0,Add the possibiliy to delete a job
+SYNCOPE-1272,Bug,Closed,Fixed,2018-02-09T14:40:22.112+0000,2018-02-12T10:41:18.759+0000,2.0.7,2.0.8;2.1.0,Export of the report always returns the result of the last execution
+SYNCOPE-1269,Bug,Closed,Fixed,2018-02-06T10:18:30.139+0000,2018-02-22T16:50:59.664+0000,2.0.7,2.0.8;2.1.0,Cannot specify validator for Configuration Parameters
+SYNCOPE-1266,Bug,Closed,Fixed,2018-01-30T11:04:25.529+0000,2018-01-30T15:53:47.308+0000,2.0.7,2.0.8;2.1.0,Multivalue binary attributes leads to OutOfMemory exception
+SYNCOPE-1265,Bug,Closed,Fixed,2018-01-29T11:53:47.517+0000,2018-01-29T15:43:48.059+0000,2.0.7,2.0.8;2.1.0,SAML 2.0 IdP cache empty until either new is imported or SAML2IdPService#list is invoked
+SYNCOPE-1263,Bug,Closed,Fixed,2018-01-22T10:19:53.992+0000,2018-01-22T10:37:24.552+0000,2.0.7,2.0.8;2.1.0,REST invocation with invalid JWT string returns 500
+SYNCOPE-1261,Bug,Closed,Fixed,2018-01-04T06:42:32.363+0000,2018-01-04T07:16:57.164+0000,2.0.7,2.0.8;2.1.0,When starting with empty database and no ConnInstances in Content.xml no bundles are reported as available
+SYNCOPE-1257,Bug,Closed,Fixed,2017-12-28T09:24:29.586+0000,2017-12-28T13:19:53.667+0000,2.0.7,2.0.8;2.1.0,USER search by GROUP does not work if group name has spaces
+SYNCOPE-1254,Bug,Closed,Fixed,2017-12-20T07:51:17.591+0000,2018-04-04T07:19:41.654+0000,2.1.0,2.1.0,Cannot create new connector instances from Admin Console
+SYNCOPE-1253,Bug,Closed,Fixed,2017-12-18T10:44:09.859+0000,2017-12-18T10:45:20.661+0000,2.0.6,2.0.7;2.1.0,Pulled users have password set even if no mapping was provided
+SYNCOPE-1252,Bug,Closed,Fixed,2017-12-18T10:39:08.603+0000,2017-12-18T19:36:06.272+0000,2.0.6,2.0.7;2.1.0,Search failing for non-string attributes from Admin Console
+SYNCOPE-1251,Bug,Closed,Fixed,2017-12-14T12:07:37.242+0000,2017-12-14T13:40:12.132+0000,2.0.6,2.0.7;2.1.0,UserTO variable is not updated during Update Activiti Task
+SYNCOPE-1250,Bug,Closed,Fixed,2017-12-13T08:44:17.975+0000,2017-12-13T10:12:23.358+0000,2.0.6,2.0.7;2.1.0,Missing attributes layout order
+SYNCOPE-1248,Bug,Closed,Fixed,2017-12-11T23:43:14.103+0000,2017-12-12T00:22:57.842+0000,2.0.6,2.0.7;2.1.0,Password policy history error when the user is updated before being approved
+SYNCOPE-1247,Bug,Closed,Fixed,2017-12-07T10:10:22.480+0000,2017-12-15T14:04:10.061+0000,2.0.6,2.0.7;2.1.0,Group search and auto-completion does not work with several thousands of groups
+SYNCOPE-1246,Bug,Closed,Fixed,2017-12-07T10:02:57.204+0000,2017-12-14T15:58:02.263+0000,2.0.6,2.0.7;2.1.0,Group membership search stucks with several thousands of groups
+SYNCOPE-1244,Bug,Closed,Fixed,2017-12-03T20:20:11.592+0000,2017-12-06T11:25:35.672+0000,2.0.2,2.0.7;2.1.0,Error creating bean with name 'logicInitializer' on startup related to quartz clustering
+SYNCOPE-1241,Bug,Closed,Fixed,2017-12-01T10:43:47.714+0000,2017-12-01T13:57:04.124+0000,2.0.6,2.0.7;2.1.0,Under high load propagation after pull might fail
+SYNCOPE-1239,Bug,Closed,Fixed,2017-11-25T10:49:10.564+0000,2017-11-25T10:53:55.009+0000,2.0.6,2.0.7;2.1.0,Missing specified plain attr values if plain attr step is the last one of the any management wizard
+SYNCOPE-1236,Bug,Closed,Fixed,2017-11-15T14:48:04.742+0000,2017-11-17T10:43:21.448+0000,2.0.6,2.0.7;2.1.0,Pagination error for executed tasks
+SYNCOPE-1235,Bug,Closed,Fixed,2017-11-15T08:20:04.785+0000,2017-11-15T11:09:10.403+0000,2.0.6,2.0.7;2.1.0,Unlink or unassign Group from External Resource resets dynamic membership conditions
+SYNCOPE-1233,Bug,Closed,Fixed,2017-11-09T08:41:19.334+0000,2017-11-10T16:23:33.378+0000,2.0.6;2.0.7,2.0.7;2.1.0,NullPointerException in Topology after creating a connector with no displayName using pure REST call
+SYNCOPE-1232,Bug,Closed,Fixed,2017-11-02T13:13:45.273+0000,2017-11-02T14:37:14.992+0000,2.0.6,2.0.7;2.1.0,AnyType removal does not check for existing AnyObjects
+SYNCOPE-1231,Bug,Closed,Fixed,2017-10-31T08:56:57.525+0000,2017-11-15T16:03:52.605+0000,2.0.6,2.0.7;2.1.0,Hidden columns in bulk action resul modal page
+SYNCOPE-1230,Bug,Closed,Fixed,2017-10-31T08:51:31.291+0000,2017-11-15T14:06:14.986+0000,2.0.6,2.0.7;2.1.0,Bad toggle handling during task execution delete
+SYNCOPE-1229,Bug,Closed,Fixed,2017-10-31T08:46:30.264+0000,2017-11-15T09:49:44.754+0000,2.0.6,2.0.7;2.1.0,Pull task execution bulk delete fails
+SYNCOPE-1227,Bug,Closed,Fixed,2017-10-27T09:58:23.928+0000,2017-11-13T11:46:40.886+0000,2.0.6,2.0.7;2.1.0,Password template not nullable after setting
+SYNCOPE-1226,Bug,Closed,Fixed,2017-10-24T14:06:26.939+0000,2017-11-27T11:17:18.482+0000,2.0.6,2.0.7;2.1.0,List the attributes to be displayed show deleted attributes
+SYNCOPE-1224,Bug,Closed,Fixed,2017-10-16T08:28:56.749+0000,2017-10-16T08:41:52.783+0000,2.0.6,2.0.7;2.1.0,"CLI: user ""all"" operations limited to 25 users"
+SYNCOPE-1223,Bug,Closed,Fixed,2017-10-12T09:21:26.943+0000,2017-10-12T12:35:20.302+0000,2.0.6,2.0.7;2.1.0,Cannot search for values containing comma
+SYNCOPE-1222,Bug,Closed,Fixed,2017-10-11T10:09:49.069+0000,2017-10-11T12:23:34.865+0000,2.0.6,2.0.7;2.1.0,Unwanted delete from External Resources on Membership removal
+SYNCOPE-1221,Bug,Closed,Fixed,2017-10-11T08:36:57.661+0000,2017-10-11T12:52:18.785+0000,2.0.6,,NPE when clicking on USER or GROUP reconciliation status (with empty table)
+SYNCOPE-1217,Bug,Closed,Fixed,2017-10-04T10:47:48.553+0000,2017-10-04T12:08:59.776+0000,2.0.5,2.0.6;2.1.0,Using the JAVA API is possible to create a Realm with the same name in the same parent realm
+SYNCOPE-1216,Bug,Closed,Fixed,2017-10-02T08:45:57.444+0000,2017-10-02T08:54:59.838+0000,,2.1.0,Upgrade to Spring 5
+SYNCOPE-1215,Bug,Closed,Fixed,2017-09-27T13:55:11.858+0000,2017-09-28T09:42:09.179+0000,2.0.5,2.0.6;2.1.0,Multivalue readonly fields allow frontend deletion
+SYNCOPE-1214,Bug,Closed,Fixed,2017-09-27T12:34:09.278+0000,2017-09-27T13:06:18.756+0000,2.0.5,2.0.6;2.1.0,Error when sorting Users by Realm
+SYNCOPE-1213,Bug,Closed,Fixed,2017-09-26T17:54:40.281+0000,2017-10-03T06:51:33.237+0000,2.0.5,2.0.6;2.1.0,Syncope console should advice user about exceeded file size
+SYNCOPE-1211,Bug,Closed,Fixed,2017-09-20T13:34:41.768+0000,2017-09-22T04:29:44.799+0000,2.0.0;2.0.5,2.0.6;2.1.0,syncope migration 1.2 to 2.0 users blocked to 200
+SYNCOPE-1210,Bug,Closed,Fixed,2017-09-20T10:34:34.997+0000,2017-09-20T11:12:48.540+0000,1.2.10;2.0.5,1.2.11;2.0.6;2.1.0,Random password generation fails for push tasks
+SYNCOPE-1207,Bug,Closed,Fixed,2017-09-12T14:15:24.148+0000,2017-09-14T16:23:38.038+0000,2.0.5,2.0.6;2.1.0,Audit: incorrect output element reported for Pull Tasks
+SYNCOPE-1206,Bug,Closed,Fixed,2017-09-08T08:29:49.572+0000,2017-09-08T13:42:17.298+0000,2.0.5,2.0.6;2.1.0,Dynamic membership updates not considered for provisioning during update
+SYNCOPE-1205,Bug,Closed,Fixed,2017-09-08T07:55:40.718+0000,2017-09-29T12:44:20.719+0000,2.0.5,2.0.6;2.1.0,Serialization exception in the logs when editing users pending approval
+SYNCOPE-1203,Bug,Closed,Fixed,2017-09-04T15:50:19.347+0000,2017-09-05T08:04:51.992+0000,2.0.5,2.0.5;2.1.0,"Not possible to add provision rules for ""Realm"" type"
+SYNCOPE-1199,Bug,Closed,Fixed,2017-08-17T12:45:22.348+0000,2017-09-04T15:49:19.191+0000,2.0.2;2.0.4,2.0.5;2.1.0,Syncope performance: AnyObjectTO's creation time grows with it's quantity
+SYNCOPE-1193,Bug,Closed,Fixed,2017-08-10T13:23:40.553+0000,2017-08-11T14:07:51.516+0000,2.0.4,2.0.5;2.1.0,Add the option to update a user via REST by using the username as key
+SYNCOPE-1190,Bug,Closed,Fixed,2017-08-07T13:58:38.738+0000,2017-08-17T14:53:52.613+0000,2.0.4,2.0.5;2.1.0,Username not refreshed on toggle menu after user update
+SYNCOPE-1189,Bug,Closed,Fixed,2017-08-07T13:57:08.854+0000,2017-08-08T10:43:15.191+0000,2.0.4,2.0.5;2.1.0,Realms page not accessible when user has permissions on dynamic realms
+SYNCOPE-1188,Bug,Closed,Fixed,2017-08-07T13:49:15.243+0000,2017-08-08T10:41:09.996+0000,2.0.4,2.0.5;2.1.0,NPE Message while saving Dynamic Realm with empty key
+SYNCOPE-1184,Bug,Closed,Fixed,2017-08-02T16:04:11.171+0000,2017-08-03T06:28:08.717+0000,2.0.4,2.0.5;2.1.0,"In the ""Attributes to be displayed"" sellection show the ones already displayed by default"
+SYNCOPE-1180,Bug,Closed,Fixed,2017-07-28T13:09:53.674+0000,2017-07-31T14:51:35.291+0000,2.0.4,2.0.5;2.1.0,No e-mail debug output
+SYNCOPE-1179,Bug,Closed,Fixed,2017-07-28T11:58:56.560+0000,2017-07-28T13:50:38.263+0000,2.0.4,2.0.5;2.1.0,"JWT ""Date"" claims are interpreted using milliseconds instead of seconds"
+SYNCOPE-1178,Bug,Closed,Fixed,2017-07-28T11:13:07.559+0000,2017-08-02T07:33:02.630+0000,,2.0.5;2.1.0,PlainSchema page empty while self update on Enduser
+SYNCOPE-1175,Bug,Closed,Fixed,2017-07-27T15:54:09.478+0000,2017-07-28T11:23:55.680+0000,2.0.4,2.0.5;2.1.0,Password Reset Token Generation Not Working After Upgrading to 2.0.4
+SYNCOPE-1174,Bug,Closed,Fixed,2017-07-27T15:47:26.802+0000,2017-07-27T15:48:16.211+0000,2.0.4,2.0.5;2.1.0,NPE in AccessTokenDataBinderImpl if no 'jwt.lifetime.minutes' schema is present
+SYNCOPE-1170,Bug,Closed,Fixed,2017-07-20T09:48:02.863+0000,2017-07-31T15:45:04.461+0000,,2.0.5;2.1.0,"Can't remove a ""Dynamic USER assignment"""
+SYNCOPE-1169,Bug,Closed,Fixed,2017-07-19T15:51:42.190+0000,2017-07-20T14:31:43.792+0000,2.0.4,2.0.5;2.1.0,Operation not supported error when trying to run a bulk action for users
+SYNCOPE-1168,Bug,Closed,Fixed,2017-07-18T10:02:10.231+0000,2017-07-18T12:27:25.984+0000,,1.2.11;2.0.5;2.1.0,"Encryptor pads short secret keys with ""0"" instead of random characters"
+SYNCOPE-1166,Bug,Closed,Fixed,2017-07-17T11:10:57.133+0000,2017-07-28T16:03:32.659+0000,2.0.4,2.0.5;2.1.0,No propagation task is created for resources where the password is not propagated
+SYNCOPE-1163,Bug,Closed,Fixed,2017-07-14T06:59:45.856+0000,2017-07-14T07:08:02.771+0000,2.0.4,2.0.5;2.1.0,External Resource priority is never NULL
+SYNCOPE-1162,Bug,Closed,Fixed,2017-07-13T10:30:54.554+0000,2017-07-13T14:24:33.579+0000,2.0.4,2.0.5;2.1.0,Change to Connector's display name not reflected by contextual menu
+SYNCOPE-1158,Bug,Closed,Fixed,2017-07-12T08:49:03.503+0000,2017-07-12T13:43:17.086+0000,2.0.4,2.0.5;2.1.0,Misleading Push Task reports
+SYNCOPE-1151,Bug,Closed,Fixed,2017-07-10T15:10:02.208+0000,2017-07-13T13:24:50.649+0000,2.0.4,2.0.5;2.1.0,Glinch in the root realm information
+SYNCOPE-1150,Bug,Closed,Fixed,2017-07-10T13:38:39.373+0000,2017-07-11T08:04:19.673+0000,2.0.4,2.0.5;2.1.0,Invalid property set for propagation task modal page header
+SYNCOPE-1149,Bug,Closed,Fixed,2017-07-05T08:16:59.225+0000,2017-07-05T10:20:49.312+0000,2.0.4,2.0.5;2.1.0,Access token still required for the third party JWT SSO integration scenario
+SYNCOPE-1141,Bug,Closed,Fixed,2017-07-04T07:47:24.833+0000,2017-07-04T07:52:12.651+0000,2.0.4,2.0.5;2.1.0,Error when getting /numbers with application/xml
+SYNCOPE-1140,Bug,Closed,Fixed,2017-07-03T14:37:37.465+0000,2017-07-11T14:14:58.950+0000,2.0.4,2.0.5;2.1.0,Error when trying to assign a relationship
+SYNCOPE-1139,Bug,Closed,Fixed,2017-07-03T12:38:20.234+0000,2017-07-04T12:04:59.491+0000,2.0.4,2.0.5;2.1.0,StackOverflowError while serializing AuditEntry after propagation
+SYNCOPE-1135,Bug,Closed,Fixed,2017-06-28T12:47:04.105+0000,2017-06-29T15:27:52.084+0000,2.0.3,2.0.4;2.1.0,Groups list not refreshing after realm change
+SYNCOPE-1134,Bug,Closed,Fixed,2017-06-28T12:39:50.383+0000,2017-06-29T13:59:33.039+0000,2.0.3,2.0.4;2.1.0,Action menu not working after page refresh
+SYNCOPE-1133,Bug,Closed,Fixed,2017-06-28T09:22:36.377+0000,2017-06-28T14:29:34.736+0000,2.0.3,2.0.4;2.1.0,Search panel used for relationships definition does not work
+SYNCOPE-1131,Bug,Closed,Fixed,2017-06-27T15:08:33.990+0000,2017-06-27T15:16:59.280+0000,2.0.3,2.0.4;2.1.0,Cannot delete resources owned by realms
+SYNCOPE-1130,Bug,Closed,Fixed,2017-06-27T14:16:04.032+0000,2017-06-27T15:47:43.845+0000,2.0.3,2.0.4;2.1.0,NPE refreshing realm page after realm creation
+SYNCOPE-1128,Bug,Closed,Fixed,2017-06-27T14:09:17.192+0000,2017-06-27T14:31:19.798+0000,1.1.8;1.2.10;2.0.3,1.2.11;2.0.4;2.1.0,Content exporter does not sort for internal foreign keys
+SYNCOPE-1127,Bug,Closed,Fixed,2017-06-27T12:40:19.467+0000,2017-06-28T14:43:42.113+0000,2.0.3,2.0.4;2.1.0,Membership attribute values are not shown
+SYNCOPE-1125,Bug,Closed,Fixed,2017-06-26T15:42:03.623+0000,2017-06-28T09:22:56.345+0000,2.0.3,2.0.4;2.1.0,Password on external resource not updated via Enduser
+SYNCOPE-1123,Bug,Closed,Fixed,2017-06-23T16:05:08.884+0000,2017-06-27T14:08:51.994+0000,2.0.3,2.0.4;2.1.0,Enduser UserRequestValidator NPE on custom form empty sections
+SYNCOPE-1122,Bug,Closed,Fixed,2017-06-23T13:18:43.328+0000,2017-06-27T16:06:05.901+0000,2.0.3,2.0.4;2.1.0,Enduser must show all attributes when customForm.json has empty section with show=true
+SYNCOPE-1121,Bug,Closed,Fixed,2017-06-23T13:12:59.264+0000,2017-06-26T15:00:56.878+0000,2.0.3,2.0.4;2.1.0,Enduser form customization does not work with empty section in edit mode
+SYNCOPE-1114,Bug,Closed,Fixed,2017-06-21T17:44:25.601+0000,2017-06-22T05:09:32.151+0000,2.0.3,2.0.4;2.1.0,Dynamic group information not available during propagation
+SYNCOPE-1112,Bug,Closed,Fixed,2017-06-19T13:53:58.559+0000,2017-06-19T13:56:37.087+0000,2.0.3,2.0.4;2.1.0,Error searching for user/group/anyobject by providing conditions on attribute with schema type Long
+SYNCOPE-1111,Bug,Closed,Fixed,2017-06-16T14:32:15.074+0000,2017-06-30T09:26:54.297+0000,2.0.3,2.0.4;2.1.0,New any type not shown unders Realms
+SYNCOPE-1110,Bug,Closed,Fixed,2017-06-15T15:49:15.194+0000,2017-06-29T08:56:08.819+0000,2.0.3,2.0.4;2.1.0,Error replacing group/auxclass/resource during self-management operation
+SYNCOPE-1109,Bug,Closed,Fixed,2017-06-13T13:26:05.910+0000,2017-06-13T13:36:59.435+0000,2.0.3,2.0.4;2.1.0,Installer fails to setup Activiti
+SYNCOPE-1108,Bug,Closed,Fixed,2017-06-13T07:54:29.742+0000,2017-06-13T14:02:31.565+0000,2.0.3;2.0.4,2.0.4;2.1.0,NullPointerException while saving an empty template
+SYNCOPE-1107,Bug,Closed,Fixed,2017-06-12T15:15:58.953+0000,2017-06-12T15:17:02.356+0000,2.0.3,2.0.4;2.1.0,The installer fails with a NoClassDefFoundError
+SYNCOPE-1104,Bug,Closed,Fixed,2017-06-06T09:48:39.179+0000,2017-06-12T15:51:35.395+0000,2.0.3,2.0.4;2.1.0,Missing autocomplete for ConnId object class when defining new provision
+SYNCOPE-1102,Bug,Closed,Fixed,2017-05-31T12:51:32.191+0000,2017-06-06T11:01:10.594+0000,1.1.5;1.1.6;1.1.7;1.1.8;1.2.10,1.1.9;1.2.11,Unique attribute update inserts additional value
+SYNCOPE-1101,Bug,Closed,Fixed,2017-05-31T09:18:21.996+0000,2017-06-01T09:53:48.174+0000,2.0.4,2.0.4;2.1.0,Error showing action icons on Notidfication events managements
+SYNCOPE-1099,Bug,Closed,Fixed,2017-05-26T11:45:25.927+0000,2017-05-26T12:38:53.515+0000,2.0.3,2.0.4;2.1.0,Dynamic group membership does not trigger propagation
+SYNCOPE-1098,Bug,Closed,Fixed,2017-05-25T12:05:14.357+0000,2017-05-25T12:47:09.189+0000,2.0.3,2.0.4;2.1.0,User edit modal page opening takes long in case of a lot of groups defined
+SYNCOPE-1094,Bug,Closed,Fixed,2017-05-24T13:09:21.606+0000,2017-05-24T14:56:24.434+0000,2.0.3,2.0.4;2.1.0,Out of memory error while rendering PDF
+SYNCOPE-1091,Bug,Closed,Fixed,2017-05-24T09:29:28.013+0000,2017-05-24T13:42:17.631+0000,2.0.3,2.0.4;2.1.0,Error while downloading Jpeg binary attribute content
+SYNCOPE-1090,Bug,Closed,Fixed,2017-05-24T08:44:34.060+0000,2017-05-24T09:16:45.946+0000,2.0.3,2.0.4;2.1.0,Error defining clause to search for group owners
+SYNCOPE-1089,Bug,Closed,Fixed,2017-05-22T15:42:16.251+0000,2017-05-22T17:36:48.007+0000,2.0.3,2.0.4;2.1.0,Improve provisioning mapping page in order to avoid duplicates in internal attribute name list
+SYNCOPE-1085,Bug,Closed,Fixed,2017-05-19T12:36:23.846+0000,2017-05-19T13:11:49.043+0000,2.0.3,2.0.4;2.1.0,"Custom tasks modal page shouldn't show ""Cancel"" button"
+SYNCOPE-1082,Bug,Closed,Fixed,2017-05-16T08:37:04.166+0000,2017-05-16T13:40:21.050+0000,2.0.3,2.0.4;2.1.0,Concurrent CRUD random failures with dynamic memberships
+SYNCOPE-1081,Bug,Closed,Fixed,2017-05-12T09:07:51.220+0000,2017-05-23T09:51:18.020+0000,2.0.4,2.0.4;2.1.0,Console: new toggle panel behavior anomalies
+SYNCOPE-1079,Bug,Closed,Fixed,2017-05-09T16:47:52.979+0000,2017-05-09T16:49:33.911+0000,2.0.3,2.0.4;2.1.0,Missing toggle panel for the job control widget of the administration console dashboard
+SYNCOPE-1078,Bug,Closed,Fixed,2017-05-09T10:52:35.287+0000,2017-05-09T13:17:20.327+0000,2.0.4,2.0.4;2.1.0,Activiti modeler window doesn't open on click
+SYNCOPE-1076,Bug,Closed,Fixed,2017-05-08T08:03:28.376+0000,2017-05-08T14:06:56.351+0000,2.0.3,2.0.4;2.1.0,The console doesn't allow to download the report in various formats
+SYNCOPE-1075,Bug,Closed,Fixed,2017-05-05T13:42:35.151+0000,2017-05-08T12:47:53.027+0000,2.0.3,2.0.4;2.1.0,User lastChangeDate attribute is not displayed correctly
+SYNCOPE-1071,Bug,Closed,Fixed,2017-04-26T10:53:36.698+0000,2017-04-26T12:15:58.008+0000,2.0.3,2.0.4;2.1.0,The executed notification tasks are not displaying on the console
+SYNCOPE-1070,Bug,Closed,Fixed,2017-04-21T11:01:46.601+0000,2017-04-21T11:04:54.985+0000,1.2.10;2.0.3,1.2.11;2.0.4;2.1.0,"Conversion pattern ignored for date, long and double values during propagation"
+SYNCOPE-1069,Bug,Closed,Fixed,2017-04-20T12:57:59.673+0000,2017-04-20T14:45:56.588+0000,,2.0.4;2.1.0,Incomplete HA setup instructions
+SYNCOPE-1066,Bug,Closed,Fixed,2017-04-14T08:34:38.113+0000,2017-04-18T08:44:29.183+0000,2.0.2,2.0.4;2.1.0,WADL servlet uses request url to provide wadl
+SYNCOPE-1062,Bug,Closed,Fixed,2017-04-06T10:10:00.713+0000,2017-04-06T12:32:33.399+0000,2.0.2,2.0.3;2.1.0,Changes pulled from one resource not propagated externally
+SYNCOPE-1060,Bug,Closed,Fixed,2017-04-05T16:46:14.606+0000,2017-04-10T07:07:53.252+0000,2.0.2,2.0.3;2.1.0,Date in membership attribute is propagated as timestamp
+SYNCOPE-1057,Bug,Closed,Fixed,2017-04-04T13:48:44.431+0000,2017-04-05T10:42:38.378+0000,2.0.3,2.0.3;2.1.0,Type extensions cleared after group update during pull
+SYNCOPE-1052,Bug,Closed,Fixed,2017-03-30T15:17:37.190+0000,2017-04-03T12:19:20.708+0000,,2.0.3;2.1.0,Enduser CAPTCHA not reloading
+SYNCOPE-1051,Bug,Closed,Fixed,2017-03-28T07:08:53.348+0000,2017-03-28T07:31:33.478+0000,2.0.2,2.0.3;2.1.0,It is possible to schedule task execution in the past
+SYNCOPE-1049,Bug,Closed,Fixed,2017-03-21T11:57:28.295+0000,2017-03-21T13:49:05.278+0000,2.0.2,2.0.3;2.1.0,Console returns an error if you try to explore Syncope as a remote object
+SYNCOPE-1048,Bug,Closed,Fixed,2017-03-17T15:31:52.088+0000,2017-03-17T16:01:25.605+0000,2.0.2,2.0.3;2.1.0,Into the connector configuration page the same bundle appear more then once if different versions exist
+SYNCOPE-1046,Bug,Closed,Fixed,2017-03-14T11:21:11.241+0000,2017-03-14T11:22:34.491+0000,2.0.2,2.0.3;2.1.0,Console: task execution sort not working properly
+SYNCOPE-1045,Bug,Closed,Fixed,2017-03-14T08:19:18.761+0000,2017-03-14T08:21:05.929+0000,2.0.3;2.1.0,2.0.3;2.1.0,Activiti Modeler: log out from Admin Console in case of error
+SYNCOPE-1044,Bug,Closed,Fixed,2017-03-13T15:03:21.155+0000,2017-03-13T15:50:33.917+0000,2.0.2,2.0.3;2.1.0,"By editing the provisioning rules, modal footer is not disabled"
+SYNCOPE-1043,Bug,Closed,Fixed,2017-03-07T14:22:09.478+0000,2017-03-10T12:51:48.157+0000,2.0.2,2.0.3;2.1.0,Improve JWT token expiration handling
+SYNCOPE-1042,Bug,Closed,Fixed,2017-03-07T12:04:29.834+0000,2017-03-07T15:42:13.424+0000,2.0.2,2.0.3;2.1.0,Removal of all executed pull tasks via bulk action returns a missing resource exception
+SYNCOPE-1040,Bug,Closed,Fixed,2017-03-01T11:24:18.169+0000,2017-03-01T11:25:36.917+0000,2.0.2,2.0.3;2.1.0,Membership derived attributes cannot reference own plain attributes
+SYNCOPE-1039,Bug,Closed,Fixed,2017-03-01T09:27:00.391+0000,2017-03-07T11:17:11.476+0000,2.0.2,2.0.3;2.1.0,User attributes in user edit/create form are reset after validation error
+SYNCOPE-1038,Bug,Closed,Fixed,2017-03-01T09:20:08.031+0000,2017-03-07T15:57:44.971+0000,2.0.2,2.0.3;2.1.0,User create: finish button should remain clickable if the last step is reached
+SYNCOPE-1037,Bug,Closed,Fixed,2017-03-01T09:09:06.040+0000,2017-03-03T13:01:43.559+0000,2.0.2,2.0.3;2.1.0,Pending approvals list is clickable
+SYNCOPE-1036,Bug,Closed,Fixed,2017-03-01T09:06:09.562+0000,2017-03-03T13:01:29.829+0000,2.0.2,2.0.3;2.1.0,Notification icon does not refresh on new approval event
+SYNCOPE-1034,Bug,Closed,Fixed,2017-02-28T08:32:06.966+0000,2017-03-07T14:11:11.428+0000,2.0.2,2.0.3;2.1.0,Assigned Auxiliary classes disappear in the Type Extensions panel when click on cancel
+SYNCOPE-1033,Bug,Closed,Fixed,2017-02-24T09:46:32.453+0000,2017-02-24T10:25:24.527+0000,2.0.2,2.0.3;2.1.0,NPE in Admin Console when working with Reconciliation Report
+SYNCOPE-1032,Bug,Closed,Fixed,2017-02-24T09:26:46.083+0000,2017-02-27T15:24:29.671+0000,2.0.2,2.0.3;2.1.0,Role key must be not modifiable during edit from Admin Console
+SYNCOPE-1030,Bug,Closed,Fixed,2017-02-24T09:20:53.285+0000,2017-02-27T14:47:53.569+0000,2.0.2,2.0.3;2.1.0,Invalid DefaultAccountRule definition from Admin Console
+SYNCOPE-1027,Bug,Closed,Fixed,2017-02-24T08:43:47.106+0000,2017-02-28T11:46:25.958+0000,2.0.2,2.0.3;2.1.0,Mapping errors cannot be fixed when defining provision rules for a new resource
+SYNCOPE-1026,Bug,Closed,Fixed,2017-02-24T08:27:42.357+0000,2017-02-27T16:48:15.711+0000,2.0.2,2.0.3;2.1.0,Cannot remove group owner once set
+SYNCOPE-1025,Bug,Closed,Fixed,2017-02-23T16:05:23.951+0000,2017-02-23T16:06:53.683+0000,2.0.2,2.0.3;2.1.0,SYNCOPEAUDIT table not populated
+SYNCOPE-1024,Bug,Closed,Fixed,2017-02-23T09:20:32.615+0000,2017-03-01T09:29:52.784+0000,2.0.2,2.0.3;2.1.0,Enduser does not manages properly ENUM schema labels
+SYNCOPE-1023,Bug,Closed,Fixed,2017-02-22T16:06:22.105+0000,2017-02-22T18:02:13.006+0000,2.0.2,2.0.3;2.1.0,Maven projects from archetype deploy test content with 'all' profile
+SYNCOPE-1022,Bug,Closed,Fixed,2017-02-22T06:57:46.457+0000,2017-03-07T15:03:54.963+0000,2.0.2,2.0.3;2.1.0,UTF-8 characters in security questions not correctly encoded by Enduser UI
+SYNCOPE-1016,Bug,Closed,Fixed,2017-02-15T17:58:38.422+0000,2017-02-15T18:05:45.732+0000,2.0.2,2.0.3;2.1.0,Last change date not updated for users when attributes are updated via pull
+SYNCOPE-1014,Bug,Closed,Fixed,2017-02-12T13:24:23.121+0000,2017-02-12T13:26:49.494+0000,2.0.2,2.0.3;2.1.0,The list of security questions is not refreshed after creating new one
+SYNCOPE-1013,Bug,Closed,Fixed,2017-02-12T13:01:24.588+0000,2017-02-12T13:03:03.805+0000,2.0.2,2.0.3;2.1.0,Password reset link generated by default notification template does not trigger Enduser UI features
+SYNCOPE-1012,Bug,Closed,Fixed,2017-02-12T07:53:29.346+0000,2017-02-12T08:06:53.549+0000,2.0.2,2.0.3;2.1.0,Security answer not recognized during password reset
+SYNCOPE-1010,Bug,Closed,Fixed,2017-02-12T06:51:38.839+0000,2017-02-12T06:54:19.073+0000,2.0.2,2.0.3;2.1.0,Some PushActions methods not invoked even if assigned
+SYNCOPE-1008,Bug,Closed,Fixed,2017-02-07T13:14:47.988+0000,2017-03-14T11:37:54.313+0000,2.0.2,2.0.3;2.1.0,Maven home directory not trimmed of whitespace
+SYNCOPE-1007,Bug,Closed,Fixed,2017-02-02T17:11:27.050+0000,2017-02-03T16:33:14.183+0000,2.0.2,2.0.3;2.1.0,NPE in Console when on an empty search term for user assignment
+SYNCOPE-1004,Bug,Closed,Fixed,2017-01-31T16:10:06.609+0000,2017-02-01T07:18:41.834+0000,2.0.2,2.0.3;2.1.0,Notification tasks generated for self read event not linked to user
+SYNCOPE-1003,Bug,Closed,Fixed,2017-01-31T15:55:17.236+0000,2017-02-01T07:18:07.265+0000,2.0.2,2.0.3;2.1.0,Error when accessing notification tasks for a given user
+SYNCOPE-1002,Bug,Closed,Fixed,2017-01-25T16:58:38.016+0000,2017-01-25T17:21:38.238+0000,2.0.1,2.0.2;2.1.0,Updating any objects' name via console is ineffective
+SYNCOPE-1001,Bug,Closed,Fixed,2017-01-24T10:07:48.040+0000,2017-01-24T10:09:10.168+0000,2.0.1,2.0.2;2.1.0,Closing the Activiti Modeler popup does not make the spinner to disappear
+SYNCOPE-1000,Bug,Closed,Fixed,2017-01-23T14:32:14.443+0000,2017-01-23T15:57:06.489+0000,2.0.1,2.0.2;2.1.0,CSVDir connector unclear about required attributes/columns
+SYNCOPE-999,Bug,Closed,Fixed,2017-01-20T15:53:35.285+0000,2017-01-20T17:06:43.656+0000,1.2.9;2.0.1,1.2.10;2.0.2;2.1.0,REST exception mapper overwrites Spring Security response
+SYNCOPE-997,Bug,Closed,Fixed,2017-01-13T11:26:29.881+0000,2017-01-13T16:33:44.457+0000,2.0.1,2.0.2;2.1.0,Angular transition errors
+SYNCOPE-994,Bug,Closed,Fixed,2017-01-12T14:48:29.763+0000,2017-01-20T11:23:43.584+0000,2.0.1,2.0.2;2.1.0,Character encoding not being respected
+SYNCOPE-993,Bug,Closed,Fixed,2017-01-12T14:22:55.577+0000,2017-01-16T15:44:11.076+0000,2.0.1,2.0.2;2.1.0,Footer buttons positioning and resizing
+SYNCOPE-992,Bug,Closed,Fixed,2017-01-12T14:03:34.120+0000,2017-01-13T10:52:38.676+0000,2.0.1,2.0.2;2.1.0,Date not registered in self registration
+SYNCOPE-990,Bug,Closed,Fixed,2017-01-10T10:49:13.743+0000,2017-01-10T10:50:57.589+0000,2.0.1,2.0.2;2.1.0,Explore resource detailed view always shows empty left column
+SYNCOPE-987,Bug,Closed,Fixed,2016-12-29T15:32:31.905+0000,2016-12-30T13:23:57.649+0000,2.0.1,2.0.2;2.1.0,Build issues on Windows
+SYNCOPE-982,Bug,Closed,Fixed,2016-12-19T16:35:21.453+0000,2016-12-20T10:24:36.106+0000,2.0.1,2.0.2;2.1.0,Notification tasks modal window does not provide access to actual HTML and TEXT e-mail body
+SYNCOPE-981,Bug,Closed,Fixed,2016-12-12T10:43:58.853+0000,2016-12-12T10:46:59.819+0000,2.0.1,2.0.2;2.1.0,Oracle/SQLServer configuration does not work
+SYNCOPE-980,Bug,Closed,Fixed,2016-12-07T09:45:35.147+0000,2016-12-07T12:28:06.598+0000,2.0.1,2.0.2;2.1.0,AnyObject search filter not honored with inGroups condition
+SYNCOPE-979,Bug,Closed,Fixed,2016-12-01T08:55:14.272+0000,2016-12-02T15:23:06.268+0000,2.0.1,2.0.2;2.1.0,resource id is missing in user propagation task table
+SYNCOPE-977,Bug,Closed,Fixed,2016-11-30T11:37:34.348+0000,2016-11-30T15:11:41.339+0000,2.0.1,2.0.2;2.1.0,style missing for captcha buttons in responsive template (under 800px width)
+SYNCOPE-976,Bug,Closed,Fixed,2016-11-28T11:52:04.990+0000,2016-11-28T12:41:23.431+0000,1.2.9;2.0.1,1.2.10;2.0.2;2.1.0,Duplicated events shown by admin console for notifications and audit
+SYNCOPE-975,Bug,Closed,Fixed,2016-11-26T03:10:51.155+0000,2016-11-26T06:54:13.138+0000,1.2.10;2.0.2;2.1.0,1.2.10;2.0.2;2.1.0,Search case insensitive ilike operator triggers search validation
+SYNCOPE-974,Bug,Closed,Fixed,2016-11-25T15:13:13.096+0000,2016-11-25T16:03:37.962+0000,2.0.1,2.0.2;2.1.0,Incorrect error reported when creating notification with missing events
+SYNCOPE-973,Bug,Closed,Fixed,2016-11-25T11:35:06.074+0000,2016-11-25T11:43:52.505+0000,1.2.9,1.2.10,NotFound error returned by user create under high load
+SYNCOPE-970,Bug,Closed,Fixed,2016-11-17T14:34:41.861+0000,2016-11-18T12:54:06.376+0000,2.0.1,2.0.2;2.1.0,"On logout, page translation doesn't reset to default settings."
+SYNCOPE-966,Bug,Closed,Fixed,2016-11-10T07:33:39.270+0000,2016-11-10T16:58:58.116+0000,2.0.1,2.0.2;2.1.0,Exception reported when looking at propagation task details from user list
+SYNCOPE-965,Bug,Closed,Fixed,2016-11-07T16:20:04.329+0000,2016-11-09T08:06:13.050+0000,1.2.9;2.0.1,1.2.10;2.0.2;2.1.0,Cron expression for scheduled job is not saved from the console
+SYNCOPE-963,Bug,Closed,Fixed,2016-11-04T10:33:20.994+0000,2016-11-04T10:35:30.519+0000,1.2.9,1.2.10,"Various content upgrade ""edge case"" failures"
+SYNCOPE-954,Bug,Closed,Fixed,2016-10-04T08:31:03.579+0000,2016-10-04T10:28:31.673+0000,1.2.8,1.2.9,Wicket exception when running an enable or disable action
+SYNCOPE-953,Bug,Closed,Fixed,2016-09-29T14:51:45.035+0000,2016-09-29T15:28:01.014+0000,2.0.0,2.0.1;2.1.0,Enduser shows groups of the selected realm rather than groups assignable to users in the selected realm
+SYNCOPE-950,Bug,Closed,Fixed,2016-09-23T08:59:16.141+0000,2016-09-23T09:26:28.528+0000,2.0.1,2.0.1;2.1.0,Self-registration / self-update not working
+SYNCOPE-947,Bug,Closed,Fixed,2016-09-19T14:31:22.998+0000,2016-09-19T14:57:47.966+0000,2.0.0,2.0.1,Missing quotes defining realm (JEXL) expression in user/group/anyobject templates for realms
+SYNCOPE-946,Bug,Closed,Fixed,2016-09-19T14:30:35.585+0000,2016-09-30T15:33:25.183+0000,2.0.0,2.0.1;2.1.0,Encrypted attribute values not managed as password values
+SYNCOPE-944,Bug,Closed,Fixed,2016-09-16T14:32:49.730+0000,2016-09-16T14:55:08.728+0000,2.0.0,2.0.1;2.1.0,Cannot manually assign groups provided with dynamic assignment rules
+SYNCOPE-943,Bug,Closed,Fixed,2016-09-13T11:26:41.709+0000,2016-10-04T13:19:17.819+0000,1.2.8,1.2.9,Security question gets deleted when changing a user attribute in the console
+SYNCOPE-942,Bug,Closed,Fixed,2016-09-13T11:02:01.832+0000,2016-10-03T07:33:28.124+0000,2.0.0,2.0.1;2.1.0,Bug in changing security answer in the Enduser UI
+SYNCOPE-940,Bug,Closed,Fixed,2016-09-12T16:02:46.362+0000,2016-09-30T08:54:20.333+0000,2.0.0,2.0.1;2.1.0,Handle authorization issues more gracefully in the console
+SYNCOPE-939,Bug,Closed,Fixed,2016-09-12T15:57:29.296+0000,2016-09-13T13:20:42.547+0000,1.2.8,1.2.9,Password history not checked when user changes password
+SYNCOPE-937,Bug,Closed,Fixed,2016-09-12T06:23:27.323+0000,2016-09-27T14:31:41.563+0000,2.0.0.M5;2.0.0,2.0.1;2.1.0,Security question not loaded while resetting the user password
+SYNCOPE-936,Bug,Closed,Fixed,2016-09-08T07:48:27.774+0000,2016-09-08T08:57:24.466+0000,1.2.8;2.0.0.M5,1.2.9;2.0.0,Sync token reset to NULL when no SyncDelta items are available
+SYNCOPE-935,Bug,Closed,Fixed,2016-09-07T09:12:50.709+0000,2016-09-07T10:58:10.835+0000,2.0.0.M5,2.0.0,Attribute 'type' shouldn't be available to create a group filter
+SYNCOPE-934,Bug,Closed,Fixed,2016-09-07T07:07:09.509+0000,2016-09-07T15:18:08.638+0000,2.0.0.M5,2.0.0,Bad form (including login) appearance with IE 11
+SYNCOPE-933,Bug,Closed,Fixed,2016-09-07T06:55:30.946+0000,2016-09-08T13:18:31.472+0000,2.0.0.M5,2.0.0,Dashboard: status COMPLETE is reported for running jobs
+SYNCOPE-931,Bug,Closed,Fixed,2016-09-06T11:49:31.546+0000,2016-09-07T13:57:44.693+0000,2.0.0.M5,2.0.0,Error in Camel route causes subsequent failures
+SYNCOPE-930,Bug,Closed,Fixed,2016-09-02T18:39:56.946+0000,2016-09-05T09:37:04.749+0000,2.0.0-M4;2.0.0.M5,2.0.0,"Exception when dropping the last ""Base Contexts to Synchronize"" from LDAP connector"
+SYNCOPE-929,Bug,Closed,Fixed,2016-09-02T10:11:49.016+0000,2016-09-05T13:50:42.311+0000,1.2.8;2.0.0-M4,1.2.9;2.0.0,Braces are ignored for FIQL strings
+SYNCOPE-928,Bug,Closed,Fixed,2016-09-01T13:59:24.190+0000,2016-09-01T14:32:13.289+0000,1.1.8;1.2.8;2.0.0-M4,1.1.9;1.2.9;2.0.0.M5,Table that stores user passwords store duplicate entries
+SYNCOPE-927,Bug,Closed,Fixed,2016-08-31T14:18:42.277+0000,2016-08-31T14:53:55.196+0000,2.0.0-M4,2.0.0.M5,User creation randomly fails if capctha check has been disabled
+SYNCOPE-923,Bug,Closed,Fixed,2016-08-23T07:54:33.289+0000,2016-08-27T14:54:34.837+0000,1.2.8;2.0.0-M4,1.2.9;2.0.0.M5,Sync / Pull task not configured for delete causes incremental sync to prematurely stop
+SYNCOPE-921,Bug,Closed,Fixed,2016-08-12T13:31:14.463+0000,2016-08-27T14:54:53.687+0000,2.0.0-M4,2.0.0.M5,Approval list not reloaded after approve/reject operations
+SYNCOPE-918,Bug,Closed,Fixed,2016-08-08T07:58:12.464+0000,2016-08-27T14:54:44.345+0000,2.0.0-M4,2.0.0.M5,"When a user has been successfully updated, logout link doesn't bring back to home page."
+SYNCOPE-916,Bug,Closed,Fixed,2016-08-04T12:00:54.023+0000,2016-08-27T14:54:56.056+0000,2.0.0-M4,2.0.0.M5,Content exporter includes unwanted items
+SYNCOPE-915,Bug,Closed,Fixed,2016-08-04T10:39:07.365+0000,2016-08-27T14:54:38.961+0000,2.0.0-M4,2.0.0.M5,"When changing connector's display name, the topology is not refreshed"
+SYNCOPE-912,Bug,Closed,Fixed,2016-07-29T09:49:06.400+0000,2016-08-27T14:54:56.483+0000,2.0.0-M4,2.0.0.M5,Registered users receive an error message after saving their own profile
+SYNCOPE-911,Bug,Closed,Fixed,2016-07-29T09:28:12.471+0000,2016-08-27T14:54:51.762+0000,2.0.0-M4,2.0.0.M5,Enduser should allow empty values on non required select fields
+SYNCOPE-908,Bug,Closed,Fixed,2016-07-25T08:58:09.064+0000,2016-08-27T14:54:39.414+0000,2.0.0-M4,2.0.0.M5,Exception when searching for any object to fill relationship
+SYNCOPE-907,Bug,Closed,Fixed,2016-07-25T08:49:30.772+0000,2016-08-27T14:54:41.828+0000,2.0.0-M4,2.0.0.M5,Creating any object with relationship to another results in self-relationship
+SYNCOPE-905,Bug,Closed,Fixed,2016-07-14T04:34:57.509+0000,2016-08-27T14:54:44.561+0000,2.0.0-M4,2.0.0.M5,Wrong entitlement evaluation
+SYNCOPE-901,Bug,Closed,Fixed,2016-07-08T08:40:27.279+0000,2016-08-27T14:54:51.232+0000,2.0.0-M2;2.0.0-M3;2.0.0-M4,2.0.0.M5,Syncope 2.0.0.X maven source artifacts missing
+SYNCOPE-900,Bug,Closed,Fixed,2016-07-07T16:11:00.002+0000,2016-08-27T14:54:37.016+0000,,2.0.0.M5,Can't edit Camel routes in Console
+SYNCOPE-899,Bug,Closed,Fixed,2016-07-07T15:32:45.875+0000,2016-08-27T14:54:55.615+0000,,2.0.0.M5,neighborhood relationship type has no description
+SYNCOPE-898,Bug,Closed,Fixed,2016-07-07T08:58:44.208+0000,2016-08-27T14:54:37.230+0000,2.0.0-M4,2.0.0.M5,Cannot set realm in user / group / any object templates for pull task
+SYNCOPE-893,Bug,Closed,Fixed,2016-07-05T20:19:57.622+0000,2016-08-27T14:54:46.215+0000,2.0.0-M4,2.0.0.M5,International characters in group name
+SYNCOPE-892,Bug,Closed,Fixed,2016-07-05T16:22:13.567+0000,2016-08-27T14:54:46.747+0000,2.0.0-M4,2.0.0.M5,RuntimeException when resizing tables
+SYNCOPE-891,Bug,Closed,Fixed,2016-06-30T15:18:04.909+0000,2016-08-27T14:54:54.016+0000,2.0.0-M4,2.0.0.M5,Resource Provisioning Error
+SYNCOPE-888,Bug,Closed,Fixed,2016-06-30T14:48:51.434+0000,2016-08-27T14:54:42.026+0000,2.0.0-M4,2.0.0.M5,No error thrown if resource mapping internal attribute doesn't exist
+SYNCOPE-887,Bug,Closed,Fixed,2016-06-30T14:07:42.633+0000,2016-08-27T14:54:49.590+0000,2.0.0-M4,2.0.0.M5,Hidden password in pull task user template
+SYNCOPE-886,Bug,Closed,Fixed,2016-06-30T12:30:40.880+0000,2016-08-27T14:54:44.128+0000,2.0.0-M4,2.0.0.M5,Error enablig/disabling user on a single resource
+SYNCOPE-884,Bug,Closed,Fixed,2016-06-28T15:58:15.665+0000,2016-08-27T14:54:46.487+0000,2.0.0-M4,2.0.0.M5,Error in REST API when specifying application/xml accept header
+SYNCOPE-883,Bug,Closed,Fixed,2016-06-28T15:47:04.113+0000,2016-08-27T14:54:52.024+0000,2.0.0-M4,2.0.0.M5,Can't access REST API via browser
+SYNCOPE-881,Bug,Closed,Fixed,2016-06-27T18:56:28.372+0000,2016-08-27T14:54:43.913+0000,2.0.0-M4,2.0.0.M5,Users not removed from transitive external resources when deleted
+SYNCOPE-879,Bug,Closed,Fixed,2016-06-24T13:27:38.334+0000,2016-08-27T14:54:52.239+0000,2.0.0-M4,2.0.0.M5,Auto-completion not working for internal and external attribute names
+SYNCOPE-878,Bug,Closed,Fixed,2016-06-24T11:08:49.585+0000,2016-08-27T14:54:46.960+0000,2.0.0-M4,2.0.0.M5,Failure on bulk deletion of users
+SYNCOPE-876,Bug,Closed,Fixed,2016-06-23T09:14:29.020+0000,2016-06-23T09:47:45.218+0000,1.2.8;2.0.0-M3,1.2.9;2.0.0-M4,Fake after object reported by propagation in case of delete
+SYNCOPE-875,Bug,Closed,Fixed,2016-06-22T16:17:02.542+0000,2016-06-23T10:48:39.311+0000,2.0.0-M3,2.0.0-M4,Can't test LDAP Connector in admin console
+SYNCOPE-872,Bug,Closed,Fixed,2016-06-14T08:00:58.342+0000,2016-08-27T14:54:57.968+0000,,2.0.0.M5,Type extensions not considered for user form
+SYNCOPE-869,Bug,Closed,Fixed,2016-06-07T14:04:57.348+0000,2016-06-23T11:29:00.529+0000,2.0.0-M3,2.0.0-M4,Missing notification in case of success after create and update
+SYNCOPE-868,Bug,Closed,Fixed,2016-06-06T12:19:35.058+0000,2016-06-06T12:34:12.145+0000,2.0.0-M3,2.0.0-M4,Submit and cancel button not available in create report template modal page
+SYNCOPE-867,Bug,Closed,Fixed,2016-06-06T12:17:45.157+0000,2016-06-06T12:33:58.216+0000,2.0.0-M3,2.0.0-M4,Creating a new notification template the list of available templates are not updated after submit
+SYNCOPE-865,Bug,Closed,Fixed,2016-05-31T09:14:11.653+0000,2016-06-17T16:58:56.743+0000,2.0.0-M3,2.0.0-M4,Random ConcurrentModificationException reported in the logs
+SYNCOPE-863,Bug,Closed,Fixed,2016-05-26T15:59:54.767+0000,2016-06-23T15:55:08.889+0000,2.0.0-M2,2.0.0-M4,Pull policy correlation rule plain attributes palette doesn't work fine
+SYNCOPE-850,Bug,Closed,Fixed,2016-05-12T07:46:45.266+0000,2016-05-27T16:19:39.007+0000,2.0.0.M5,2.0.0-M3,Heart icon to check connector connectivity does not show feedback panel on Chrome
+SYNCOPE-849,Bug,Closed,Fixed,2016-05-12T07:42:08.371+0000,2016-05-27T16:19:23.725+0000,2.0.0.M5,2.0.0-M3,Task execution popup does not resize properly on Chrome
+SYNCOPE-847,Bug,Closed,Fixed,2016-05-11T16:50:15.452+0000,2016-05-16T14:39:25.920+0000,,2.0.0-M3,"When creating virtual schema, the new item is not shown in the list"
+SYNCOPE-846,Bug,Closed,Fixed,2016-05-11T16:47:33.039+0000,2016-05-31T18:31:47.796+0000,,2.0.0-M3,Annoying flickering
+SYNCOPE-845,Bug,Closed,Fixed,2016-05-11T16:44:53.463+0000,2016-06-17T14:05:43.079+0000,,2.0.0-M4,Type extensions not considered for user and any objects forms
+SYNCOPE-844,Bug,Closed,Fixed,2016-05-11T16:08:13.282+0000,2016-05-13T15:56:39.704+0000,,2.0.0-M3,When showing propagation task details stacktrace is reported instead
+SYNCOPE-840,Bug,Closed,Fixed,2016-05-05T07:33:02.946+0000,2016-05-09T07:46:36.715+0000,1.2.7,1.2.8,REST API doc url breaks without trailing slash
+SYNCOPE-839,Bug,Closed,Fixed,2016-05-03T12:33:25.929+0000,2016-05-09T07:34:39.986+0000,2.0.0-M2,2.0.0-M3,Syncope 2.0.0-M2 has a missing dependency syncope-fit-build-build-tools
+SYNCOPE-837,Bug,Closed,Fixed,2016-04-27T08:22:28.039+0000,2016-04-27T09:17:08.235+0000,2.0.0-M2,2.0.0-M3,Bad appearance for + / - buttons under Chrome / Chromium
+SYNCOPE-836,Bug,Closed,Fixed,2016-04-22T15:44:12.660+0000,2016-05-05T14:59:06.980+0000,2.0.0.M5,2.0.0-M3,"On Firefox, once logged in can't log out and viceversa if cache is not have been cleared"
+SYNCOPE-825,Bug,Closed,Fixed,2016-04-06T11:58:38.678+0000,2016-04-27T10:45:52.379+0000,2.0.0-M2,2.0.0-M3,CSS title under Realms: bad style
+SYNCOPE-823,Bug,Closed,Fixed,2016-04-05T14:41:21.279+0000,2016-04-07T08:57:38.681+0000,2.0.0-M2,2.0.0-M3,Workflow XML editor pops up after closing Activiti Modeler
+SYNCOPE-817,Bug,Closed,Fixed,2016-03-29T09:49:56.399+0000,2016-04-21T16:08:12.702+0000,2.0.0-M2,2.0.0-M3,Switching between Connector Configuration tabs loses information
+SYNCOPE-814,Bug,Closed,Fixed,2016-03-24T17:31:24.728+0000,2016-03-29T15:56:31.363+0000,2.0.0-M2,2.0.0-M3,"MasterContent.xml configuration is broken for ""main"""
+SYNCOPE-813,Bug,Closed,Fixed,2016-03-24T15:02:32.215+0000,2016-03-24T16:34:29.412+0000,2.0.0-M2,2.0.0-M3,"Remove ""mandatory"" field from configuration parameter creation"
+SYNCOPE-812,Bug,Closed,Fixed,2016-03-24T13:46:16.152+0000,2016-03-24T16:34:52.011+0000,2.0.0-M1,2.0.0-M3,Remove flickering
+SYNCOPE-811,Bug,Closed,Fixed,2016-03-24T12:16:30.687+0000,2016-04-04T11:51:47.331+0000,2.0.0-M2,2.0.0-M3,"Error message ""'spinner' is required"""
+SYNCOPE-801,Bug,Closed,Fixed,2016-03-23T15:46:39.785+0000,2016-04-22T09:22:23.124+0000,2.0.0-M2,2.0.0-M3,Provisioning mappings are not saved
+SYNCOPE-800,Bug,Closed,Fixed,2016-03-23T14:37:01.579+0000,2016-03-29T10:02:44.482+0000,1.2.7;2.0.0-M1,1.2.8;2.0.0-M3,Synchronization fails in case of accountId mapped on derived attribute starting with literal
+SYNCOPE-799,Bug,Closed,Fixed,2016-03-22T15:12:11.304+0000,2016-05-04T13:34:26.706+0000,2.0.0-M2,2.0.0-M3,Do not allow admin user log in to enduser
+SYNCOPE-798,Bug,Closed,Fixed,2016-03-22T15:04:59.622+0000,2016-05-02T15:35:26.607+0000,2.0.0-M2,2.0.0-M3,"Once authenticated to enduser, ""Cancel"" brings nowhere"
+SYNCOPE-793,Bug,Closed,Fixed,2016-03-22T13:42:08.368+0000,2016-04-04T12:46:22.390+0000,2.0.0-M2,2.0.0-M3,"Password"" keys missing when creating a resource mapping"
+SYNCOPE-792,Bug,Closed,Fixed,2016-03-22T13:28:02.510+0000,2016-04-01T14:34:24.310+0000,2.0.0-M2,2.0.0-M3,"Improve JEXL information text for ""mandatory"" when creating a new schema attribute"
+SYNCOPE-783,Bug,Closed,Fixed,2016-03-21T13:12:02.283+0000,2016-05-13T15:05:22.084+0000,2.0.0-M2,2.0.0-M3,DateTime fields not correctly handled in Enduser
+SYNCOPE-782,Bug,Closed,Fixed,2016-03-19T10:59:14.365+0000,2016-03-19T11:08:00.917+0000,2.0.0-M2,2.0.0-M2,DateParamConverterProvider not working with Widlfly 9
+SYNCOPE-781,Bug,Closed,Fixed,2016-03-17T15:33:26.561+0000,2016-04-20T15:30:53.288+0000,2.0.0-M2,2.0.0-M3,Activiti Modeler breaks deployment from installer
+SYNCOPE-780,Bug,Closed,Fixed,2016-03-17T13:21:54.128+0000,2016-03-21T13:26:05.296+0000,2.0.0-M2,2.0.0-M2,On logout session is not completely cleared out
+SYNCOPE-776,Bug,Closed,Fixed,2016-03-14T15:37:14.410+0000,2016-03-17T08:49:53.913+0000,2.0.0-M1,2.0.0-M2,Standalone 2.0.0-M1 does not start up
+SYNCOPE-775,Bug,Closed,Fixed,2016-03-03T12:01:42.751+0000,2016-03-09T14:14:01.962+0000,2.0.0-M1,2.0.0-M2,Error when adding a dynamic user membership condition to a role
+SYNCOPE-774,Bug,Closed,Fixed,2016-03-03T11:17:32.041+0000,2016-03-11T16:41:13.588+0000,2.0.0-M2,2.0.0-M2,Cannot update resource mapping
+SYNCOPE-769,Bug,Closed,Fixed,2016-02-18T15:16:05.938+0000,2016-02-18T16:10:42.012+0000,1.2.7;2.0.0-M1,1.2.8;2.0.0-M2,Sync performance decrease
+SYNCOPE-768,Bug,Closed,Fixed,2016-02-18T14:03:18.891+0000,2016-02-19T15:41:46.909+0000,1.2.7;2.0.0-M1,1.2.8;2.0.0-M2,Missing records in case of user list ordered by nullable schema
+SYNCOPE-762,Bug,Closed,Fixed,2016-01-29T15:03:21.497+0000,2016-02-02T13:31:51.800+0000,2.0.0-M1,2.0.0-M2,"Last execution date value is always null for Sched, Sync and Push tasks"
+SYNCOPE-759,Bug,Closed,Fixed,2016-01-21T11:12:30.781+0000,2016-01-22T16:45:20.294+0000,2.0.0-M1,2.0.0-M2,Creation of a new AnyTypeClass doesn't check if the key is already used
+SYNCOPE-758,Bug,Closed,Fixed,2016-01-20T14:30:07.922+0000,2016-02-12T15:27:49.363+0000,2.0.0-M1,2.0.0-M2,Workflow diagram not updated after saving from XML editor modal window
+SYNCOPE-756,Bug,Closed,Fixed,2016-01-04T12:03:17.736+0000,2016-01-22T16:45:33.265+0000,2.0.0-M1,2.0.0-M2,Relationships with USERs on the right side have to be forbidden
+SYNCOPE-741,Bug,Closed,Fixed,2015-12-09T16:26:29.497+0000,2015-12-11T08:45:21.296+0000,1.2.6;2.0.0-M1,1.2.7;2.0.0-M1,Tasks page unusable when a task has thousand executions
+SYNCOPE-739,Bug,Closed,Fixed,2015-12-03T12:46:38.932+0000,2015-12-07T08:21:47.025+0000,1.2.6,1.2.7;2.0.0-M1,Virtual attributes are not updated after a sync task
+SYNCOPE-738,Bug,Closed,Fixed,2015-12-02T16:15:53.990+0000,2016-09-05T13:40:44.810+0000,2.0.0-M1,2.0.0,Startup errors with Wildfly due to Camel route loading
+SYNCOPE-737,Bug,Closed,Fixed,2015-12-01T17:02:10.042+0000,2016-04-27T12:26:48.494+0000,2.0.0-M1,2.0.0-M3,"UserWizardBuilder, the store internally password flag is not set properly"
+SYNCOPE-735,Bug,Closed,Fixed,2015-11-25T11:06:47.768+0000,2015-11-25T11:32:02.134+0000,1.2.6,1.2.7;2.0.0-M1,Acitiviti history tables uncontrolled growth
+SYNCOPE-734,Bug,Resolved,Fixed,2015-11-23T14:44:33.323+0000,2015-11-27T16:35:04.361+0000,,,Useless and unpleasant flickering during datatable record selection
+SYNCOPE-733,Bug,Closed,Fixed,2015-11-23T14:36:58.310+0000,2015-11-25T10:44:28.080+0000,2.0.0-M1,2.0.0-M1,Table sort does not work fine in case of multi paged result
+SYNCOPE-730,Bug,Closed,Fixed,2015-11-11T08:10:55.644+0000,2016-03-15T15:32:04.574+0000,2.0.0-M1,2.0.0-M2,Datetime picker component is not working properly with some date formats
+SYNCOPE-729,Bug,Closed,Fixed,2015-11-10T17:33:41.287+0000,2015-11-10T18:04:13.289+0000,1.2.6;2.0.0-M1,1.2.7;2.0.0-M1,Skipped remote update during resource assignment if connector CREATE capability is not provided
+SYNCOPE-726,Bug,Resolved,Fixed,2015-11-09T08:28:16.847+0000,2015-11-09T08:32:27.770+0000,1.1.8,1.1.9,Role name update may result in incorrect external operation
+SYNCOPE-717,Bug,Closed,Fixed,2015-10-28T13:00:17.931+0000,2015-10-28T13:14:30.025+0000,1.2.5,1.2.6;2.0.0-M1,Inconsistent double attribute value management
+SYNCOPE-716,Bug,Closed,Fixed,2015-10-27T09:08:46.313+0000,2015-10-27T09:10:48.469+0000,1.2.5,1.2.6,Cannot specify conversion pattern during schema creation
+SYNCOPE-712,Bug,Closed,Fixed,2015-10-19T07:43:21.673+0000,2015-10-22T12:45:16.548+0000,1.2.5,1.2.6,Error while searching roles by parent
+SYNCOPE-710,Bug,Closed,Fixed,2015-10-14T15:32:31.591+0000,2015-10-15T10:27:14.427+0000,1.2.5,1.2.6;2.0.0-M1,Password propagation not occuring if other updates are set on different resources
+SYNCOPE-707,Bug,Closed,Fixed,2015-10-13T11:12:42.514+0000,2015-10-13T14:04:41.159+0000,1.2.5;2.0.0-M1,1.2.6;2.0.0-M1,ConfigurationLogic doesn't check the existence of key during deletion.
+SYNCOPE-706,Bug,Closed,Fixed,2015-10-12T14:06:56.365+0000,2015-10-13T07:53:52.785+0000,2.0.0-M1,2.0.0-M1,INTERNAL_SERVER_ERROR when authenticating with non existing username
+SYNCOPE-703,Bug,Closed,Fixed,2015-10-07T09:41:59.853+0000,2015-10-07T09:54:00.845+0000,2.0.0-M1,2.0.0-M1,Static WADL is missing extension services
+SYNCOPE-702,Bug,Closed,Fixed,2015-10-06T08:15:08.871+0000,2015-10-06T09:07:02.941+0000,,1.2.6;2.0.0-M1,Documentation issue on Architecture section
+SYNCOPE-691,Bug,Closed,Fixed,2015-09-07T12:14:39.124+0000,2015-09-07T14:44:35.069+0000,1.2.5,1.2.6;2.0.0-M1,Multivalue virtual attribute does not work
+SYNCOPE-689,Bug,Resolved,Fixed,2015-08-28T14:26:43.346+0000,2015-09-02T10:56:11.585+0000,2.0.0-M1,,Some integration tests fail with Wildfy
+SYNCOPE-688,Bug,Closed,Fixed,2015-08-28T11:11:34.184+0000,2015-09-04T12:52:18.948+0000,2.0.0-M1,2.0.0-M1,JSON (de)serialization not working in Glassfish 4.1
+SYNCOPE-686,Bug,Closed,Fixed,2015-08-25T09:17:07.457+0000,2015-08-26T14:54:31.051+0000,1.2.5,1.2.6;2.0.0-M1,Indirect LDAP resource provisioning fails on missing password
+SYNCOPE-684,Bug,Closed,Fixed,2015-07-23T08:47:24.218+0000,2015-07-23T08:57:48.741+0000,1.2.4,1.2.5;2.0.0-M1,Password not updated on external resources from self-service
+SYNCOPE-683,Bug,Closed,Fixed,2015-07-13T09:51:17.186+0000,2015-07-13T10:51:50.087+0000,1.2.4,1.2.5,Cannot unassign and reassign role with membership attrs to user
+SYNCOPE-682,Bug,Closed,Fixed,2015-07-13T09:39:20.561+0000,2015-07-13T10:51:41.550+0000,1.2.4,1.2.5,NPE when defining resources for pass-through authentication
+SYNCOPE-678,Bug,Closed,Fixed,2015-07-08T07:39:10.747+0000,2015-07-13T09:18:15.126+0000,1.2.4,1.2.5;2.0.0-M1,Password generation fails with no password policy or no min / max length
+SYNCOPE-677,Bug,Closed,Fixed,2015-07-08T07:36:43.945+0000,2015-07-08T08:01:26.576+0000,1.2.4,1.2.5,Cannot override console's landing page
+SYNCOPE-673,Bug,Closed,Fixed,2015-05-27T07:35:23.263+0000,2015-05-27T10:22:38.170+0000,1.2.2;1.2.3;1.2.4,1.2.5;2.0.0-M1,Null ids in SyncJob report
+SYNCOPE-672,Bug,Closed,Fixed,2015-05-25T14:49:40.703+0000,2015-05-25T15:45:03.304+0000,1.2.4,1.2.5;2.0.0-M1,Console doesn't display the right condition when configuring a search filter with a resource
+SYNCOPE-671,Bug,Closed,Fixed,2015-05-24T16:17:22.465+0000,2015-05-24T17:08:31.950+0000,1.2.4,1.2.5;2.0.0-M1,Changed password value is not propagated to external resources on successful password reset
+SYNCOPE-670,Bug,Closed,Fixed,2015-05-21T14:40:41.867+0000,2015-05-22T10:25:05.998+0000,1.2.4,1.2.5;2.0.0-M1,Prpagation miss all UserMod's changes performed by the Activiti update service task
+SYNCOPE-669,Bug,Closed,Fixed,2015-05-21T13:09:43.215+0000,2015-05-22T08:13:54.725+0000,1.2.4,1.2.5;2.0.0-M1,Search filter in the notifications doesn't work properly
+SYNCOPE-668,Bug,Closed,Fixed,2015-05-19T15:41:31.695+0000,2015-05-20T12:00:27.331+0000,1.2.4,1.2.5;2.0.0-M1,JobInstanceLoader class is not able to return the correct Task id or Report id from its job name
+SYNCOPE-664,Bug,Closed,Fixed,2015-05-04T14:57:16.677+0000,2015-05-04T15:59:02.832+0000,1.2.3,1.2.4;2.0.0-M1,Empty string values not allowed with Oracle DB
+SYNCOPE-659,Bug,Closed,Fixed,2015-04-15T07:57:38.428+0000,2015-04-16T07:03:43.911+0000,1.2.3,1.2.4;2.0.0-M1,"Wrong fasterxml.jackson, common-lang3 version in the Import-Package in the syncope-common, syncope-client"
+SYNCOPE-658,Bug,Closed,Fixed,2015-04-10T15:02:07.136+0000,2015-04-14T10:10:03.774+0000,1.2.3,1.2.4;2.0.0-M1,Duplicate derived attribute after sync task when it is configured as accountid for the synched resource
+SYNCOPE-656,Bug,Closed,Fixed,2015-04-02T07:34:46.533+0000,2015-04-02T07:49:50.164+0000,1.2.3,1.2.4;2.0.0-M1,Debian configuration files overwrittern
+SYNCOPE-655,Bug,Closed,Fixed,2015-03-27T08:31:16.529+0000,2015-03-27T10:17:21.287+0000,1.2.3,1.2.4,Files under /etc/apache-syncope ignored
+SYNCOPE-654,Bug,Closed,Fixed,2015-03-26T16:55:18.480+0000,2015-04-14T16:03:44.473+0000,1.2.3,1.2.4;2.0.0-M1,Some generic and uninformative error messages
+SYNCOPE-649,Bug,Closed,Fixed,2015-02-27T15:33:37.657+0000,2015-02-27T15:36:13.457+0000,1.2.2,1.2.3;2.0.0-M1,Paged lists not working properly
+SYNCOPE-647,Bug,Closed,Fixed,2015-02-23T17:28:50.519+0000,2015-02-24T13:07:59.728+0000,1.2.2,1.2.3;2.0.0-M1,Problem during propagation of an updated membership on a resource
+SYNCOPE-644,Bug,Closed,Fixed,2015-02-18T10:29:04.988+0000,2015-02-18T14:06:16.959+0000,1.2.2,1.2.3;2.0.0-M1,Error during synchronization of roles when using a RoleSchema as accountId
+SYNCOPE-643,Bug,Closed,Fixed,2015-02-16T08:54:09.674+0000,2015-02-16T13:59:30.209+0000,1.1.8;1.2.2,1.1.9;1.2.3;2.0.0-M1,WorkflowResult provides unmodifiable collection for performed tasks
+SYNCOPE-641,Bug,Closed,Fixed,2015-02-13T13:48:46.615+0000,2015-02-13T15:12:46.805+0000,1.2.2,1.2.3;2.0.0-M1,Concurrency issues with multiple client threads
+SYNCOPE-639,Bug,Closed,Fixed,2015-02-13T09:06:59.107+0000,2015-02-13T15:24:04.957+0000,1.2.1,1.2.3;2.0.0-M1,Notification 'recipientAttrType' and 'recipientAttrName' are not required
+SYNCOPE-638,Bug,Closed,Fixed,2015-02-13T08:23:30.138+0000,2015-02-13T14:21:37.165+0000,1.2.2,1.2.3;2.0.0-M1,MAttrTemplate and RAttrTemplate sequence values are not managed in content.xml
+SYNCOPE-632,Bug,Closed,Fixed,2015-01-28T10:53:05.390+0000,2015-01-29T16:52:02.922+0000,1.2.1,1.2.2;2.0.0-M1,Errors during update propagation when derived attribute is configured as account id
+SYNCOPE-629,Bug,Closed,Fixed,2015-01-20T11:46:26.878+0000,2015-01-21T09:41:45.522+0000,1.2.1;2.0.0-M1,1.2.2;2.0.0-M1,ATTRTEMPLATE entities not exported
+SYNCOPE-625,Bug,Closed,Fixed,2014-12-28T14:03:35.765+0000,2015-01-05T10:11:13.711+0000,,1.2.2;2.0.0-M1,Build fails with Java 6
+SYNCOPE-617,Bug,Closed,Fixed,2014-12-18T09:15:59.867+0000,2014-12-22T14:32:14.396+0000,1.2.1,1.2.2;2.0.0-M1,User/role schema attribute with minus symbol in name
+SYNCOPE-615,Bug,Closed,Fixed,2014-12-11T16:13:38.248+0000,2014-12-12T11:24:51.825+0000,1.2.2,1.2.2;2.0.0-M1,Updating properties and xml files of the installer module with the current version
+SYNCOPE-614,Bug,Closed,Fixed,2014-12-04T15:03:43.764+0000,2014-12-10T15:01:00.578+0000,1.2.1,1.2.2;2.0.0-M1,NotificationJob fails with NullPointerException
+SYNCOPE-613,Bug,Closed,Fixed,2014-12-01T11:37:29.227+0000,2014-12-11T13:45:52.608+0000,1.2.1,1.2.2;2.0.0-M1,delete overridable connector configuration property of type array String in resource edit panel
+SYNCOPE-611,Bug,Closed,Fixed,2014-11-27T14:22:44.066+0000,2014-11-28T17:20:54.337+0000,1.2.1,1.2.2;2.0.0-M1,An approver displays all approval tasks including those not assigned to him
+SYNCOPE-610,Bug,Closed,Fixed,2014-11-21T12:49:32.512+0000,2014-12-22T17:01:25.757+0000,1.2.1,1.2.2;2.0.0-M1,Installer doesn't update the console.properties with the container port
+SYNCOPE-608,Bug,Closed,Fixed,2014-11-19T09:00:24.237+0000,2014-11-21T08:44:59.900+0000,1.2.0,1.2.2;2.0.0-M1,Cannot configure audit for AuthenticationController
+SYNCOPE-607,Bug,Closed,Fixed,2014-11-19T08:26:39.596+0000,2014-11-21T08:44:36.595+0000,1.2.1,1.2.2;2.0.0-M1,Error when adding a value to a multivalue configuration parameter of type long
+SYNCOPE-605,Bug,Closed,Fixed,2014-11-11T15:16:52.198+0000,2014-11-12T15:34:02.794+0000,1.2.1,1.2.1;2.0.0-M1,Impossible to update the connector capabilities
+SYNCOPE-603,Bug,Closed,Fixed,2014-11-06T18:41:18.540+0000,2014-11-07T08:36:11.553+0000,1.2.1,1.2.1;2.0.0-M1,Remote unauthorized exception when a user makes a request to add a role to his profile
+SYNCOPE-601,Bug,Closed,Fixed,2014-11-06T10:06:41.880+0000,2014-11-10T11:22:22.034+0000,1.1.8;1.2.0,1.1.9;1.2.1;2.0.0-M1,AD deleted object synchronization fails if a sync policy is specified on one or more attributes that can have no values on Syncope
+SYNCOPE-600,Bug,Closed,Fixed,2014-11-05T09:33:06.804+0000,2014-11-05T10:09:25.726+0000,1.1.8;1.2.0,1.2.1;2.0.0-M1,Approval chains do not work from second form onwards
+SYNCOPE-598,Bug,Closed,Fixed,2014-11-02T21:29:51.928+0000,2014-11-06T08:54:29.581+0000,1.2.0,1.2.1;2.0.0-M1,Push Task fails on role with LDAP resource with rolemapping defined
+SYNCOPE-597,Bug,Closed,Fixed,2014-10-29T16:15:25.008+0000,2014-10-30T09:53:59.853+0000,1.2.0,1.2.1;2.0.0-M1,Error when serializating SyncToken with byte array type during sync task from Active Directory
+SYNCOPE-596,Bug,Closed,Fixed,2014-10-28T11:25:45.974+0000,2014-10-28T13:33:50.815+0000,1.2.0-M1;1.2.0,1.2.1;2.0.0-M1,Standalone persistence not configured for H2
+SYNCOPE-578,Bug,Closed,Fixed,2014-10-23T13:43:47.515+0000,2014-10-30T16:22:04.585+0000,1.2.0-M1;1.2.0,1.2.1;2.0.0-M1,Role bulk delete not working
+SYNCOPE-576,Bug,Closed,Fixed,2014-10-23T08:17:52.753+0000,2014-10-30T15:47:27.448+0000,1.2.0,1.2.1;2.0.0-M1,The values of configuration parameters are not saved
+SYNCOPE-574,Bug,Closed,Fixed,2014-10-20T15:21:03.748+0000,2014-10-22T20:40:26.691+0000,1.2.0;2.0.0-M1,1.2.1;2.0.0-M1,NullPointerException in ConnInstanceDataBinder with Java 8
+SYNCOPE-572,Bug,Closed,Fixed,2014-10-20T10:03:44.425+0000,2014-10-31T10:33:36.398+0000,1.2.0,1.2.1;2.0.0-M1,overridable resource connector properties cannot be changed
+SYNCOPE-571,Bug,Closed,Fixed,2014-10-20T09:31:57.712+0000,2014-10-22T15:55:47.910+0000,1.2.0,1.2.1;2.0.0-M1,ResourceConnConfPanel feedback panel does not work
+SYNCOPE-569,Bug,Closed,Fixed,2014-10-16T13:03:36.686+0000,2014-10-17T09:56:05.165+0000,1.2.0,1.2.1;2.0.0-M1,The user status is not propagated on the resources
+SYNCOPE-568,Bug,Closed,Fixed,2014-10-16T12:46:02.653+0000,2014-10-17T10:04:26.402+0000,1.1.8;1.2.0,1.1.9;1.2.1;2.0.0-M1,"Connectors configuration ""check connection"""
+SYNCOPE-567,Bug,Closed,Fixed,2014-10-15T14:39:39.292+0000,2014-10-17T10:08:48.574+0000,1.2.0,1.2.1;2.0.0-M1,Security question is not displayed correctly during password reset
+SYNCOPE-566,Bug,Closed,Fixed,2014-10-15T11:20:07.604+0000,2014-10-16T07:20:43.385+0000,1.2.0,1.2.1;2.0.0-M1,Name attribute value disappears after changing attribute type during schema manipulation
+SYNCOPE-565,Bug,Closed,Fixed,2014-10-13T11:39:25.042+0000,2014-10-14T13:17:40.167+0000,1.2.0,1.2.1;2.0.0-M1,Error on ResourceModalPage when override a SpinnerField in the ConnectorModalPage
+SYNCOPE-564,Bug,Closed,Fixed,2014-10-11T12:05:27.148+0000,2014-10-23T16:00:11.028+0000,1.2.0,1.2.1;2.0.0-M1,Error while viewing user details in approval request workflow from Approvers login
+SYNCOPE-563,Bug,Closed,Fixed,2014-10-09T01:53:46.378+0000,2014-10-09T07:11:43.431+0000,,,Typo in DOAP - spurious / after category
+SYNCOPE-562,Bug,Closed,Fixed,2014-10-08T08:04:45.453+0000,2014-10-09T09:50:06.642+0000,1.2.0,1.2.1;2.0.0-M1,Duplicated configuration parameters in the CATTR table
+SYNCOPE-561,Bug,Closed,Fixed,2014-10-07T09:02:17.766+0000,2014-10-07T09:41:26.649+0000,1.2.0,1.2.1;2.0.0-M1,HTML reports not displayed correctly with no external resources
+SYNCOPE-560,Bug,Closed,Fixed,2014-10-07T08:19:36.917+0000,2014-10-07T08:36:06.631+0000,1.2.0,1.2.1;2.0.0-M1,build-tools classes artifact not published to Maven repository
+SYNCOPE-557,Bug,Closed,Fixed,2014-10-03T15:52:41.943+0000,2014-10-07T08:15:11.547+0000,1.2.0-M1,1.2.1;2.0.0-M1,Exception during report execution when matching condition is not provided for user and role reportlets
+SYNCOPE-556,Bug,Closed,Fixed,2014-10-02T10:23:33.282+0000,2014-10-03T08:01:17.314+0000,1.2.0-M1,1.2.0;2.0.0-M1,Error in the enum schema when trying to add new enumeration value/label
+SYNCOPE-554,Bug,Closed,Fixed,2014-09-29T08:17:55.868+0000,2014-10-23T09:21:03.686+0000,1.2.0-M1;1.2.0,1.2.1;2.0.0-M1,Class Cast Exception when syncronization task starts
+SYNCOPE-553,Bug,Closed,Fixed,2014-09-29T06:59:48.173+0000,2014-09-29T14:26:45.215+0000,1.2.0-M1,1.2.0;2.0.0-M1,Internal Server Error when creating account policy
+SYNCOPE-551,Bug,Closed,Fixed,2014-09-23T14:30:43.777+0000,2014-09-23T14:33:14.961+0000,1.2.0-M1,1.2.0;2.0.0-M1,Admin console shows 24 roles at most in the role tree
+SYNCOPE-549,Bug,Closed,Fixed,2014-09-16T15:30:43.521+0000,2014-09-16T15:35:58.655+0000,1.2.0-M1,1.2.0;2.0.0-M1,Activiti Modeler always show the default workflow definition
+SYNCOPE-548,Bug,Closed,Fixed,2014-09-15T12:59:09.554+0000,2014-09-15T15:20:23.012+0000,1.2.0-M1,1.2.0;2.0.0-M1,Provide Activiti Modeler setup instructions
+SYNCOPE-547,Bug,Closed,Fixed,2014-09-15T08:01:35.107+0000,2014-09-15T08:26:04.210+0000,1.1.8,1.1.9;1.2.0;2.0.0-M1,Cannot send e-mails out when SMTP server requires authentication
+SYNCOPE-546,Bug,Resolved,Fixed,2014-09-04T09:34:02.430+0000,2014-09-04T15:48:15.647+0000,1.1.9,1.1.9,Date field panel content with conversion pattern specified cannot be deleted
+SYNCOPE-545,Bug,Closed,Fixed,2014-09-04T09:21:26.172+0000,2014-09-05T08:46:46.907+0000,1.1.9;1.2.0-M1;2.0.0-M1,1.1.9;1.2.0-M1;2.0.0-M1,Date field without conversion pattern specified goes in NPE if deleting date
+SYNCOPE-543,Bug,Closed,Fixed,2014-08-27T07:55:51.141+0000,2014-09-08T12:17:26.518+0000,1.1.8;1.2.0-M1;2.0.0-M1,1.1.9;1.2.0-M1;2.0.0-M1,"Role's ""Inherit Attributes"" does not inherit from parent role for check box attribute"
+SYNCOPE-540,Bug,Closed,Fixed,2014-08-04T12:40:25.209+0000,2014-08-05T17:42:00.647+0000,1.2.0-M1,1.2.0-M1;2.0.0-M1,Console build fails on Windows
+SYNCOPE-539,Bug,Closed,Fixed,2014-07-30T15:15:46.049+0000,2014-08-06T09:57:41.800+0000,1.2.0-M1,1.2.0-M1;2.0.0-M1,Edit user with resources causes Ajax failure
+SYNCOPE-532,Bug,Closed,Fixed,2014-07-07T07:25:46.569+0000,2014-07-07T09:40:00.077+0000,1.2.0-M1;2.0.0-M1,1.2.0-M1;2.0.0-M1,Installer does not pick Syncope version from POM
+SYNCOPE-531,Bug,Closed,Fixed,2014-07-05T12:44:27.993+0000,2014-07-07T11:56:45.481+0000,1.1.8;1.2.0-M1,1.1.9;1.2.0-M1,Failed login counter not reset if log.lastlogindate==false
+SYNCOPE-527,Bug,Closed,Fixed,2014-07-02T14:56:46.195+0000,2014-07-03T13:22:50.003+0000,,1.2.0-M1,Stacktrace on BulkAction result
+SYNCOPE-515,Bug,Closed,Fixed,2014-06-24T12:57:40.960+0000,2014-06-25T12:06:55.967+0000,1.1.7;1.2.0-M1,1.1.8;1.2.0-M1,Bad integration test causes role ownership conflicts
+SYNCOPE-514,Bug,Closed,Fixed,2014-06-23T15:19:30.965+0000,2014-06-25T15:04:29.210+0000,1.2.0-M1,1.2.0-M1,Core doesn't deploy on Glassfish
+SYNCOPE-512,Bug,Closed,Fixed,2014-06-20T14:25:56.095+0000,2014-06-20T14:38:23.635+0000,1.1.8;1.2.0-M1,1.1.8;1.2.0-M1,If there are no roles in edit user modal page is possible to create membership between root (fake) role and user
+SYNCOPE-510,Bug,Closed,Fixed,2014-06-19T09:42:56.366+0000,2014-06-19T12:56:14.690+0000,1.2.0-M1,1.2.0-M1,Class cast exception in AbstractSearchPanel
+SYNCOPE-509,Bug,Closed,Fixed,2014-06-19T07:43:12.923+0000,2014-06-19T12:40:55.738+0000,1.1.8;1.2.0-M1,1.1.8;1.2.0-M1,In Task page after change of number of rows (to display) is erroneously added a column to tasks table
+SYNCOPE-506,Bug,Closed,Fixed,2014-06-12T12:29:24.953+0000,2014-06-13T09:39:35.516+0000,1.2.0-M1,1.2.0-M1,Connector configuration tab in connector modal page does not accept new values
+SYNCOPE-504,Bug,Closed,Fixed,2014-06-11T07:46:15.333+0000,2014-06-25T12:06:31.602+0000,1.1.7;1.2.0-M1,1.1.8;1.2.0-M1,Sync/Push actions shouldn't be executed in dryrun
+SYNCOPE-501,Bug,Closed,Fixed,2014-06-10T08:59:42.423+0000,2014-06-17T09:24:55.939+0000,1.1.8;1.2.0-M1,1.1.8;1.2.0-M1,Virtual attribute propagation not working when updating only virtual attributes
+SYNCOPE-500,Bug,Closed,Fixed,2014-06-06T12:46:01.049+0000,2014-06-06T15:51:16.985+0000,1.1.8;1.2.0-M1,1.1.8;1.2.0-M1,Wrong (unwanted) derived attribute insertion addition in membership modal page
+SYNCOPE-499,Bug,Closed,Fixed,2014-06-03T16:55:33.405+0000,2014-06-05T13:33:02.148+0000,1.1.7;1.2.0-M1,1.1.8;1.2.0-M1,Deletion of role set as parent role in template generates exception
+SYNCOPE-498,Bug,Closed,Fixed,2014-05-30T10:59:54.908+0000,2014-06-03T14:49:39.279+0000,,1.2.0-M1,Connector SpinnerFieldPanel required values
+SYNCOPE-497,Bug,Closed,Fixed,2014-05-30T10:17:32.364+0000,2014-06-06T12:17:17.824+0000,,1.2.0-M1,JEXL Frame positioning error
+SYNCOPE-495,Bug,Closed,Fixed,2014-05-22T08:01:46.050+0000,2014-06-03T12:18:36.068+0000,1.2.0-M1,1.2.0-M1,List of role(s) assigned to user is deleted in edit user modal page if cancel button of role modal page is clicked
+SYNCOPE-490,Bug,Closed,Fixed,2014-05-08T08:36:00.154+0000,2014-05-13T11:50:11.893+0000,1.2.0-M1,1.2.0-M1,Problem returning to login page with manual url insertion after typing invalid username and/or password
+SYNCOPE-489,Bug,Closed,Fixed,2014-05-07T11:55:57.422+0000,2014-05-13T11:50:00.641+0000,1.2.0-M1,1.2.0-M1,Feedback panel not working in workflow xml editor popup
+SYNCOPE-484,Bug,Closed,Fixed,2014-03-12T15:05:12.097+0000,2014-03-13T07:14:33.556+0000,1.1.6,1.1.7,Reports and Content export fails over HTTPS connection
+SYNCOPE-483,Bug,Closed,Fixed,2014-03-11T10:04:43.768+0000,2014-05-13T14:02:41.920+0000,1.2.0-M1,1.2.0-M1,Configured CSVDir connector doesn't work fine
+SYNCOPE-482,Bug,Closed,Fixed,2014-02-27T14:28:09.567+0000,2014-02-27T16:15:04.201+0000,1.2.0-M1,1.2.0-M1,Updating workflow definition throught console XML editor doesn't really update
+SYNCOPE-481,Bug,Closed,Fixed,2014-02-12T01:57:40.278+0000,2014-03-28T09:18:09.547+0000,1.1.5,,Limit the number of results stored for Task Exectutions
+SYNCOPE-477,Bug,Closed,Fixed,2014-01-15T08:17:08.280+0000,2014-01-15T09:58:19.966+0000,1.1.5,1.1.6;1.2.0-M1,Alert popup appears through page navigation after modal window closing
+SYNCOPE-476,Bug,Closed,Fixed,2014-01-14T14:41:44.647+0000,2014-01-15T09:58:30.353+0000,1.1.5,1.1.6;1.2.0-M1,NPE opening Roles tab
+SYNCOPE-475,Bug,Closed,Fixed,2014-01-09T12:51:34.466+0000,2014-01-09T15:22:58.209+0000,1.1.5,1.1.6;1.2.0-M1,"After session expired, console shows split screen"
+SYNCOPE-474,Bug,Closed,Fixed,2014-01-09T11:28:43.893+0000,2014-01-09T16:03:35.353+0000,1.1.5,1.1.6,forbidden error when tried to change password
+SYNCOPE-466,Bug,Closed,Fixed,2013-12-30T10:20:34.197+0000,2013-12-30T11:33:48.106+0000,1.1.5,1.1.6;1.2.0-M1,Server error when updating an existing policy to its global counterpart
+SYNCOPE-465,Bug,Closed,Fixed,2013-12-29T14:27:15.754+0000,2013-12-31T11:59:05.158+0000,1.1.6;1.2.0-M1,1.1.6;1.2.0-M1,Selected items lost browsing paged results
+SYNCOPE-462,Bug,Closed,Fixed,2013-12-16T11:04:32.373+0000,2014-01-30T13:00:15.837+0000,1.1.5,1.1.6;1.2.0-M1,Upgrade Spring to 3.2.7
+SYNCOPE-459,Bug,Closed,Fixed,2013-12-04T12:39:22.855+0000,2013-12-14T09:42:22.055+0000,1.1.4;1.1.5,1.1.6;1.2.0-M1,Read-only virtual attribute cannot be added for a user by admin console
+SYNCOPE-458,Bug,Closed,Fixed,2013-12-03T17:28:14.915+0000,2014-06-10T09:47:23.877+0000,1.1.5,1.2.0-M1,Change membership virtual attribute management
+SYNCOPE-457,Bug,Closed,Fixed,2013-12-03T02:25:08.399+0000,2013-12-04T08:25:25.285+0000,1.1.5;1.2.0-M1,1.2.0-M1,Must be able to configure JavaMailSender used by NotificationJob
+SYNCOPE-456,Bug,Resolved,Fixed,2013-12-02T14:33:19.232+0000,2013-12-03T12:22:37.062+0000,1.2.0-M1,,TaskTestITCase failures
+SYNCOPE-455,Bug,Closed,Fixed,2013-11-29T12:17:33.497+0000,2013-12-04T11:48:37.835+0000,1.1.5,1.1.6;1.2.0-M1,Role child implicit delete won't be propagated during parent delete
+SYNCOPE-454,Bug,Closed,Fixed,2013-11-29T11:58:00.748+0000,2013-12-04T15:35:21.307+0000,1.1.5,1.1.6;1.2.0-M1,"Update user without password specification involving resource with ""Generate password if missing"" enabled, sends password out anyway"
+SYNCOPE-453,Bug,Closed,Fixed,2013-11-29T11:50:59.425+0000,2013-12-03T16:17:39.952+0000,1.1.5,1.1.6;1.2.0-M1,Propagation problem with role virtual attribute mapped in user mapping
+SYNCOPE-452,Bug,Closed,Fixed,2013-11-29T08:26:29.471+0000,2013-12-03T13:41:14.948+0000,1.1.5,1.1.6;1.2.0-M1,Generated project not starting in embedded mode
+SYNCOPE-440,Bug,Closed,Fixed,2013-11-15T06:33:33.820+0000,2013-11-21T10:09:13.955+0000,1.1.3,1.1.5;1.2.0-M1,Timestamp based synchronization miss events
+SYNCOPE-437,Bug,Closed,Fixed,2013-11-13T08:46:33.268+0000,2013-11-13T12:06:53.127+0000,1.1.4,1.1.5;1.2.0-M1,Wrong ID generation for new Notification instances
+SYNCOPE-436,Bug,Closed,Fixed,2013-11-12T10:53:51.026+0000,2013-11-18T16:59:03.640+0000,1.1.4,1.1.5;1.2.0-M1,Read-only virtual attribute values not retrieved from external resource
+SYNCOPE-435,Bug,Closed,Fixed,2013-11-08T15:17:04.863+0000,2013-11-12T08:57:56.446+0000,1.1.4,1.1.5;1.2.0-M1,Password not mandatory when subscribing external resource
+SYNCOPE-434,Bug,Closed,Fixed,2013-11-07T15:27:05.908+0000,2013-11-07T16:40:51.329+0000,1.1.4,1.1.5;1.2.0-M1,Users can log in the admin console despite of their status
+SYNCOPE-433,Bug,Closed,Fixed,2013-11-07T14:14:14.822+0000,2013-11-07T15:22:40.281+0000,1.1.4,1.1.5;1.2.0-M1,Counting search results fails with MySQL when OR condition is used
+SYNCOPE-426,Bug,Closed,Fixed,2013-10-25T08:03:03.379+0000,2013-10-25T08:40:56.031+0000,1.1.4,1.1.5;1.2.0-M1,UserService#update and RoleService#update require entity id to be specified twice
+SYNCOPE-423,Bug,Closed,Fixed,2013-10-02T15:18:47.184+0000,2013-11-20T11:42:05.547+0000,1.1.5;1.2.0-M1,1.1.5;1.2.0-M1,Improve notifications
+SYNCOPE-419,Bug,Closed,Fixed,2013-10-01T14:28:19.560+0000,2013-10-01T14:50:29.381+0000,1.1.4,1.1.5;1.2.0-M1,Meaningless error message when attempting to delete user owning role
+SYNCOPE-418,Bug,Closed,Fixed,2013-09-20T09:21:05.744+0000,2013-09-20T13:56:34.461+0000,1.1.3,1.1.4;1.2.0-M1,Special chars break REST URLs
+SYNCOPE-417,Bug,Closed,Fixed,2013-09-20T07:26:23.649+0000,2013-09-20T08:28:10.458+0000,1.1.3,1.1.4;1.2.0-M1,Users are made active when updating in NoOpWorkflowAdapter
+SYNCOPE-414,Bug,Closed,Fixed,2013-09-18T08:23:49.969+0000,2014-01-28T08:20:00.093+0000,1.2.0-M1,1.2.0-M1,Cannot successfully deploy on Weblogic 12c (12.1.1)
+SYNCOPE-412,Bug,Closed,Fixed,2013-09-16T13:41:06.970+0000,2013-09-18T12:12:52.612+0000,1.1.3,1.1.4,Audit tables are reset after restart
+SYNCOPE-404,Bug,Closed,Fixed,2013-07-19T21:25:56.052+0000,2013-07-22T07:38:34.407+0000,1.1.0;1.1.3,1.1.4;1.2.0-M1,LDAP Roles lose entitlement upon LDAP synchronization
+SYNCOPE-401,Bug,Closed,Fixed,2013-07-11T14:55:36.336+0000,2013-07-11T15:01:08.722+0000,1.1.2,1.1.3;1.2.0-M1,Deploying syncope.war with MSSQL server settings to Tomcat on Windows results in Error listenerStart
+SYNCOPE-400,Bug,Closed,Fixed,2013-07-11T09:35:22.990+0000,2013-07-11T11:24:21.026+0000,1.0.8;1.1.2,1.1.3;1.2.0-M1,Poor search performance on MySQL
+SYNCOPE-399,Bug,Closed,Fixed,2013-07-04T14:07:23.050+0000,2013-07-04T14:22:09.100+0000,1.1.2;1.2.0-M1,1.1.3;1.2.0-M1,Role attribute mapping for user mapping item doesn't result in a multivalue property
+SYNCOPE-398,Bug,Closed,Fixed,2013-07-01T13:08:32.485+0000,2013-07-01T13:50:32.580+0000,1.1.2,1.1.3;1.2.0-M1,secretKey does not get resolved during archetype:generate
+SYNCOPE-397,Bug,Closed,Fixed,2013-06-26T14:11:21.839+0000,2013-06-27T11:44:04.079+0000,1.1.2,1.1.3;1.2.0-M1,Double update propagation with virtual attributes on already associated resource when changing password and adding new resource
+SYNCOPE-396,Bug,Closed,Fixed,2013-06-24T13:37:20.566+0000,2013-06-24T14:50:48.851+0000,1.1.3,1.1.3;1.2.0-M1,removeAll and retainAll in PropagationByResource dont evaluate correctly boolean expression
+SYNCOPE-394,Bug,Closed,Fixed,2013-06-12T13:57:25.580+0000,2013-06-12T14:24:55.149+0000,1.1.2,1.1.3;1.2.0-M1,Scheduled tasks are executed without transaction support
+SYNCOPE-387,Bug,Closed,Fixed,2013-06-03T11:19:40.316+0000,2013-06-07T10:42:38.985+0000,1.1.1,1.1.2;1.2.0-M1,Unable to synchronize deleted objects from OpenDJ
+SYNCOPE-386,Bug,Closed,Fixed,2013-06-03T09:00:09.192+0000,2013-06-03T09:02:34.640+0000,1.1.1,1.1.2;1.2.0-M1,"Database sync (no full reconciliation) fails with ""Unsupported object class"""
+SYNCOPE-385,Bug,Closed,Fixed,2013-06-03T07:01:15.625+0000,2013-06-03T07:03:55.629+0000,1.1.1,1.1.2;1.2.0-M1,NPE when reading user assigned to resource with no mapping
+SYNCOPE-384,Bug,Closed,Fixed,2013-05-31T12:49:46.820+0000,2013-05-31T13:49:43.285+0000,1.1.1,1.1.2;1.2.0-M1,Issues with CXF and Glassfish
+SYNCOPE-383,Bug,Closed,Fixed,2013-05-31T12:40:04.632+0000,2013-05-31T14:49:35.628+0000,1.1.1,1.1.2;1.2.0-M1,Failure assigning resource to an existing user
+SYNCOPE-382,Bug,Closed,Fixed,2013-05-31T12:19:28.757+0000,2013-05-31T13:50:24.874+0000,1.1.1,1.1.2;1.2.0-M1,Core hangs for a very long time (1h+ and then resumes) after a CLI role create and list
+SYNCOPE-381,Bug,Closed,Fixed,2013-05-31T10:34:40.132+0000,2013-05-31T16:08:10.932+0000,1.1.1,1.1.2;1.2.0-M1,Adding and saving roles with resources during save
+SYNCOPE-380,Bug,Closed,Fixed,2013-05-31T10:24:20.034+0000,2013-05-31T16:08:46.444+0000,1.1.1,1.1.2;1.2.0-M1,Deleting a role from admin console throws an exception
+SYNCOPE-377,Bug,Closed,Fixed,2013-05-31T10:09:37.732+0000,2013-05-31T13:50:01.610+0000,1.1.2,1.1.2;1.2.0-M1,Exporting configuration via console causes exceptions to be thrown
+SYNCOPE-376,Bug,Closed,Fixed,2013-05-30T12:44:54.896+0000,2013-05-30T12:54:30.631+0000,1.1.1,1.1.2;1.2.0-M1,Console webapp does not start on Glassfish
+SYNCOPE-375,Bug,Closed,Fixed,2013-05-28T15:32:52.669+0000,2013-05-29T06:54:14.816+0000,1.1.1,1.1.2;1.2.0-M1,QUARTZ tables are not written into an innodb mysql DB for an mvn generated and created project
+SYNCOPE-373,Bug,Closed,Fixed,2013-05-28T06:47:44.684+0000,2013-05-28T07:55:37.064+0000,1.1.1,1.1.2;1.2.0-M1,500 when self reading admin user
+SYNCOPE-372,Bug,Closed,Fixed,2013-05-27T16:08:50.949+0000,2013-05-28T08:18:43.226+0000,1.1.1,1.1.2;1.2.0-M1,Connector error before save
+SYNCOPE-371,Bug,Closed,Fixed,2013-05-21T10:28:34.784+0000,2013-05-21T10:33:26.366+0000,1.1.1,1.1.2;1.2.0-M1,Console RuntimeException with multiple sessions for the same user
+SYNCOPE-370,Bug,Closed,Fixed,2013-05-08T10:11:06.215+0000,2013-07-02T07:14:17.204+0000,1.1.1,1.1.3;1.2.0-M1,HTTP Status 404 adding a role to a user with IE8
+SYNCOPE-369,Bug,Closed,Fixed,2013-05-07T08:13:18.937+0000,2013-05-09T09:07:24.794+0000,1.1.1,1.1.2;1.2.0-M1,Wrong error message on failed login
+SYNCOPE-368,Bug,Closed,Fixed,2013-04-29T09:26:13.839+0000,2013-04-29T11:23:00.967+0000,1.1.0,1.1.1;1.2.0-M1,Cannot add 'RoleOwnerSchema' mapping item via console
+SYNCOPE-366,Bug,Closed,Fixed,2013-04-26T12:48:12.403+0000,2013-04-26T16:00:27.866+0000,1.1.0;1.1.1,1.1.1;1.2.0-M1,Uniform constraint violation building
+SYNCOPE-365,Bug,Closed,Fixed,2013-04-24T12:23:10.004+0000,2013-04-24T15:42:00.979+0000,1.1.0;1.1.1,1.1.1;1.2.0-M1,External attribute disabled in case of schema info not available
+SYNCOPE-364,Bug,Closed,Fixed,2013-04-19T14:21:57.701+0000,2013-04-19T15:15:48.250+0000,1.0.8;1.1.0,1.0.9;1.1.1;1.2.0-M1,Rejected users are anyway propagate to associated resources
+SYNCOPE-363,Bug,Closed,Fixed,2013-04-19T09:26:27.932+0000,2013-04-19T14:12:13.419+0000,1.1.0,1.1.1;1.2.0-M1,ApacheDS not available since second run of the standalone distribution
+SYNCOPE-361,Bug,Closed,Fixed,2013-04-19T08:26:22.772+0000,2013-04-19T08:29:20.743+0000,1.1.0,1.1.1;1.2.0-M1,"When creating new report, the modal window does not close and an exception is logged"
+SYNCOPE-360,Bug,Closed,Fixed,2013-04-18T18:32:17.258+0000,2013-04-19T09:38:44.592+0000,1.1.0,1.1.1;1.2.0-M1,Removing Role mapping from External Resource fails
+SYNCOPE-358,Bug,Closed,Fixed,2013-04-15T11:01:18.941+0000,2013-04-15T12:06:27.810+0000,1.1.0,1.1.1;1.2.0-M1,ConnectorService#list invocation with null parameter actually calls ConnectorService#readByResource
+SYNCOPE-357,Bug,Closed,Fixed,2013-04-15T10:43:31.263+0000,2013-04-24T15:21:12.066+0000,1.1.0,1.1.1;1.2.0-M1,"When deleting role on external resource, also remove from there users with resource assigned only via that role"
+SYNCOPE-356,Bug,Closed,Fixed,2013-04-14T16:48:13.804+0000,2013-04-15T09:44:39.009+0000,1.1.0,1.1.1;1.2.0-M1,Unable to set resource for role via the console
+SYNCOPE-354,Bug,Closed,Fixed,2013-04-12T23:22:37.587+0000,2013-04-24T13:32:30.415+0000,1.1.0,1.1.1;1.2.0-M1,LDAP Membership propagation does not remove memberships
+SYNCOPE-353,Bug,Closed,Fixed,2013-04-09T10:53:38.919+0000,2013-04-09T12:54:20.372+0000,1.1.0,1.1.1;1.2.0-M1,UserTemplate evaluation generates unjustified attributes to be removed
+SYNCOPE-352,Bug,Closed,Fixed,2013-04-08T18:51:02.714+0000,2013-04-09T14:45:57.462+0000,1.1.0,1.1.1;1.2.0-M1,No connectors available on clean install
+SYNCOPE-351,Bug,Closed,Fixed,2013-04-05T10:42:06.404+0000,2013-04-09T12:16:43.374+0000,1.0.7;1.1.0,1.0.8;1.1.1;1.2.0-M1,Errors when editing role membership assignment in notifications (About and Recipients)
+SYNCOPE-349,Bug,Closed,Fixed,2013-04-03T10:23:29.901+0000,2013-12-20T08:34:24.749+0000,1.0.7;1.1.0;1.2.0-M1,1.2.0-M1,Sorting scope is limited to each page
+SYNCOPE-347,Bug,Closed,Fixed,2013-03-28T11:43:55.964+0000,2013-04-03T10:15:07.056+0000,1.1.0,1.1.0,User schema mapping error for Username
+SYNCOPE-343,Bug,Closed,Fixed,2013-03-22T16:11:42.649+0000,2013-03-22T17:07:06.147+0000,1.1.0,1.1.0,REST methods returning implementation classes might fail when there are no available
+SYNCOPE-342,Bug,Closed,Fixed,2013-03-22T09:52:19.102+0000,2013-03-22T11:16:01.030+0000,1.0.6;1.1.0,1.0.7;1.1.0,Console might fail to connect when core is deployed on virtual host
+SYNCOPE-341,Bug,Closed,Fixed,2013-03-21T07:48:43.759+0000,2013-03-22T13:56:25.619+0000,1.0.6;1.1.0,1.0.7;1.1.0,"When deleting user schema, user list attributes head don't get updated"
+SYNCOPE-339,Bug,Closed,Fixed,2013-03-19T12:10:35.434+0000,2013-03-19T15:21:53.040+0000,1.0.7;1.1.0,1.0.7;1.1.0,enum schema multivalue doesn't work
+SYNCOPE-338,Bug,Closed,Fixed,2013-03-19T10:32:44.266+0000,2013-03-19T15:07:35.587+0000,1.1.0,1.1.0,Some CXF REST services can be accessed by anonymous
+SYNCOPE-336,Bug,Closed,Fixed,2013-03-11T13:35:26.011+0000,2013-03-19T14:47:09.642+0000,,1.0.7;1.1.0,Use a auto-complete textfield to chose for external attribute to be mapped during schema mapping creation
+SYNCOPE-334,Bug,Closed,Fixed,2013-03-04T12:52:12.575+0000,2013-03-04T13:20:38.179+0000,1.1.0,1.1.0,Can't delete a role from a user in the console
+SYNCOPE-332,Bug,Closed,Fixed,2013-03-03T19:37:03.712+0000,2013-03-04T15:54:50.423+0000,1.0.5;1.0.6;1.1.0,1.0.7;1.1.0,User List sorting via Derived attributes column doesn't work
+SYNCOPE-330,Bug,Closed,Fixed,2013-03-01T15:10:28.213+0000,2013-03-05T14:43:33.391+0000,1.1.0,1.1.0,noopworkflow profile not succeeding
+SYNCOPE-329,Bug,Closed,Fixed,2013-02-28T11:36:22.709+0000,2013-03-15T13:18:21.982+0000,,1.1.0,Wrong CSS deleting execution task
+SYNCOPE-328,Bug,Closed,Fixed,2013-02-28T11:20:54.161+0000,2013-03-05T15:35:50.155+0000,,1.1.0,NPE with no global password policy defined
+SYNCOPE-327,Bug,Closed,Fixed,2013-02-27T16:46:55.682+0000,2013-03-01T16:23:15.927+0000,1.0.6;1.1.0,1.1.0,Error messages during Tomcat shutdown
+SYNCOPE-325,Bug,Closed,Fixed,2013-02-25T10:05:33.131+0000,2013-02-25T10:08:34.576+0000,1.0.5;1.1.0,1.0.6;1.1.0,Stacktrace when accessing the Configuration page on JBoss
+SYNCOPE-323,Bug,Closed,Fixed,2013-02-22T13:33:19.069+0000,2013-02-22T16:32:27.851+0000,1.0.5;1.1.0,1.1.0,REST: create turns into update for some entities
+SYNCOPE-322,Bug,Closed,Fixed,2013-02-22T11:15:32.180+0000,2013-02-22T15:44:35.234+0000,,1.1.0,Can't create a new Role in Chromium
+SYNCOPE-321,Bug,Closed,Fixed,2013-02-21T13:51:46.693+0000,2013-02-21T16:27:09.906+0000,1.1.0,1.1.0,Wicket error adding new derived/virtual attribute
+SYNCOPE-320,Bug,Closed,Fixed,2013-02-20T12:24:34.354+0000,2013-02-20T14:44:52.874+0000,1.1.0,1.1.0,Support synchronizing role memberships from LDAP groupOfNames
+SYNCOPE-318,Bug,Closed,Fixed,2013-02-19T10:08:20.012+0000,2013-02-27T14:38:38.471+0000,,1.1.0,No way to see Connector help message for multi-valued property
+SYNCOPE-317,Bug,Closed,Fixed,2013-02-18T11:39:03.564+0000,2013-02-18T14:45:45.338+0000,1.1.0,1.1.0,Error executing SyncTask twice or more
+SYNCOPE-316,Bug,Closed,Fixed,2013-02-18T08:23:44.793+0000,2013-02-18T11:14:24.548+0000,1.0.5;1.1.0,1.0.6;1.1.0,Exception when creating connector instances with no bundles available
+SYNCOPE-315,Bug,Closed,Fixed,2013-02-15T13:45:39.095+0000,2013-02-18T15:25:06.447+0000,1.0.5;1.1.0,1.0.6;1.1.0,"""Persistent"" feedback messages"
+SYNCOPE-314,Bug,Closed,Fixed,2013-02-14T17:18:39.685+0000,2013-02-14T17:24:08.889+0000,1.0.6;1.1.0,1.0.6;1.1.0,User list sort based on username fails
+SYNCOPE-312,Bug,Closed,Fixed,2013-02-08T13:15:10.261+0000,2013-02-27T13:45:16.832+0000,,1.1.0,Introducing UserWorkflowService
+SYNCOPE-310,Bug,Closed,Fixed,2013-02-08T11:34:53.209+0000,2013-02-08T12:19:26.675+0000,1.0.5;1.1.0,1.0.6;1.1.0,Palette elements get translated
+SYNCOPE-309,Bug,Closed,Fixed,2013-02-04T17:18:28.954+0000,2013-02-25T12:03:55.717+0000,1.0.5;1.1.0,1.0.6;1.1.0,Enter key not bound to user form submit
+SYNCOPE-308,Bug,Closed,Fixed,2013-02-04T16:55:08.759+0000,2013-02-11T17:07:08.601+0000,1.0.5;1.1.0,1.0.6;1.1.0,"When trying to update an user in status 'rejected', an error 500 is returned"
+SYNCOPE-307,Bug,Closed,Fixed,2013-02-04T11:48:00.433+0000,2013-02-13T18:41:57.946+0000,1.0.6;1.1.0,1.0.6;1.1.0,Virtual Attributes don't propagated in case of update during synchronization
+SYNCOPE-306,Bug,Closed,Fixed,2013-02-01T10:55:47.439+0000,2013-02-01T14:27:47.240+0000,,1.1.0,'Mandatory' error in Console when propagating Virtual Attributes
+SYNCOPE-305,Bug,Closed,Fixed,2013-02-01T10:42:39.012+0000,2013-02-01T12:54:52.950+0000,,1.1.0,Can't create Sync or Sched Task in Console
+SYNCOPE-302,Bug,Closed,Fixed,2013-01-31T10:32:19.377+0000,2013-01-31T10:41:38.310+0000,1.1.0,1.1.0,Error when accessing the Resources page as non-admin
+SYNCOPE-301,Bug,Closed,Fixed,2013-01-30T11:27:32.656+0000,2013-01-30T17:57:42.428+0000,1.0.5;1.1.0,1.0.6;1.1.0,Status is not updated when synchronizing existing users
+SYNCOPE-297,Bug,Closed,Fixed,2013-01-29T10:53:57.037+0000,2013-01-31T16:07:53.173+0000,,1.1.0,External Attributes are showing up for AccoundId/Password in Resource User Mappings
+SYNCOPE-294,Bug,Closed,Fixed,2013-01-28T11:30:59.742+0000,2013-02-01T09:52:18.719+0000,1.0.5,1.0.6;1.1.0,User data not refreshed before edit
+SYNCOPE-292,Bug,Closed,Fixed,2013-01-28T10:07:53.022+0000,2013-01-28T16:06:09.766+0000,1.1.0,1.1.0,NPE when accessing Configuration page with no global sync policy
+SYNCOPE-285,Bug,Closed,Fixed,2013-01-23T10:09:53.217+0000,2013-07-26T11:04:21.902+0000,,1.2.0-M1,Complete CXF migration
+SYNCOPE-284,Bug,Closed,Fixed,2013-01-23T09:52:18.413+0000,2013-02-04T16:58:50.514+0000,1.1.0,1.1.0,Broken export
+SYNCOPE-274,Bug,Closed,Fixed,2013-01-15T11:35:22.750+0000,2013-01-15T12:49:13.038+0000,1.0.4,1.0.5;1.1.0,Sync: during update with user template existing memberships break update
+SYNCOPE-272,Bug,Closed,Fixed,2013-01-11T11:52:27.633+0000,2013-01-14T15:10:58.601+0000,1.0.5,1.0.5,During sync null attributes from template are considered
+SYNCOPE-269,Bug,Closed,Fixed,2013-01-10T11:08:23.071+0000,2013-01-11T16:10:08.367+0000,1.0.4;1.1.0,1.0.5;1.1.0,AES encryption key defined in source code
+SYNCOPE-267,Bug,Closed,Fixed,2013-01-08T10:00:41.438+0000,2013-01-08T11:35:59.253+0000,1.0.4;1.0.5;1.1.0,1.0.5;1.1.0,Possible NullPointerException into SchemaMappingUtil.getAccountIdValue()
+SYNCOPE-262,Bug,Closed,Fixed,2013-01-04T08:21:46.717+0000,2013-01-07T16:31:12.457+0000,1.1.0,1.1.0,Create sync policy fail
+SYNCOPE-260,Bug,Closed,Fixed,2013-01-02T09:50:14.833+0000,2013-01-07T09:06:20.238+0000,1.0.5;1.1.0,1.0.5;1.1.0,Update propagation with null virtual attribute values
+SYNCOPE-240,Bug,Closed,Fixed,2012-11-29T14:31:55.161+0000,2012-11-29T15:08:14.868+0000,1.0.4;1.1.0,1.0.4,Missed CREATE status into org.apache.syncope.console.commons.StatusUtils.Status
+SYNCOPE-238,Bug,Closed,Fixed,2012-11-19T14:23:25.527+0000,2012-11-28T17:18:11.658+0000,1.0.3-incubating,1.0.4;1.1.0,"With an high number of users, the admin console's 'TODO' tab is extremely slow"
+SYNCOPE-237,Bug,Closed,Fixed,2012-11-16T10:11:03.241+0000,2012-11-16T10:17:13.221+0000,1.0.3-incubating,1.0.4;1.1.0,Users with no entitlements cannot edit their own profile via console
+SYNCOPE-236,Bug,Closed,Fixed,2012-11-11T14:57:54.205+0000,2012-11-11T15:01:25.840+0000,1.0.3-incubating,1.0.4;1.1.0,Username and password not evaluated from user template during synchronization
+SYNCOPE-234,Bug,Closed,Fixed,2012-11-05T11:24:18.187+0000,2012-11-05T15:08:55.893+0000,1.0.4,1.0.4;1.1.0,Failures upgrading OpenJPA
+SYNCOPE-233,Bug,Closed,Fixed,2012-11-03T18:26:39.291+0000,2012-11-10T11:30:04.379+0000,1.0.2-incubating;1.0.3-incubating,1.0.4;1.1.0,Authentication failure using password with special characters
+SYNCOPE-232,Bug,Closed,Fixed,2012-11-02T17:04:23.164+0000,2012-11-06T11:09:58.722+0000,1.0.2-incubating;1.0.3-incubating,1.0.4;1.1.0,"""Connection is read-only"" during initialization"
+SYNCOPE-230,Bug,Closed,Fixed,2012-10-26T12:41:21.483+0000,2012-10-29T17:19:29.024+0000,1.0.2-incubating,1.0.3-incubating;1.1.0,Sync user attributes using a long schema attribute as accountId
+SYNCOPE-228,Bug,Closed,Fixed,2012-10-25T15:28:07.577+0000,2012-10-25T16:11:50.999+0000,1.0.2-incubating,1.0.3-incubating;1.1.0,"When updating a role, assigned entitlements get lost"
+SYNCOPE-226,Bug,Closed,Fixed,2012-10-18T12:49:11.426+0000,2012-10-19T10:39:04.489+0000,1.0.2-incubating,1.0.3-incubating;1.1.0,Invalid passwords might fill up user's password history
+SYNCOPE-224,Bug,Closed,Fixed,2012-10-16T14:06:08.649+0000,2012-10-18T12:53:48.427+0000,1.0.2-incubating,1.0.3-incubating;1.1.0,ActivitiWorkflowLoader called by SpringContextInitializer even when ActivitiUserWorkflowAdapter is not selected
+SYNCOPE-220,Bug,Closed,Fixed,2012-10-13T09:44:25.934+0000,2012-10-15T12:54:50.297+0000,1.0.2-incubating,1.0.3-incubating;1.1.0,"When running in embedded mode, CSVDir configuration shows unresolved ${urlencoded.csvdir.path} property"
+SYNCOPE-217,Bug,Closed,Fixed,2012-10-09T12:59:02.626+0000,2012-10-09T16:00:25.705+0000,1.0.2-incubating,1.0.3-incubating;1.1.0,SyncopeUser.hasTokenExpired() can easily cause nullpointer exception
+SYNCOPE-214,Bug,Closed,Fixed,2012-10-04T10:45:45.287+0000,2012-10-09T16:18:44.235+0000,1.0.1-incubating,1.0.3-incubating;1.1.0,Error when trying to change readonly attribute
+SYNCOPE-211,Bug,Closed,Fixed,2012-09-20T12:51:29.656+0000,2012-09-20T15:32:10.668+0000,1.0.1-incubating,1.0.2-incubating;1.1.0,Test org.apache.syncope.core.persistence.relationships.derAttrFromSpecialAttrs not enabled
+SYNCOPE-202,Bug,Closed,Fixed,2012-09-05T10:09:33.938+0000,2012-10-01T15:30:49.055+0000,1.0.2-incubating;1.1.0,1.0.2-incubating;1.1.0,MySQL and Oracle integration test hangs
+SYNCOPE-197,Bug,Closed,Fixed,2012-09-03T10:35:02.387+0000,2012-09-05T10:06:49.057+0000,,1.1.0,TaskModalPage Refresh button misaligned
+SYNCOPE-196,Bug,Closed,Fixed,2012-09-03T10:32:43.271+0000,2012-09-04T10:47:08.526+0000,1.0.0-incubating,1.0.2-incubating;1.1.0,Change Display Attributes button misaligned
+SYNCOPE-194,Bug,Closed,Fixed,2012-09-03T10:24:21.010+0000,2012-09-10T15:20:07.963+0000,1.0.1-incubating,1.0.2-incubating;1.1.0,User attributes not sychronized properly from LDAP resource
+SYNCOPE-192,Bug,Closed,Fixed,2012-08-29T08:01:19.061+0000,2012-08-29T12:42:33.791+0000,1.0.0-incubating,1.0.1-incubating;1.1.0,With trace level NONE notification tasks don't get updated
+SYNCOPE-191,Bug,Closed,Fixed,2012-08-27T09:54:11.459+0000,2012-08-28T12:49:35.617+0000,1.0.0-incubating,1.0.1-incubating;1.1.0,UI Error when sorting Synchronization Task executions
+SYNCOPE-187,Bug,Closed,Fixed,2012-08-14T08:35:21.403+0000,2012-08-14T14:20:34.851+0000,1.0.0-incubating;1.1.0,1.0.1-incubating;1.1.0,"When deleting an user, REST error doesn't bring error message to display"
+SYNCOPE-185,Bug,Closed,Fixed,2012-08-14T08:27:50.017+0000,2012-08-29T15:07:48.266+0000,1.0.0-incubating,1.0.1-incubating;1.1.0,Could not delete an user with LDAP resource
+SYNCOPE-183,Bug,Closed,Fixed,2012-08-14T08:25:42.719+0000,2012-10-01T15:57:08.158+0000,1.0.1-incubating,1.0.1-incubating;1.1.0,'Enforce mandatory constraints' not working
+SYNCOPE-182,Bug,Closed,Fixed,2012-08-13T06:38:25.234+0000,2012-08-17T12:14:46.370+0000,1.0.0-incubating,1.0.1-incubating;1.1.0,LICENSE & NOTICE: duplicated entries
+SYNCOPE-181,Bug,Closed,Fixed,2012-08-06T15:49:04.483+0000,2012-08-07T08:18:54.272+0000,1.0.0-incubating,1.0.0-incubating,Missing entries in LICENSE & NOTICE for JQuery and CodeMirror
+SYNCOPE-180,Bug,Closed,Fixed,2012-08-02T08:47:12.411+0000,2012-08-02T15:56:23.079+0000,1.0.0-incubating,1.0.0-incubating,After test execution spare files aren't all cleaned up
+SYNCOPE-179,Bug,Closed,Fixed,2012-08-01T16:25:11.912+0000,2012-08-01T16:27:50.233+0000,1.0.0-incubating,1.0.0-incubating,Synchronization task executions not connected to owning task
+SYNCOPE-178,Bug,Closed,Fixed,2012-08-01T13:17:48.427+0000,2012-08-01T13:29:50.813+0000,1.0.0-incubating,1.0.0-incubating,Incomplete processing during synchronization / full reconciliation
+SYNCOPE-118,Bug,Closed,Fixed,2012-07-27T15:39:00.382+0000,2012-07-30T07:50:57.190+0000,1.0.0-incubating,1.0.0-incubating,User list: 'propagationTOs' shouldn't be shown for display attributes
+SYNCOPE-117,Bug,Closed,Fixed,2012-07-27T15:36:17.803+0000,2012-07-30T11:34:38.824+0000,1.0.0-incubating,1.0.0-incubating,Empty default user list display attributes selection
+SYNCOPE-115,Bug,Closed,Fixed,2012-07-26T09:20:17.112+0000,2012-07-26T09:34:40.462+0000,1.0.0-incubating,1.0.0-incubating,Spring warns about 'Ambiguous write methods found' for HttpClientParams
+SYNCOPE-114,Bug,Closed,Fixed,2012-07-20T07:28:39.625+0000,2012-07-20T10:20:53.417+0000,1.0.0-incubating,1.0.0-incubating,Cannot edit an existing reportlet
+SYNCOPE-113,Bug,Closed,Fixed,2012-07-19T22:00:51.166+0000,2012-07-20T08:47:04.088+0000,1.0.0-incubating,1.0.0-incubating,Adding schema mapping to new resource requires changing connector
+SYNCOPE-112,Bug,Closed,Fixed,2012-07-17T08:34:10.411+0000,2012-07-17T10:58:09.882+0000,1.0.0-incubating,1.0.0-incubating,Resource test connection doesn't work fine
+SYNCOPE-111,Bug,Closed,Fixed,2012-07-16T10:13:32.205+0000,2012-07-16T14:10:43.282+0000,1.0.0-incubating,1.0.0-incubating,Failure during role attribute propagation
+SYNCOPE-108,Bug,Closed,Fixed,2012-07-12T10:56:05.996+0000,2012-07-13T08:11:53.349+0000,1.0.0-incubating,1.0.0-incubating,Wrong de-provisioning in case of different role with the same externat resource
+SYNCOPE-106,Bug,Closed,Fixed,2012-07-06T13:41:27.582+0000,2012-07-06T13:55:47.127+0000,1.0.0-incubating,1.0.0-incubating,User search based on Enum attribute doesn't work
+SYNCOPE-104,Bug,Closed,Fixed,2012-07-04T09:55:19.447+0000,2012-07-04T10:08:25.759+0000,1.0.0-incubating,1.0.0-incubating,UTF-8 characters do not appear in notification mails
+SYNCOPE-103,Bug,Closed,Fixed,2012-07-02T10:18:51.113+0000,2012-07-03T10:21:10.370+0000,1.0.0-incubating,1.0.0-incubating,Export function in console not working
+SYNCOPE-102,Bug,Closed,Fixed,2012-06-27T14:16:36.507+0000,2012-07-13T16:35:18.932+0000,1.0.0-incubating,1.0.0-incubating,Concurrent execution of the same report might lead to inconsistencies
+SYNCOPE-101,Bug,Closed,Fixed,2012-06-26T15:09:36.156+0000,2012-07-18T12:40:55.082+0000,1.0.0-incubating,1.0.0-incubating,Release process creates three source artifacts
+SYNCOPE-99,Bug,Closed,Fixed,2012-06-20T13:40:22.839+0000,2012-06-21T10:37:35.688+0000,1.0.0-incubating,1.0.0-incubating,Problem editing notifications through console when Membership included in about
+SYNCOPE-97,Bug,Closed,Fixed,2012-06-19T08:59:08.893+0000,2012-06-21T08:25:11.457+0000,1.0.0-incubating,1.0.0-incubating,Singleton RestTemplate
+SYNCOPE-96,Bug,Closed,Fixed,2012-06-14T14:25:55.917+0000,2012-06-20T13:50:22.158+0000,1.0.0-incubating,1.0.0-incubating,Invalid authentication
+SYNCOPE-95,Bug,Closed,Fixed,2012-06-12T16:13:58.248+0000,2012-06-14T15:34:59.771+0000,1.0.0-incubating,1.0.0-incubating,search doesn't work at all with production content.xml
+SYNCOPE-94,Bug,Closed,Fixed,2012-06-08T12:18:22.210+0000,2012-06-12T14:54:16.304+0000,1.0.0-incubating,1.0.0-incubating,"When upgrading to HttpComponents Client 4.2, an Integration Tes fails"
+SYNCOPE-92,Bug,Closed,Fixed,2012-06-04T10:29:34.431+0000,2012-06-08T15:20:58.325+0000,1.0.0-incubating,1.0.0-incubating,Align parent POM version to latest release
+SYNCOPE-90,Bug,Closed,Fixed,2012-05-30T13:47:18.289+0000,2012-06-04T15:18:48.284+0000,1.0.0-incubating,1.0.0-incubating,GenerateToken class doesn't persist token to DB
+SYNCOPE-86,Bug,Closed,Fixed,2012-05-22T10:40:29.098+0000,2012-05-22T13:39:54.882+0000,1.0.0-incubating,1.0.0-incubating,TaskExec instances are not associated with owning NotificationTask
+SYNCOPE-84,Bug,Closed,Fixed,2012-05-22T07:36:51.665+0000,2012-05-22T14:07:57.242+0000,1.0.0-incubating,1.0.0-incubating,Projects generated with maven artifacts fail because of missing legal files
+SYNCOPE-83,Bug,Closed,Fixed,2012-05-21T08:29:52.723+0000,2012-05-30T12:35:15.445+0000,1.0.0-incubating,1.0.0-incubating,Recipients tab has all fields required when editing NotificationTask
+SYNCOPE-82,Bug,Closed,Fixed,2012-05-08T08:10:58.897+0000,2012-05-08T11:32:12.321+0000,1.0.0-incubating,1.0.0-incubating,Propagation task executions don't get persisted
+SYNCOPE-81,Bug,Closed,Fixed,2012-05-03T15:29:04.037+0000,2012-05-04T10:29:37.393+0000,1.0.0-incubating,1.0.0-incubating,NotificationTasks cannot be deleted
+SYNCOPE-80,Bug,Closed,Fixed,2012-05-03T15:26:28.190+0000,2012-05-08T08:14:03.942+0000,1.0.0-incubating,1.0.0-incubating,Changin Rows to display value in Propagation Tasks does not take effect
+SYNCOPE-77,Bug,Closed,Fixed,2012-05-02T14:48:13.610+0000,2012-05-02T14:52:00.455+0000,1.0.0-incubating,1.0.0-incubating,Save button not displayed in MembershipModalPage
+SYNCOPE-75,Bug,Closed,Fixed,2012-05-02T10:49:37.281+0000,2012-05-03T12:33:45.824+0000,1.0.0-incubating,1.0.0-incubating,User create fails providing more than one value for a multivalued attribute of type date
+SYNCOPE-72,Bug,Closed,Fixed,2012-04-30T13:07:46.163+0000,2012-04-30T15:44:33.226+0000,1.0.0-incubating,1.0.0-incubating,JSP files don't contain the required ASF license header
+SYNCOPE-71,Bug,Closed,Fixed,2012-04-30T09:54:43.451+0000,2012-04-30T10:31:13.242+0000,1.0.0-incubating,1.0.0-incubating,Foreign key constraints missed with OpenJPA
+SYNCOPE-70,Bug,Closed,Fixed,2012-04-30T09:44:07.552+0000,2012-04-30T16:04:11.284+0000,1.0.0-incubating,1.0.0-incubating,Source artifacts include either 'syncope-1.0.0-RC1-incubating-source' and 'syncope-root-1.0.0-RC1-incubating-source' root dirs
+SYNCOPE-68,Bug,Closed,Fixed,2012-04-27T07:03:41.946+0000,2012-05-23T13:33:45.758+0000,1.0.0-incubating,1.0.0-incubating,Existing memberships removed during synchronization
+SYNCOPE-65,Bug,Closed,Fixed,2012-04-24T13:59:10.650+0000,2012-05-02T10:22:10.269+0000,1.0.0-incubating,1.0.0-incubating,Export/Import doesn't work with MySQL
+SYNCOPE-63,Bug,Closed,Fixed,2012-04-24T10:10:12.714+0000,2012-04-24T10:45:51.742+0000,1.0.0-incubating,1.0.0-incubating,PolicyBeanPanel doesn't work fine
+SYNCOPE-61,Bug,Closed,Fixed,2012-04-18T13:03:30.583+0000,2012-10-04T11:51:01.489+0000,1.0.0-incubating,1.0.0-incubating,WARNING: DB connection abandoned
+SYNCOPE-58,Bug,Closed,Fixed,2012-04-17T07:31:30.423+0000,2012-04-17T08:29:10.630+0000,1.0.0-incubating,1.0.0-incubating,User request approval duplicates requests
+SYNCOPE-54,Bug,Closed,Fixed,2012-04-04T13:06:32.931+0000,2012-04-04T13:54:36.986+0000,1.0.0-incubating,1.0.0-incubating,Notification e-mails can be sent forever
+SYNCOPE-52,Bug,Closed,Fixed,2012-04-04T07:08:45.469+0000,2012-04-04T11:35:18.392+0000,1.0.0-incubating,1.0.0-incubating,Recipient search does not work
+SYNCOPE-49,Bug,Closed,Fixed,2012-03-28T07:35:41.808+0000,2012-03-28T13:38:44.287+0000,1.0.0-incubating,1.0.0-incubating,Make utility maps returned by TO's methods read-only
+SYNCOPE-48,Bug,Closed,Fixed,2012-03-26T15:48:50.847+0000,2012-04-03T12:49:41.411+0000,1.0.0-incubating,1.0.0-incubating,Incorrect entitlement inheritance
+SYNCOPE-47,Bug,Closed,Fixed,2012-03-23T10:49:16.553+0000,2012-03-23T14:43:46.366+0000,1.0.0-incubating,1.0.0-incubating,User resource set update fails during synchronization
+SYNCOPE-46,Bug,Closed,Fixed,2012-03-22T12:23:12.083+0000,2012-03-22T16:26:46.034+0000,1.0.0-incubating,1.0.0-incubating,Error: Search from console with LIKE condition
+SYNCOPE-43,Bug,Closed,Fixed,2012-03-17T08:31:15.594+0000,2012-03-19T10:42:44.035+0000,1.0.0-incubating,1.0.0-incubating,Report does not keep a reference to its executions for a new report
+SYNCOPE-41,Bug,Closed,Fixed,2012-03-15T17:03:48.879+0000,2012-03-28T15:32:19.123+0000,1.0.0-incubating,1.0.0-incubating,NotificationManager: extend email.schema to derived and virtual attributes
+SYNCOPE-40,Bug,Closed,Fixed,2012-03-15T16:10:12.858+0000,2012-03-19T09:08:51.480+0000,1.0.0-incubating,1.0.0-incubating,Notification task error: small field size (htmlbody and txtbody)
+SYNCOPE-39,Bug,Closed,Fixed,2012-03-15T14:10:10.408+0000,2012-03-22T12:51:06.348+0000,1.0.0-incubating,1.0.0-incubating,Notification task is not created during synchronization
+SYNCOPE-37,Bug,Closed,Fixed,2012-03-14T13:51:48.620+0000,2012-03-16T18:05:39.224+0000,1.0.0-incubating,1.0.0-incubating,"Using console, create a new report feature does not work."
+SYNCOPE-36,Bug,Closed,Fixed,2012-03-13T10:09:34.331+0000,2012-03-13T10:25:38.913+0000,1.0.0-incubating,1.0.0-incubating,User read fails in case of error during virtual attribute retrieving
+SYNCOPE-34,Bug,Closed,Fixed,2012-03-09T15:36:01.869+0000,2012-03-09T15:39:55.423+0000,1.0.0-incubating,1.0.0-incubating,No propagation fo virtual attributes retrieved/generated  during synchronization
+SYNCOPE-33,Bug,Closed,Fixed,2012-03-09T11:45:34.694+0000,2012-03-09T13:58:15.066+0000,1.0.0-incubating,1.0.0-incubating,Virtual attribute missing during synchronization
+SYNCOPE-32,Bug,Closed,Fixed,2012-03-09T08:54:47.123+0000,2012-03-09T09:11:42.121+0000,1.0.0-incubating,1.0.0-incubating,Missing SMALLINT type in ImportExport class
+SYNCOPE-31,Bug,Closed,Fixed,2012-03-08T14:43:03.618+0000,2012-03-09T09:11:22.786+0000,1.0.0-incubating,1.0.0-incubating,User status is not propagated during update
+SYNCOPE-30,Bug,Closed,Fixed,2012-03-08T13:45:09.209+0000,2012-03-08T14:36:36.151+0000,1.0.0-incubating,1.0.0-incubating,Generation from archetype fails with error 'The defined artifact is not an archetype'
+SYNCOPE-29,Bug,Closed,Fixed,2012-03-08T13:27:47.796+0000,2012-04-02T16:18:48.430+0000,1.0.0-incubating,1.0.0-incubating,Deployment on JBoss AS 7.1.0-Final does not work
+SYNCOPE-27,Bug,Closed,Fixed,2012-03-07T14:40:20.894+0000,2012-03-07T15:00:21.768+0000,1.0.0-incubating,1.0.0-incubating,Reflection aware REST methods don't consider classes not explicitly implementing interfaces
+SYNCOPE-23,Bug,Closed,Fixed,2012-03-02T09:19:01.088+0000,2012-03-02T10:00:31.149+0000,1.0.0-incubating,1.0.0-incubating,TODO tab glitches
+SYNCOPE-21,Bug,Closed,Fixed,2012-03-02T09:01:55.398+0000,2012-03-16T14:17:39.709+0000,1.0.0-incubating,1.0.0-incubating,ACT_HI_ACTINST:Unique index or primary key violation on non-empty database
+SYNCOPE-18,Bug,Closed,Fixed,2012-03-01T15:14:01.811+0000,2012-03-13T16:38:51.590+0000,1.0.0-incubating,1.0.0-incubating,Virtual attributes cannot be mapped as AccountId
+SYNCOPE-17,Bug,Closed,Fixed,2012-03-01T14:28:34.749+0000,2012-03-01T14:53:40.322+0000,1.0.0-incubating,1.0.0-incubating,Manage ConnID's configuration exception
+SYNCOPE-16,Bug,Closed,Fixed,2012-03-01T11:41:37.655+0000,2012-03-01T15:09:42.895+0000,1.0.0-incubating,1.0.0-incubating,Update propagation fails in case of virtual attributes
+SYNCOPE-12,Bug,Closed,Fixed,2012-02-29T14:02:13.839+0000,2012-02-29T18:09:44.432+0000,1.0.0-incubating,1.0.0-incubating,Error Selenium Tests
+SYNCOPE-11,Bug,Closed,Fixed,2012-02-29T10:19:28.360+0000,2012-02-29T13:39:58.192+0000,1.0.0-incubating,1.0.0-incubating,"Editing a virtual attribute, error after submit"
+SYNCOPE-10,Bug,Closed,Fixed,2012-02-28T10:56:09.006+0000,2012-02-28T15:36:42.786+0000,1.0.0-incubating,1.0.0-incubating,ConnInstance update doesn't imply related connector spring beans reloading
+SYNCOPE-8,Bug,Closed,Fixed,2012-02-24T17:13:02.387+0000,2012-02-27T11:47:58.601+0000,1.0.0-incubating,1.0.0-incubating,"ERROR: type ""clob"" does not exist"
+SYNCOPE-3,Bug,Closed,Fixed,2012-02-23T07:41:54.396+0000,2012-02-27T08:26:32.567+0000,1.0.0-incubating,1.0.0-incubating,Include NOTICE and LICENSE in all artifacts
+SYNCOPE-1,Bug,Closed,Fixed,2012-02-21T14:26:29.638+0000,2012-02-27T08:26:21.210+0000,1.0.0-incubating,1.0.0-incubating,ASF license headers not correct

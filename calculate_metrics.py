@@ -219,7 +219,6 @@ def create_dataset(directory_path, repo_path=None):
 
             # --- STRUCTURE ---
             "ns": m["ns"],
-            "loc_touched": m["loc_touched"],#sostituire con nfix total
             "revisions_density": m["revisions_density"],
             "fix": m["fix"],
 
