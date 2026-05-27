@@ -1,0 +1,30 @@
+Metriche:
+CLASS
+1 - Size (LOC): La dimensione base. Le classi IAM troppo grandi tendono a violare il principio di singola responsabilità e diventano difficili da audire per la sicurezza.
+2 - Churn: Indica il volume totale di codice impattato nel tempo, dando una misura dello sforzo di manutenzione richiesto da quella classe.
+3 - Churn total (dalla release 0)
+4 - Max Churn: Aiuta a identificare i momenti in cui la classe ha subito massicci refactoring, che spesso introducono regressioni silenziose.
+5 - Average Churn (total): Indica se il file è cronicamente instabile o se ha avuto solo picchi isolati. lo mettiamo total perchè cosi capiamo se la classe in generale viene cambiata spesso o è solo un picco individuale.
+6 - LOC Added: Ci permette di tracciare la crescita della classe e capire se sta accumulando troppe responsabilità (feature creep). quindi piu avanti dara bug.
+7 - LOC Added (Total): Somma storica di tutte le linee aggiunte. Indica l'espansione totale del componente nel tempo.
+8 - Nauth (Number of authors): Il numero di sviluppatori che hanno toccato il file. Un Nauth elevato su componenti critici (es. gestione password) aumenta il rischio di inconsistenze dovute a stili e logiche diverse.
+9 - Nauth total (Number of authors) (dalla release 0): Il numero di sviluppatori che hanno toccato il file. Un Nauth elevato su componenti critici (es. gestione password) aumenta il rischio di inconsistenze dovute a stili e logiche diverse.
+10 - NR (Number of Revisions): Quante volte una classe viene modificata. Se una classe legata all'autenticazione ha un NR altissimo, è un campanello d'allarme per la stabilità.
+11 - NR Total (dalla release 0)
+12- Nfix (Number of defect fixes): Fondamentale. Ci dice quali classi hanno storicamente concentrato i bug. In un sistema IAM, le classi con alti Nfix richiedono test di sicurezza rigorosi.
+13 -Nfix total (dalla release 0)
+14 - Fan in total (dalla release 0): ovvero le classi che chiamano questa classe. Se questo valore aumenta, significa che la classe è centrale ed è più probabile che non venga toccata e sia e rimanga stabile
+15 - Fan out: le classi che questa classe chiama. Avere molte dipendenze esterne rende la classe meno stabile, perché è dipendente dalla stabilità delle altre
+16- Age: L'età della classe. Nel software di sicurezza, il codice molto vecchio e mai toccato potrebbe essere solido, oppure nascondere debito tecnico obsoleto.
+17- Weighted Age: Pesa l'età con le modifiche. È eccellente per distinguere il codice "vecchio ma stabile" dal codice "vecchio ma costantemente rattoppato".
+COMMIT
+18 - Entropy (Distribution of modified code): Critica. Modifiche con alta entropia (sparpagliate su tanti file) in un sistema IAM aumentano drasticamente il rischio che lo sviluppatore dimentichi di coprire un caso limite di sicurezza.
+19 - FIX (Whether or not the change is a defect fix): Essenziale per addestrare modelli di predizione dei difetti. Se una commit è un fix, l'area toccata è statisticamente più prona a futuri errori.
+20 - NS (Number of modified subsystems): Se una commit modifica contemporaneamente il core, la console e le API REST, è una modifica architetturale massiccia che ha alte probabilità di introdurre difetti sistemici.
+
+
+La tua selezione di metriche è eccellente e molto ben strutturata. Hai coperto le quattro dimensioni fondamentali dell'analisi del software: Dimensione, Evoluzione (Processo), Collaborazione (Social) e Accoppiamento (Architettura).
+
+Per un progetto come Apache Syncope, che è un sistema di Identity and Access Management (IAM), la sicurezza e la manutenibilità sono critiche. Queste metriche ti permetteranno di identificare non solo i bug, ma anche le aree di "fragilità architetturale".
+
+Ecco un'analisi della tua lista con alcuni suggerimenti per affinarle:
