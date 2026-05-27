@@ -3,13 +3,27 @@ import requests
 import json
 import os
 import time
+import pandas as pd
 
-# ✅ CONFIGURA QUI
-SONAR_PROJECT_KEY = "TUO_PROJECT_KEY"
-SONAR_TOKEN = "TUO_TOKEN"
+
+# =====================================================================
+# CONFIGURAZIONE
+# =====================================================================
+
+SONAR_PROJECT_KEY = "enricobarbatano_storm"
+SONAR_ORG = "enricobarbatano"
+SONAR_TOKEN = "9f26bdfd1bededb4de0dbb2e28e4fda0f5b971ba"
+
 SONAR_URL = "https://sonarcloud.io/api/issues/search"
 
-# ✅ mapping precise release → tag
+DATASET_PATH = "../dataset.csv"
+OUTPUT_DATASET = "../dataset_with_smells.csv"
+CACHE_FILE = "smells_cache.json"
+
+REPO_PATH = "../storm"
+
+
+# mapping release → tag
 release_to_tag = {
     "release_0.9.0.1": "0.9.0.1",
     "release_0.9.1": "v0.9.1-incubating",
@@ -26,15 +40,27 @@ release_to_tag = {
 }
 
 
-# ✅ esegue comando shell
+# =====================================================================
+# UTILS
+# =====================================================================
+
 def run_cmd(cmd):
+    print(f"\n> {cmd}")
     subprocess.run(cmd, shell=True)
 
 
-# ✅ esegue sonar per tutte le release
-def run_sonar_scans(repo_path):
+def normalize_path(path):
+    return path.replace("\\", os.sep).replace("/", os.sep)
 
-    os.chdir(repo_path)
+
+# =====================================================================
+# STEP 1: SONAR SCAN
+# =====================================================================
+
+def run_sonar_scans():
+    print("\n=== SONAR SCANS ===")
+
+    os.chdir(REPO_PATH)
 
     for release, tag in release_to_tag.items():
 
@@ -45,19 +71,27 @@ def run_sonar_scans(repo_path):
         run_cmd(
             f"sonar-scanner "
             f"-Dsonar.projectKey={SONAR_PROJECT_KEY} "
-            f"-Dsonar.projectVersion={release}"
+            f"-Dsonar.organization={SONAR_ORG} "
+            f"-Dsonar.host.url=https://sonarcloud.io "
+            f"-Dsonar.token={SONAR_TOKEN} "
+            f"-Dsonar.branch.name={release}"
         )
 
-        time.sleep(5)  # evita rate limit
+        time.sleep(5)
+
+    print("\n✅ Sonar scan completate")
 
 
-# ✅ recupera smells per release
-def fetch_smells_for_release(release):
+# =====================================================================
+# STEP 2: FETCH SMELLS (NO BRANCH!)
+# =====================================================================
+
+def fetch_all_smells():
+    print("\n=== FETCH SMELLS ===")
 
     params = {
         "projectKeys": SONAR_PROJECT_KEY,
         "types": "CODE_SMELL",
-        "branch": release,
         "ps": 500
     }
 
@@ -68,58 +102,112 @@ def fetch_smells_for_release(release):
     )
 
     if response.status_code != 200:
-        print(f"❌ errore per {release}")
+        print("❌ Errore API Sonar")
         return {}
 
     data = response.json()
-
     smells_map = {}
 
     for issue in data.get("issues", []):
-
         component = issue.get("component")
 
         if ":" not in component:
             continue
 
         file_path = component.split(":")[1]
+        file_path = normalize_path(file_path)
 
-        # ✅ normalizza path
-        file_path = file_path.replace("/", os.sep)
+        smells_map[file_path] = smells_map.get(file_path, 0) + 1
 
-        if file_path not in smells_map:
-            smells_map[file_path] = 0
+    print(f"✅ Trovati {len(smells_map)} file con smell")
 
-        smells_map[file_path] += 1
+    # stesso mapping per tutte le release (semplificazione)
+    all_data = {release: smells_map for release in release_to_tag}
 
-    return smells_map
-
-
-# ✅ genera cache JSON (IMPORTANTISSIMO)
-def build_smells_cache(output_file="smells_cache.json"):
-
-    all_data = {}
-
-    for release in release_to_tag:
-
-        print(f"\n📊 Download smells {release}")
-
-        smells = fetch_smells_for_release(release)
-
-        all_data[release] = smells
-
-        time.sleep(2)
-
-    with open(output_file, "w") as f:
+    with open(CACHE_FILE, "w") as f:
         json.dump(all_data, f, indent=2)
 
-    print(f"\n✅ Cache salvata: {output_file}")
+    print(f"✅ Cache salvata: {CACHE_FILE}")
+
+    return all_data
 
 
-# ✅ load cache
-def load_cache(file="smells_cache.json"):
-    if not os.path.exists(file):
-        return {}
+# =====================================================================
+# STEP 3: MERGE DATASET + SMELLS
+# =====================================================================
 
-    with open(file, "r") as f:
-        return json.load(f)
+def merge_dataset(smells_data):
+    print("\n=== MERGE DATASET ===")
+
+    df = pd.read_csv(DATASET_PATH)
+    df["code_smells"] = 0
+
+    matched = 0
+
+    for i, row in df.iterrows():
+
+        class_path = normalize_path(row["class"])
+        release = row["release"]
+
+        smells_in_release = smells_data.get(release, {})
+
+        count = 0
+
+        for file_path, smell_count in smells_in_release.items():
+            file_path = normalize_path(file_path)
+
+            # match principale
+            if file_path.endswith(class_path):
+                count = smell_count
+                matched += 1
+                break
+
+            # fallback senza estensione
+            if file_path.replace(".java", "").endswith(
+                class_path.replace(".java", "")
+            ):
+                count = smell_count
+                matched += 1
+                break
+
+        df.at[i, "code_smells"] = count
+
+    print(f"✅ Match trovati: {matched}")
+
+    print("\n📊 Statistiche code_smells:")
+    print(df["code_smells"].describe())
+
+    df.to_csv(OUTPUT_DATASET, index=False)
+
+    print(f"\n✅ Dataset finale salvato: {OUTPUT_DATASET}")
+
+
+# =====================================================================
+# PIPELINE COMPLETA
+# =====================================================================
+
+def run_pipeline(run_scan=True):
+
+    print("\n🔥 AVVIO PIPELINE COMPLETA")
+
+    # STEP 1 (opzionale)
+    if run_scan:
+        run_sonar_scans()
+    else:
+        print("⏭️ Scan saltate")
+
+    # STEP 2
+    smells_data = fetch_all_smells()
+
+    # STEP 3
+    merge_dataset(smells_data)
+
+    print("\n✅ PIPELINE COMPLETATA")
+
+
+# =====================================================================
+# MAIN
+# =====================================================================
+
+if __name__ == "__main__":
+    run_pipeline(run_scan=True)  # metti True SOLO la prima volta

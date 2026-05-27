@@ -29,7 +29,7 @@ def simplify_dataset(input_path, output_path):
 # MAIN
 # -----------------------------
 if __name__ == "__main__":
-    input_csv = "./dataset.csv"
+    input_csv = "./dataset_with_smells.csv"
     output_csv = "./dataset_simplified.csv"
 
     simplify_dataset(input_csv, output_csv)
